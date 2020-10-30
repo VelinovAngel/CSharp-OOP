@@ -13,13 +13,22 @@ namespace CustomStack
         }
 
 
-        public void AddRange(IEnumerable<string> collection)
-        {
+        //public void AddRange(IEnumerable<string> collection)
+        //{
 
-            foreach (var element in collection)
+        //    foreach (var element in collection)
+        //    {
+        //        stack.Push(element);
+        //    } 
+        //}
+
+
+        public void AddRange(Stack<string> stackString)
+        {
+            while (stackString.Count > 0)
             {
-                stack.Push(element);
-            } 
+                stack.Push(stackString.Pop());
+            }
         }
     }
 }
