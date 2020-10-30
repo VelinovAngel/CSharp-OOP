@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace CustomRandomList
+namespace CustomStack
 {
     public class StartUp
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Hello World!");
         }
     }
 }
