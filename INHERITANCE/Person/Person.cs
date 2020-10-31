@@ -25,7 +25,7 @@ namespace Person
             }
         }
 
-        public int Age
+        public virtual int Age
         {
             get
             {
@@ -35,7 +35,7 @@ namespace Person
             {
                 if (value < 0)
                 {
-
+                    throw new ArgumentException("Age must be postive.");
                 }
                 else
                 {
