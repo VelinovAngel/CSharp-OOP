@@ -5,7 +5,7 @@ namespace Zoo
     {
         public Gorilla(string name) : base(name)
         {
-            this.Name = name;
+          
         }
     }
 }
