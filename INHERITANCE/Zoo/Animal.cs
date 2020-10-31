@@ -8,6 +8,6 @@ namespace Zoo
             this.Name = name;
         }
 
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
     }
 }

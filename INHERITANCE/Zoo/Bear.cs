@@ -8,7 +8,5 @@ namespace Zoo
             this.Name = name;
         }
 
-        public override string Name { get; set; }
-
     }
 }
