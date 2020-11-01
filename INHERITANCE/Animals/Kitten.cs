@@ -3,7 +3,7 @@ namespace Animals
 {
     public class Kitten : Cat //(female)
     {
-        private const string kitten = "female";
+        private const string kitten = "Female";
 
         public Kitten(string name, int age)
             : base(name, age, kitten)

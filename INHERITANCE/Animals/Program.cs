@@ -14,11 +14,6 @@ namespace Animals
             while ((input = Console.ReadLine()) != "Beast!")
             {
 
-                if (input  != null)
-                {
-                    Console.WriteLine("Invalid input!");
-                    continue;
-                }
                 string typeAnimal = input;
                 string[] tokensInfo = Console.ReadLine()
                     .Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -26,11 +21,6 @@ namespace Animals
                 string name = tokensInfo[0];
                 int age = int.Parse(tokensInfo[1]);
                 string gender = tokensInfo[2];
-                if (age < 0)
-                {
-                    Console.WriteLine("Invalid input!");
-                    continue;
-                }
 
 
                 Animals animal;
@@ -65,9 +55,9 @@ namespace Animals
                 animals.Add(animal);
 
             }
-            if (animals.Count > 0)
+            foreach (var type in animals)
             {
-                animals.ForEach(Console.WriteLine);
+                Console.WriteLine(type);
             }
         }
     }
