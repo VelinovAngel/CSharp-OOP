@@ -3,21 +3,17 @@ namespace NeedForSpeed
 {
     public class RaceMotorcycle : Motorcycle
     {
-        private double defaultFuelConsumption = 8;
+        private const double DefaultFuelConsumption = 8;
         public RaceMotorcycle(int horsePower, double fuel)
             : base(horsePower, fuel)
         {
         }
 
-        public virtual double DefaultFuelConsumption
+        public override double FuelConsumption
         {
             get
             {
-                return defaultFuelConsumption;
-            }
-            set
-            {
-                defaultFuelConsumption = value;
+                return DefaultFuelConsumption;
             }
         }
     }
