@@ -1,18 +1,11 @@
-﻿using System;
-namespace Animals
+﻿public class Tomcat : Cat
 {
-    public class Tomcats : Cat //(male)
+    public Tomcat(string name, int age, string gender = "Male") : base(name, age, gender)
     {
-        private const string tomcats = "male";
-        public Tomcats(string name, int age)
-            : base(name, age, tomcats)
-        {
+    }
 
-        }
-
-        public override string ProduceSound()
-        {
-            return "MEOW";
-        }
+    public override string ProduceSound()
+    {
+        return "MEOW";
     }
 }

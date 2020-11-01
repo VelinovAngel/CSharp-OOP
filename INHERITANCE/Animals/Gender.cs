@@ -1,9 +1,5 @@
-﻿using System;
-namespace Animals
+﻿public enum Gender
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
+    Male,
+    Female
 }

@@ -1,81 +1,72 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
-namespace Animals
+public class Animal : ISoundProducable
 {
-    public abstract class Animals
+    private string name;
+    private int age;
+    private Gender gender;
+
+    public Animal(string name, int age, string gender)
     {
-        private int age;
-        private string name;
-        private Gender gender;
+        this.Name = name;
+        this.Age = age;
+        this.Gender = gender;
+    }
 
-
-        public Animals(string name, int age, string gender)
+    private string Name
+    {
+        set
         {
-            Name = name;
-            Age = age;
-            this.Gender = gender;
-        }
-
-        public string Name
-        {
-            set
+            if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value))
             {
-                if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Invalid input!");
-                }
-
-                this.name = value;
+                throw new ArgumentException("Invalid input!");
             }
-            
-        }
 
-        public int Age
+            this.name = value;
+        }
+    }
+
+    private int Age
+    {
+        set
         {
-            set
+            if (value <= 0)
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Invalid input!");
-                }
-
-                this.age = value;
+                throw new ArgumentException("Invalid input!");
             }
+
+            this.age = value;
         }
+    }
 
-
-        public string Gender
+    private string Gender
+    {
+        set
         {
-            set
+            Gender gender;
+            if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value) || !Enum.TryParse<Gender>(value, out gender))
             {
-                Gender gender;
-                if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value) || !Enum.TryParse<Gender>(value, out gender))
-                {
-                    throw new ArgumentException("Invalid input!");
-                }
-
-                this.gender = gender;
+                throw new ArgumentException("Invalid input!");
             }
+
+            this.gender = gender;
         }
+    }
 
+    public virtual string ProduceSound()
+    {
+        return null;
+    }
 
-        public virtual string ProduceSound()
-        {
-            return null;
-        }
+    public override string ToString()
+    {
+        var builder = new StringBuilder();
 
+        builder.AppendLine(this.GetType().Name)
+            .AppendLine($"{this.name} {this.age} {this.gender.ToString()}")
+            .Append($"{this.ProduceSound()}");
 
-        public override string ToString()
-        {
-            StringBuilder builder = new StringBuilder();
-
-            builder.AppendLine(this.GetType().Name)
-                .AppendLine($"{this.name} {this.age} {this.gender.ToString()}")
-                .Append($"{this.ProduceSound()}");
-
-            return builder.ToString();
-        }
+        return builder.ToString();
     }
 }
