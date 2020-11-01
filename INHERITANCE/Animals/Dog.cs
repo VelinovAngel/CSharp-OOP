@@ -1,10 +1,16 @@
 ﻿using System;
 namespace Animals
 {
-    public class Dog
+    public class Dog : Animals
     {
-        public Dog()
+        public Dog(string name, int age, string gender)
+            : base(name, age, gender)
         {
+        }
+
+        public override string ProduceSound()
+        {
+            return "Woof!";
         }
     }
 }
