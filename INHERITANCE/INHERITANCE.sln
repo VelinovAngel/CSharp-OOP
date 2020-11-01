@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeedForSpeed", "NeedForSpee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant", "Restaurant\Restaurant.csproj", "{295201BD-DD06-4EFD-AC18-B38AF8D30B0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{DE7C35C7-69A0-4C2E-8A1F-10CAD85AE176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,5 +63,9 @@ Global
 		{295201BD-DD06-4EFD-AC18-B38AF8D30B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295201BD-DD06-4EFD-AC18-B38AF8D30B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295201BD-DD06-4EFD-AC18-B38AF8D30B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7C35C7-69A0-4C2E-8A1F-10CAD85AE176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7C35C7-69A0-4C2E-8A1F-10CAD85AE176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7C35C7-69A0-4C2E-8A1F-10CAD85AE176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7C35C7-69A0-4C2E-8A1F-10CAD85AE176}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
