@@ -1,11 +1,18 @@
-﻿public class Kitten : Cat
+﻿using System;
+namespace Animals
 {
-    public Kitten(string name, int age, string gender = "Female") : base(name, age, gender)
+    public class Kitten : Cat //(female)
     {
-    }
+        private const string kitten = "female";
 
-    public override string ProduceSound()
-    {
-        return "Meow";
+        public Kitten(string name, int age)
+            : base(name, age, kitten)
+        {
+        }
+
+        public override string ProduceSound()
+        {
+            return "Meow";
+        }
     }
 }

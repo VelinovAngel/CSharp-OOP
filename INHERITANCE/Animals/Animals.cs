@@ -1,72 +1,39 @@
 ﻿using System;
 using System.Text;
 
-public class Animal : ISoundProducable
+namespace Animals
 {
-    private string name;
-    private int age;
-    private Gender gender;
-
-    public Animal(string name, int age, string gender)
+    public abstract class Animals
     {
-        this.Name = name;
-        this.Age = age;
-        this.Gender = gender;
-    }
+       
 
-    private string Name
-    {
-        set
+        public Animals(string name, int age, string gender)
         {
-            if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentException("Invalid input!");
-            }
-
-            this.name = value;
+            Name = name;
+            Age = age;
+            Gender = gender;
         }
-    }
 
-    private int Age
-    {
-        set
+        public string Name { get; set; }
+
+        public int Age { get; set; }
+
+
+        public string Gender { get; set; }
+
+
+        public abstract string ProduceSound();
+
+
+        public override string ToString()
         {
-            if (value <= 0)
-            {
-                throw new ArgumentException("Invalid input!");
-            }
+            StringBuilder builder = new StringBuilder();
 
-            this.age = value;
+            builder.AppendLine(this.GetType().Name)
+                .AppendLine($"{this.Name} {this.Age} {this.Gender}")
+                .Append($"{this.ProduceSound()}");
+
+            return builder.ToString().TrimEnd();
         }
-    }
-
-    private string Gender
-    {
-        set
-        {
-            Gender gender;
-            if (String.IsNullOrEmpty(value) || String.IsNullOrWhiteSpace(value) || !Enum.TryParse<Gender>(value, out gender))
-            {
-                throw new ArgumentException("Invalid input!");
-            }
-
-            this.gender = gender;
-        }
-    }
-
-    public virtual string ProduceSound()
-    {
-        return null;
-    }
-
-    public override string ToString()
-    {
-        var builder = new StringBuilder();
-
-        builder.AppendLine(this.GetType().Name)
-            .AppendLine($"{this.name} {this.age} {this.gender.ToString()}")
-            .Append($"{this.ProduceSound()}");
-
-        return builder.ToString();
     }
 }
