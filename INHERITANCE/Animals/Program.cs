@@ -13,6 +13,7 @@ namespace Animals
 
             while ((input = Console.ReadLine()) != "Beast!")
             {
+
                 string typeAnimal = input;
                 string[] tokensInfo = Console.ReadLine()
                     .Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -20,40 +21,41 @@ namespace Animals
                 string name = tokensInfo[0];
                 int age = int.Parse(tokensInfo[1]);
                 string gender = tokensInfo[2];
+                try
+                {
+                    if (typeAnimal == "Dog")
+                    {
+                        animals.Add(new Dog(name, age, gender));
+                    }
+                    else if (typeAnimal == "Cat")
+                    {
+                        animals.Add(new Cat(name, age, gender));
+                    }
+                    else if (typeAnimal == "Frog")
+                    {
+                        animals.Add(new Frog(name, age, gender));
+                    }
+                    else if (typeAnimal == "Tomcat")
+                    {
+                        animals.Add(new Tomcats(name, age));
+                    }
+                    else if (typeAnimal == "Kitten")
+                    {
+                        animals.Add(new Kitten(name, age));
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Invalid input!");
+                    }
 
-                if (typeAnimal == "Dog")
-                {
-                    animals.Add(new Dog(name, age, gender));
                 }
-                else if (typeAnimal == "Cat")
+                catch (ArgumentException ex)
                 {
-                    animals.Add(new Cat(name, age, gender));
+                    Console.WriteLine(ex.Message);
                 }
-                else if (typeAnimal == "Frog")
-                {
-                    animals.Add(new Frog(name, age, gender));
-                }
-                else if (typeAnimal == "Tomcat")
-                {
-                    animals.Add(new Tomcats(name, age));
-                }
-                else if (typeAnimal == "Kitten")
-                {
-                    animals.Add(new Kitten(name, age));
-                }
-                //else
-                //{
-                //    Console.WriteLine("Invalid input!");
-                //}
-
             }
 
-            foreach (var type in animals)
-            {
-                Console.WriteLine(type.GetType().Name);
-                Console.WriteLine($"{type.Name} {type.Age} {type.Gender}");
-                Console.WriteLine($"{type.ProduceSound()}");
-            }
+            animals.ForEach(Console.WriteLine);
         }
     }
 }
