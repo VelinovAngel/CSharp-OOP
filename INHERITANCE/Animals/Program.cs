@@ -14,6 +14,11 @@ namespace Animals
             while ((input = Console.ReadLine()) != "Beast!")
             {
 
+                if (input  != null)
+                {
+                    Console.WriteLine("Invalid input!");
+                    continue;
+                }
                 string typeAnimal = input;
                 string[] tokensInfo = Console.ReadLine()
                     .Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -26,12 +31,14 @@ namespace Animals
                     Console.WriteLine("Invalid input!");
                     continue;
                 }
+
+
                 Animals animal;
 
                 if (typeAnimal == "Dog")
                 {
-                   animal = new Dog(name, age, gender);
-                    
+                    animal = new Dog(name, age, gender);
+
                 }
                 else if (typeAnimal == "Cat")
                 {
@@ -39,7 +46,7 @@ namespace Animals
                 }
                 else if (typeAnimal == "Frog")
                 {
-                   animal = new Frog(name, age, gender);
+                    animal = new Frog(name, age, gender);
                 }
                 else if (typeAnimal == "Tomcat")
                 {
@@ -58,7 +65,10 @@ namespace Animals
                 animals.Add(animal);
 
             }
-            animals.ForEach(Console.WriteLine);
+            if (animals.Count > 0)
+            {
+                animals.ForEach(Console.WriteLine);
+            }
         }
     }
 }
