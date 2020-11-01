@@ -3,13 +3,13 @@ using System.Text;
 
 namespace Animals
 {
-    public abstract class Animals
+    public abstract class Animal
     {
         private string name;
         private int age;
         private string gender;
 
-        public Animals(string name, int age, string gender)
+        public Animal(string name, int age, string gender)
         {
             Name = name;
             Age = age;

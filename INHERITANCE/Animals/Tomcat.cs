@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Animals
 {
-    public class Tomcats : Cat //(male)
+    public class Tomcat : Cat //(male)
     {
         private const string tomcats = "Male";
-        public Tomcats(string name, int age)
+        public Tomcat(string name, int age)
             : base(name, age, tomcats)
         {
 

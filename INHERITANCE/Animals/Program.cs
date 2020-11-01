@@ -9,7 +9,7 @@ namespace Animals
         {
             string input = string.Empty;
 
-            List<Animals> animals = new List<Animals>();
+            List<Animal> animals = new List<Animal>();
 
             while ((input = Console.ReadLine()) != "Beast!")
             {
@@ -23,7 +23,7 @@ namespace Animals
                 string gender = tokensInfo[2];
 
 
-                Animals animal;
+                Animal animal;
 
                 if (typeAnimal == "Dog")
                 {
@@ -40,7 +40,7 @@ namespace Animals
                 }
                 else if (typeAnimal == "Tomcat")
                 {
-                    animal = new Tomcats(name, age);
+                    animal = new Tomcat(name, age);
                 }
                 else if (typeAnimal == "Kitten")
                 {
@@ -48,8 +48,7 @@ namespace Animals
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input!");
-                    continue;
+                    throw new ArgumentException("Invalid input!");
                 }
 
                 animals.Add(animal);
