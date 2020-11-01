@@ -1,15 +1,16 @@
 ﻿using System;
 namespace NeedForSpeed
 {
-    public class RaceMotorcycle : Motorcycle
+    public class Car : Vehicle
     {
-        private double defaultFuelConsumption = 8;
-        public RaceMotorcycle(int horsePower, double fuel)
+        private double defaultFuelConsumption = 3;
+
+        public Car(int horsePower, double fuel)
             : base(horsePower, fuel)
         {
         }
 
-        public virtual double DefaultFuelConsumption
+        public override double DefaultFuelConsumption
         {
             get
             {
