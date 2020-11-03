@@ -13,12 +13,12 @@ namespace _01.ClassBoxData
 
         public Box(double length, double width, double height)
         {
-            this.Lenght = length;
+            this.Length = length;
             this.Width = width;
             this.Height = height;
         }
 
-        public double Lenght
+        public double Length
         {
             get
             {
@@ -26,7 +26,7 @@ namespace _01.ClassBoxData
             }
             private set
             {
-                Validation(value, nameof(Lenght));
+                Validation(value, nameof(Length));
 
                 this.length = value;
             }
@@ -80,15 +80,15 @@ namespace _01.ClassBoxData
 
 
         public double SurfaceArea()
-            => (2 * this.length * this.width) +
+            => (2 * this.Length * this.Width) +
             LateralSurfaceArea();
 
         public double LateralSurfaceArea()
-            => (2 * this.length * this.height)+
-            (2 * this.width * this.height);
+            => (2 * this.Length * this.Height)+
+            (2 * this.Width * this.Height);
 
         public double Volume()
-            => this.length * this.height * this.width;
+            => this.Length * this.Height * this.Width;
 
 
         public override string ToString()

@@ -11,6 +11,8 @@ namespace _01.ClassBoxData
             double width = double.Parse(Console.ReadLine());
             double height = double.Parse(Console.ReadLine());
 
+
+
             try
             {
                 Box box = new Box(length, width, height);
@@ -26,5 +28,6 @@ namespace _01.ClassBoxData
 
 
         }
+
     }
 }
