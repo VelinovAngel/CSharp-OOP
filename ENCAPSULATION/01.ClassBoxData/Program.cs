@@ -11,16 +11,19 @@ namespace _01.ClassBoxData
             double width = double.Parse(Console.ReadLine());
             double height = double.Parse(Console.ReadLine());
 
-            try
-            {
-                Box box = new Box(length, width, height);
+            //try
+            //{
+            //    Box box = new Box(length, width, height);
 
-            }
-            catch (ArgumentException aex)
-            {
-                Console.WriteLine(aex.Message);
-            }
+            //}
+            //catch (ArgumentException aex)
+            //{
+            //    Console.WriteLine(aex.Message);
+            //}
 
+            Box box = new Box(length, width, height);
+
+            Console.WriteLine(box.SurfaceArea());
 
         }
     }

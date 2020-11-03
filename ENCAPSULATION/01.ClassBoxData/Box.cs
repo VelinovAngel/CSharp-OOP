@@ -9,7 +9,7 @@ namespace _01.ClassBoxData
         private double width;
         private double height;
 
-        public Box(double length , double width, double height)
+        public Box(double length, double width, double height)
         {
             this.Lenght = length;
             this.Width = width;
@@ -24,7 +24,7 @@ namespace _01.ClassBoxData
             }
             private set
             {
-                Validation(value, nameof(Lenght));              
+                Validation(value, nameof(Lenght));
 
                 this.length = value;
             }
@@ -43,7 +43,7 @@ namespace _01.ClassBoxData
                 //    throw new ArgumentException(String.Format(MSG_EXC_INV_COORDINATE, nameof(Width)));
                 //}
 
-                Validation(value,nameof(Width));
+                Validation(value, nameof(Width));
 
                 this.width = value;
             }
@@ -68,12 +68,30 @@ namespace _01.ClassBoxData
             }
         }
 
-        private void Validation(double side , string paramName)
+        private void Validation(double side, string paramName)
         {
             if (side <= 0)
             {
                 throw new ArgumentException(String.Format(MSG_EXC_INV_COORDINATE, paramName));
             }
+        }
+
+
+        public double SurfaceArea()
+            => (2 * this.length * this.width) +
+            LateralSurfaceArea();
+
+        public double LateralSurfaceArea()
+            => (2 * this.length * this.height)+
+            (2 * this.width * this.height);
+
+        public double Volume()
+            => this.length * this.height * this.width;
+
+
+        public override string ToString()
+        {
+            return
         }
 
 
