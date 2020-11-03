@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+
 namespace _01.ClassBoxData
 {
     public class Box
@@ -91,7 +93,14 @@ namespace _01.ClassBoxData
 
         public override string ToString()
         {
-            return
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Surface Area - {SurfaceArea():f2}")
+                .AppendLine($"Lateral Surface Area - {LateralSurfaceArea():f2}")
+                .AppendLine($"Volume - {Volume():f2}");
+
+            return sb.ToString().TrimEnd();
+
         }
 
 

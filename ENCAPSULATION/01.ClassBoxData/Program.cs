@@ -23,7 +23,7 @@ namespace _01.ClassBoxData
 
             Box box = new Box(length, width, height);
 
-            Console.WriteLine(box.SurfaceArea());
+            Console.WriteLine(box);
 
         }
     }
