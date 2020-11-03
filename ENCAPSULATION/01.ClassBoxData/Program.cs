@@ -14,6 +14,7 @@ namespace _01.ClassBoxData
             try
             {
                 Box box = new Box(length, width, height);
+                Console.WriteLine(box);
 
             }
             catch (ArgumentException aex)
@@ -23,7 +24,6 @@ namespace _01.ClassBoxData
 
             //Box box = new Box(length, width, height);
 
-            //Console.WriteLine(box);
 
         }
     }
