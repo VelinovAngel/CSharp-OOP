@@ -7,13 +7,19 @@ namespace _03.ShoppingSpree
     {
         private string name;
         private decimal money;
-        private ICollection<Product> products;
+        private List<Product> bag;
+
+
+        private Person()
+        {
+            this.bag = new List<Product>();
+        }
 
         public Person(string name, decimal money)
+            :this()
         {
             this.Name = name;
             this.Money = money;
-            products = new List<Product>();
         }
 
 
@@ -51,7 +57,31 @@ namespace _03.ShoppingSpree
             }
         }
 
+        public List<Product> Bag
+        {
+            get
+            {
+                return this.bag;
+            }
+            private set
+            {
+                this.bag = value;
+            }
+        }
 
+
+        public string BuyProduct(Product product)
+        {
+            if (this.money < product.Cost)
+            {
+                return $"{string.Format(GlobalConstans.NothingBoughtExMSG, this.Name, product.Name)}";
+            }
+
+            this.Money -= product.Cost;
+            this.bag.Add(product);
+
+            return $"{string.Format(GlobalConstans.BoughtPorduct, this.Name, product.Name)}";
+        }
 
     }
 }
