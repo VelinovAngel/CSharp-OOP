@@ -11,8 +11,8 @@ namespace AnimalFarm.Models
 
         internal Chicken(string name, int age)
         {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
         }
 
         public string Name
@@ -24,6 +24,10 @@ namespace AnimalFarm.Models
 
             private set
             {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Name cannot be empty.");
+                }
                 this.name = value;
             }
         }
@@ -37,6 +41,11 @@ namespace AnimalFarm.Models
 
             private set
             {
+                if (value < 0 || value > 15)
+                {
+                    throw new ArgumentException("Age should be between 0 and 15.");
+                }
+
                 this.age = value;
             }
         }
