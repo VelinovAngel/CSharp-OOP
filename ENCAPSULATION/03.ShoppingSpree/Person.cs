@@ -7,8 +7,7 @@ namespace _03.ShoppingSpree
     {
         private string name;
         private decimal money;
-        private ICollection<Product> bag;
-
+        private readonly ICollection<Product> bag;
 
         private Person()
         {
@@ -21,7 +20,6 @@ namespace _03.ShoppingSpree
             this.Name = name;
             this.Money = money;
         }
-
 
         public string Name
         {
@@ -65,12 +63,11 @@ namespace _03.ShoppingSpree
             }
         }
 
-
         public string BuyProduct(Product product)
         {
             if (this.money < product.Cost)
             {
-                return $"{string.Format(GlobalConstans.NothingBoughtExMSG, this.Name, product.Name)}";
+                return $"{string.Format(GlobalConstans.NoMoneyExMSG, this.Name, product.Name)}";
             }
 
             this.Money -= product.Cost;
@@ -79,5 +76,13 @@ namespace _03.ShoppingSpree
             return $"{string.Format(GlobalConstans.BoughtPorduct, this.Name, product.Name)}";
         }
 
+        public override string ToString()
+        {
+            string result = bag.Count > 0
+                ? string.Join(", ", bag) : string.Format(GlobalConstans.NothingBoughtExMSG);
+
+            return $"{this.Name} - {result}";
+                
+        }
     }
 }

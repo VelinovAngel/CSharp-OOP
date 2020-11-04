@@ -7,7 +7,7 @@ namespace _03.ShoppingSpree
         public const string MoneyNegativeExMSG = "Money cannot be negative";
         public const string NoMoneyExMSG = "{0} can't afford {1}";
         public const string NothingBoughtExMSG = "Nothing bought";
-
+        public const string BoughtPorduct ="{0} bought {1}";
     }
 
 }
