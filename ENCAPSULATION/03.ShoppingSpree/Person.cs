@@ -50,5 +50,8 @@ namespace _03.ShoppingSpree
                 this.money = value;
             }
         }
+
+
+
     }
 }
