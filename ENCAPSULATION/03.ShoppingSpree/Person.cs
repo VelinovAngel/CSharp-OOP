@@ -7,7 +7,7 @@ namespace _03.ShoppingSpree
     {
         private string name;
         private decimal money;
-        private List<Product> bag;
+        private ICollection<Product> bag;
 
 
         private Person()
@@ -57,15 +57,11 @@ namespace _03.ShoppingSpree
             }
         }
 
-        public List<Product> Bag
+        public IReadOnlyCollection<Product> Bag
         {
             get
             {
-                return this.bag;
-            }
-            private set
-            {
-                this.bag = value;
+                return (IReadOnlyCollection<Product>)this.bag;
             }
         }
 
