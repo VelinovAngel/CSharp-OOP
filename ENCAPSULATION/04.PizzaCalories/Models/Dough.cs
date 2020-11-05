@@ -10,7 +10,7 @@ namespace _04.PizzaCalories.Models
         private string bakingTechnique;
         private double weight;
 
-        public Dough(string flourType, string bakingTechnique , double weight)
+        public Dough(string flourType, string bakingTechnique, double weight)
         {
             this.FlourType = flourType;
             this.BankingTechnique = bakingTechnique;
@@ -25,7 +25,7 @@ namespace _04.PizzaCalories.Models
             }
             private set
             {
-                ValidationType(value);
+                ValidationTypeFlour(value);
 
                 this.flourType = value;
             }
@@ -39,7 +39,7 @@ namespace _04.PizzaCalories.Models
             }
             private set
             {
-                ValidationType(value);
+                ValidationTypeBaking(value);
 
                 this.bakingTechnique = value;
             }
@@ -62,20 +62,24 @@ namespace _04.PizzaCalories.Models
             }
         }
 
-        private void ValidationType(string type)
+        private void ValidationTypeFlour(string type)
         {
 
-            if (type != "White" &&  type != "Wholegrain")
-            {
-                throw new ArgumentException(GlobalExeptions.InvTypeDough);
-            }
-            else if (type != "Crispy" && type != "Chewy" && type != "Homemade")
+            if (type != "White" && type != "Wholegrain")
             {
                 throw new ArgumentException(GlobalExeptions.InvTypeDough);
             }
         }
 
-        private double FlourModifire()
+        private void ValidationTypeBaking(string type)
+        {
+            if (type != "Crispy" && type != "Chewy" && type != "Homemade")
+            {
+                throw new ArgumentException(GlobalExeptions.InvTypeDough);
+            }
+        }
+
+        private double FlourModifier()
         {
             if (this.FlourType == "White")
             {
@@ -85,6 +89,28 @@ namespace _04.PizzaCalories.Models
             return 1.0;
         }
 
+        private double BakingTecModifier()
+        {
+            if (this.BankingTechnique == "Crispy")
+            {
+                return 0.9;
+            }
+            else if (this.BankingTechnique == "Chewy")
+            {
+                return 1.1;
+            }
+            else
+            {
+                return 1.0;
+            }
 
+        }
+
+        public double DoughCalories()
+        {
+            //weighting 100 grams will have (2 * 100) * 1.5 * 1.1 = 330.00
+
+            return (2 * this.Weight) * FlourModifier() * BakingTecModifier();
+        }
     }
 }

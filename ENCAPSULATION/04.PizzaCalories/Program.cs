@@ -7,9 +7,13 @@ namespace _04.PizzaCalories
     {
         static void Main(string[] args)
         {
+            //Dough Tip500 Chewy 100
+
             try
             {
-                Dough dough = new Dough("Margherita", "gosho", 2.20); 
+                Dough dough = new Dough("White", "Chewy", 100);
+                double value = dough.DoughCalories();
+                Console.WriteLine($"{value:f2}");
             }
             catch (ArgumentException ae)
             {
