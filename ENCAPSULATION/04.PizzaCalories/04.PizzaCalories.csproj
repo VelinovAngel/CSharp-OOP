@@ -9,6 +9,5 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ExeptionMSG\" />
-    <Folder Include="Core\" />
   </ItemGroup>
 </Project>

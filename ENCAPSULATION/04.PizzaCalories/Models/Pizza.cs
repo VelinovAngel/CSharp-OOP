@@ -35,6 +35,28 @@ namespace _04.PizzaCalories.Models
             }
         }
 
+        public Dough PizzaDough
+        {
+            get
+            {
+                return this.dough;
+            }
+            set
+            {
+                this.dough = value;
+            }
+        }
+
+        public List<Topping> Topping { get; }
+
+        public void Add(Topping topping)
+        {
+            if (this.toppings.Count >= 10)
+            {
+                throw new ArgumentException(GlobalExeptions.OutOfRangeToppingExp);
+            }
+        }
+
         private void ValidationName(string name)
         {
             if (string.IsNullOrWhiteSpace(name) || name.Length > 15)

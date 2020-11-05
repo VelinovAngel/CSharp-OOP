@@ -8,6 +8,7 @@ namespace _04.PizzaCalories.ExeptionMSG
         public const string InvalidToppingExp = "Cannot place {0} on top of your pizza.";
         public const string ToppingTypeOutOfRangeExp = "{0} weight should be in the range [1..50].";
         public const string NamePizzaLongerExp = "Pizza name should be between 1 and 15 symbols.";
+        public const string OutOfRangeToppingExp = "Number of toppings should be in range [0..10].";
 
     }
 }
