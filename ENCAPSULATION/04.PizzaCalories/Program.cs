@@ -12,8 +12,15 @@ namespace _04.PizzaCalories
             try
             {
                 Dough dough = new Dough("White", "Chewy", 100);
-                double value = dough.DoughCalories();
-                Console.WriteLine($"{value:f2}");
+                //double value = dough.DoughCalories();
+                Console.WriteLine($"{dough.DoughCalories():f2}");
+
+                //Topping meat 30
+                Topping topping = new Topping("Meat", 30);
+                Console.WriteLine($"{topping.CalculateCalories():f2}");
+
+                Pizza pizza = new Pizza("asdasdasdasdasdasdsdas");
+
             }
             catch (ArgumentException ae)
             {
