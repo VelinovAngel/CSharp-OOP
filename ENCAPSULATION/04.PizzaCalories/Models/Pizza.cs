@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using _04.PizzaCalories.ExeptionMSG;
 
 namespace _04.PizzaCalories.Models
@@ -8,17 +9,19 @@ namespace _04.PizzaCalories.Models
     {
         private string name;
         private Dough dough;
-        private ICollection<Topping> toppings;
+        private readonly ICollection<Topping> toppings;
 
-        public Pizza()
-        {
-            toppings = new List<Topping>();
-        }
+        //public Pizza()
+        //{
+        //    this.Toppings 
+        //}
 
-        public Pizza(string name)
-            :this()
+        public Pizza(string name , Dough dough)
+            
         {
             this.Name = name;
+            this.PizzaDough = dough;
+            toppings = new List<Topping>();
         }
 
         public string Name
@@ -27,7 +30,7 @@ namespace _04.PizzaCalories.Models
             {
                 return this.name;
             }
-            set
+            private set
             {
                 ValidationName(value);
 
@@ -47,22 +50,39 @@ namespace _04.PizzaCalories.Models
             }
         }
 
-        public List<Topping> Topping { get; }
+        public IReadOnlyCollection<Topping> Toppings
+        {
+            get
+            {
+                return (IReadOnlyCollection<Topping>)this.toppings;
+            }
+  
+        }
 
         public void Add(Topping topping)
         {
-            if (this.toppings.Count >= 10)
+            if (this.toppings.Count >= 10 || this.toppings.Count < 0)
             {
                 throw new ArgumentException(GlobalExeptions.OutOfRangeToppingExp);
             }
+
+            this.toppings.Add(topping);
         }
 
         private void ValidationName(string name)
         {
-            if (string.IsNullOrWhiteSpace(name) || name.Length > 15)
+            if (name == string.Empty || name.Length > 15 )
             {
                 throw new ArgumentException(GlobalExeptions.NamePizzaLongerExp);
             }
+        }
+
+        public override string ToString()
+        {
+            double calories = this.toppings.Sum(p => p.CalculateCalories());
+            double totalCal = this.PizzaDough.DoughCalories() + calories;
+
+            return $"{this.Name} - {totalCal:F2} Calories.";
         }
     }
 }

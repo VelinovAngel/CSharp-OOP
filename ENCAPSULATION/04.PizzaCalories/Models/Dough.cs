@@ -51,7 +51,7 @@ namespace _04.PizzaCalories.Models
             {
                 return this.weight;
             }
-            set
+            private set
             {
                 if (value < 1 || value > 200)
                 {
@@ -62,18 +62,19 @@ namespace _04.PizzaCalories.Models
             }
         }
 
-        private void ValidationTypeFlour(string type)
+        private void ValidationTypeFlour(string typeFlour)
         {
-
-            if (type != "White" && type != "Wholegrain")
+            string type = typeFlour.ToLower();
+            if (type != "white" && type != "wholegrain")
             {
                 throw new ArgumentException(GlobalExeptions.InvTypeDough);
             }
         }
 
-        private void ValidationTypeBaking(string type)
+        private void ValidationTypeBaking(string baking)
         {
-            if (type != "Crispy" && type != "Chewy" && type != "Homemade")
+            string type = baking.ToLower();
+            if (type != "crispy" && type != "chewy" && type != "homemade")
             {
                 throw new ArgumentException(GlobalExeptions.InvTypeDough);
             }
@@ -81,7 +82,8 @@ namespace _04.PizzaCalories.Models
 
         private double FlourModifier()
         {
-            if (this.FlourType == "White")
+            string type = this.FlourType.ToLower();
+            if (type == "white")
             {
                 return 1.5;
             }
@@ -91,11 +93,12 @@ namespace _04.PizzaCalories.Models
 
         private double BakingTecModifier()
         {
-            if (this.BankingTechnique == "Crispy")
+            string technic = this.BankingTechnique.ToLower();
+            if (technic == "crispy")
             {
                 return 0.9;
             }
-            else if (this.BankingTechnique == "Chewy")
+            else if (technic == "chewy")
             {
                 return 1.1;
             }

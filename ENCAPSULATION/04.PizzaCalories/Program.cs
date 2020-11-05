@@ -10,64 +10,48 @@ namespace _04.PizzaCalories
         {
             //Dough Tip500 Chewy 100
 
-            Pizza pizza;
-            Dough dough;
-
             try
             {
-                string[] input = Console.ReadLine()
-                    .Split(' ')
-                    .ToArray();
-                string namePizza = input[1];
-                pizza = new Pizza(namePizza);
-            }
-            catch (ArgumentException ae)
-            {
-                Console.WriteLine(ae.Message);
-                return;
-            }
+                string[] pizzaTokens = Console.ReadLine().
+                    Split(" ");
 
-            try
-            {
-                string[] input = Console.ReadLine()
-                    .Split(' ')
-                    .ToArray();
-                string typeDough = input[1];
-                string technique = input[2];
-                double weight = double.Parse(input[3]);
-                dough = new Dough(typeDough, technique, weight);
+                string pizzaName = pizzaTokens[1];
 
-                pizza.PizzaDough = dough;
-            }
-            catch (ArgumentException ae)
-            {
-                Console.WriteLine(ae.Message);
-                return;
-            }
+                string[] doughTokens = Console.ReadLine().
+                    Split(" ");
 
-            string inputTopping = string.Empty;
-            while ((inputTopping = Console.ReadLine()) != "END")
-            {
-                //Topping Sauce 20
-                try
+                string doughName = doughTokens[1];
+                string bakeType = doughTokens[2];
+                double doughWeight = double.Parse(doughTokens[3]);
+
+                Dough dough = new Dough(doughName, bakeType, doughWeight);
+
+                Pizza pizza = new Pizza(pizzaName, dough);
+
+                string command = Console.ReadLine();
+
+                while (command.ToUpper() != "END")
                 {
-                    string[] tokens = inputTopping
-                        .Split(' ')
-                        .ToArray();
+                    string[] toppingTokens = command.
+                        Split(" ");
 
-                    string toppingName = tokens[1];
-                    double toppingWeight = double.Parse(tokens[1]);
+                    string toppingName = toppingTokens[1];
+                    double toppingWeight = double.Parse(toppingTokens[2]);
 
                     Topping topping = new Topping(toppingName, toppingWeight);
 
                     pizza.Add(topping);
 
+                    command = Console.ReadLine();
                 }
-                catch (ArgumentException ae)
-                {
-                    Console.WriteLine(ae.Message);
-                    return;
-                }
+
+                Console.WriteLine(pizza);
+
+            }
+            catch (ArgumentException ae)
+            {
+                Console.WriteLine(ae.Message);
+                return;
             }
         }
     }

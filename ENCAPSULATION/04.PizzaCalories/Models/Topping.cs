@@ -82,7 +82,7 @@ namespace _04.PizzaCalories.Models
 
         public double CalculateCalories()
         {
-            return 2 * ToppingTypeCalories() * this.weight;
+            return 2 * ToppingTypeCalories() * Weight;
         }
 
 
