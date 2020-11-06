@@ -9,10 +9,8 @@ namespace _04.PizzaCalories
     {
         static void Main(string[] args)
         {
-
             Engine engine = new Engine();
-            engine.Run();
-           
+            engine.Run(); 
         }
     }
 }
