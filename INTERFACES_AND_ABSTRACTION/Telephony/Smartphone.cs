@@ -28,15 +28,7 @@ namespace Telephony
 
         public string Call(string number)
         {
-            if (number.Length < 7 || number.Length > 10)
-            {
-                throw new ArgumentException("Invalid number!");
-            }
-            else if (string.IsNullOrWhiteSpace(number))
-            {
-                throw new ArgumentException("Invalid number!");
-            }
-            else if (!number.All(x => char.IsDigit(x)))
+            if (string.IsNullOrWhiteSpace(number) || (!number.All(x => char.IsDigit(x))))
             {
                 throw new ArgumentException("Invalid number!");
             }
