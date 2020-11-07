@@ -4,9 +4,9 @@ namespace Shapes
 {
     public class Circle : IDrawable
     {
-        private double radius;
+        private int radius;
 
-        public Circle(double radius)
+        public Circle(int radius)
         {
             this.radius = radius;
         }
