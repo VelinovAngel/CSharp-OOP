@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Telephony.GlobalConstans;
+
 namespace Telephony
 {
     public class StartUp
@@ -31,7 +33,7 @@ namespace Telephony
                     }
                     else
                     {
-                        Console.WriteLine("Invalid number!");
+                        throw new ArgumentException(Constant.InvalidNumberExp);
                     }
                 }
                 catch (ArgumentException ae)

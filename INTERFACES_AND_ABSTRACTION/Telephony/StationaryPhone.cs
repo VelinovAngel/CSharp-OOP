@@ -1,4 +1,5 @@
 ﻿using System;
+using Telephony.GlobalConstans;
 using Telephony.Interfaces;
 
 namespace Telephony
@@ -13,7 +14,7 @@ namespace Telephony
         {
             if (number.Length < 7 || number.Length > 10)
             {
-                throw new ArgumentException("Invalid number!");
+                throw new ArgumentException(Constant.InvalidNumberExp);
             }
             else
             {

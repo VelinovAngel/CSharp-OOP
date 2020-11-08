@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Telephony.GlobalConstans;
 using Telephony.Interfaces;
 
 namespace Telephony
@@ -16,7 +17,7 @@ namespace Telephony
             //[] currUrl = url.ToCharArray();
             if (url.Any(x => char.IsDigit(x)) || string.IsNullOrWhiteSpace(url))
             {
-                throw new ArgumentException("Invalid URL!");
+                throw new ArgumentException(Constant.InvalidUrlExp);
             }
             else
             {
@@ -30,7 +31,7 @@ namespace Telephony
         {
             if (string.IsNullOrWhiteSpace(number) || (!number.All(x => char.IsDigit(x))))
             {
-                throw new ArgumentException("Invalid number!");
+                throw new ArgumentException(Constant.InvalidNumberExp);
             }
             else
             {
