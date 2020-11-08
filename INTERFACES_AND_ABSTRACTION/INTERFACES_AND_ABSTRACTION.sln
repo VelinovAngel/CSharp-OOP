@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BorderControl", "04.Bord
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.BirthdayCelebrations", "05.BirthdayCelebrations\05.BirthdayCelebrations.csproj", "{6A589700-D362-4CD2-912B-1658ABC631AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FoodShortage", "06.FoodShortage\06.FoodShortage.csproj", "{4EC40702-6B96-4F86-BE4C-7AB982660CC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +45,9 @@ Global
 		{6A589700-D362-4CD2-912B-1658ABC631AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A589700-D362-4CD2-912B-1658ABC631AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A589700-D362-4CD2-912B-1658ABC631AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC40702-6B96-4F86-BE4C-7AB982660CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC40702-6B96-4F86-BE4C-7AB982660CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC40702-6B96-4F86-BE4C-7AB982660CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC40702-6B96-4F86-BE4C-7AB982660CC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
