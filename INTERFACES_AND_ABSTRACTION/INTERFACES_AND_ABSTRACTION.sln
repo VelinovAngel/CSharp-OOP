@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonInfo", "PersonInfo\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telephony", "Telephony\Telephony.csproj", "{30374E9C-5FEB-4D97-A997-CEE11D01398C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BorderControl", "04.BorderControl\04.BorderControl.csproj", "{59271026-9702-4C26-B436-35486296A924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{30374E9C-5FEB-4D97-A997-CEE11D01398C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30374E9C-5FEB-4D97-A997-CEE11D01398C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30374E9C-5FEB-4D97-A997-CEE11D01398C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59271026-9702-4C26-B436-35486296A924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59271026-9702-4C26-B436-35486296A924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59271026-9702-4C26-B436-35486296A924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59271026-9702-4C26-B436-35486296A924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
