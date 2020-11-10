@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MathOperation
+namespace Operations
 {
-    class Program
+    class StartUp
     {
         static void Main(string[] args)
         {
