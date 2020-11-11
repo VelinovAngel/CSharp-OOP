@@ -18,6 +18,7 @@ namespace _01.Vehicles.Models
 
         public double FuelConsumpiton { get => this.fuelConsumption; private set => this.fuelConsumption = value; }
 
+
         public void Drive(double distance)
         {
             double consumption = this.FuelConsumpiton * distance;

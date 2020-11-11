@@ -23,8 +23,7 @@ namespace _01.Vehicles
 
             IVehicle car = new Car(fuelCar, distanceCar);
             IVehicle truck = new Truck(fuelTruck, distanceTruck);
-            
-
+     
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++)
@@ -61,8 +60,8 @@ namespace _01.Vehicles
                 }
             }
 
-            Console.WriteLine($"Car: {Math.Round(car.FuelQuantity,2,MidpointRounding.AwayFromZero)}");
-            Console.WriteLine($"Truck: {Math.Round(truck.FuelQuantity,2,MidpointRounding.AwayFromZero)}");
+            Console.WriteLine($"Car: {car.FuelQuantity:f2}");
+            Console.WriteLine($"Truck: {truck.FuelQuantity:f2}");
 
         }
     }

@@ -11,6 +11,5 @@ namespace _01.Vehicles
 
         public void Refuel(double fuel);
 
-        
     }
 }
