@@ -11,5 +11,6 @@
     <Folder Include="Models\Foods\" />
     <Folder Include="Models\Animals\" />
     <Folder Include="Models\Foods\Interfaces\" />
+    <Folder Include="Models\Animals\Interfaces\" />
   </ItemGroup>
 </Project>
