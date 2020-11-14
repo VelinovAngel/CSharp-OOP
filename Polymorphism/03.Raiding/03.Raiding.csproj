@@ -6,4 +6,7 @@
     <RootNamespace>_03.Raiding</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>
