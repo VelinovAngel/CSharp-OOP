@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using _03.Raiding.Models;
 
 namespace _03.Raiding
@@ -7,9 +8,10 @@ namespace _03.Raiding
     {
         static void Main(string[] args)
         {
-            Druid druid = new Druid("Gosho");
 
-            Console.WriteLine(druid.CastAbility());
+            BaseHero baseHero = new Druid("Gosho");
+
+            baseHero.Add(new Druid("Pesho"));
         }
     }
 }
