@@ -7,5 +7,10 @@ namespace _03.Raiding.Models
             :base(name, 80)
         {
         }
+
+        public override string CastAbility()
+        {
+            return $"{GetType().Name} – {this.Name} hit for {this.Power} demage";
+        }
     }
 }

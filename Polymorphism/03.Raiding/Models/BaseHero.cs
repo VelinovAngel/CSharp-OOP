@@ -1,63 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using _03.Raiding.Interfaces;
 
 namespace _03.Raiding.Models
 {
-    public abstract class BaseHero
+    public abstract class BaseHero : ICastable
     {
-        private const string INV_HERO = "Invalid hero!";
 
-        private ICollection<BaseHero> heroes;
-
-
-
-        protected BaseHero(string name)
+        protected BaseHero(string name, int power)
         {
             this.Name = name;
-            heroes = new List<BaseHero>();
+            this.Power = power;
         }
 
-        public string Name { get; }
+        public string Name { get; private set; }
 
-        protected abstract int Power { get; }
+        public int Power { get; private set; }
 
-        protected IReadOnlyCollection<BaseHero> Heros
+        public virtual string CastAbility()
         {
-            get
-            {
-                return (IReadOnlyCollection<BaseHero>)this.heroes;
-            }
-            private set
-            {
-                ValidationHero(value, GetType().Name);
-
-                this.heroes = (ICollection<BaseHero>)value;
-            }
-        }
-
-        public abstract string CastAbility();
-
-        private IReadOnlyCollection<BaseHero> ValidationHero(IReadOnlyCollection<BaseHero> value , string typeHero)
-        {
-            switch (typeHero)
-            {
-                case "Druid": 
-                    return value;
-                case "Paladin":
-                    return value;
-                case "Rogue":
-                    return value;
-                case "Warrior":
-                    return value;
-                default:
-                    throw new InvalidOperationException(INV_HERO);
-                    
-            }
-        }
-
-        public void Add(BaseHero hero)
-        {
-            heroes.Add(hero);
+            return $"{GetType().Name} – {this.Name} healed for {this.Power}";
         }
     }
 }
