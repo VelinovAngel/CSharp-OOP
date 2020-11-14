@@ -1,6 +1,6 @@
 ﻿namespace _04.WildFarm.Models.Foods.Interfaces
 {
-    public interface IFoods
+    public interface IFood
     {
         int Quantity { get; }
     }
