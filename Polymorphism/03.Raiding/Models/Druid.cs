@@ -3,9 +3,18 @@ namespace _03.Raiding.Models
 {
     public class Druid : BaseHero
     {
-        public Druid(string name, int power)
-            : base(name, power)
+        private const int power = 80;
+
+
+        public Druid(string name)
+            : base(name)
         {
+            
+        }
+
+        public override string CastAbility()
+        {
+            return $"{GetType().Name} – {this.Name} healed for {power}";
         }
     }
 }

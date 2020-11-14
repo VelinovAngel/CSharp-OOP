@@ -5,9 +5,11 @@ namespace _03.Raiding
 {
     class Program
     {
-        BaseHero druid = new Druid("Gosho", 80);
+        static void Main(string[] args)
+        {
+            Druid druid = new Druid("Gosho");
 
-
-        Console.WriteLine( );
+            Console.WriteLine(druid.CastAbility());
+        }
     }
 }
