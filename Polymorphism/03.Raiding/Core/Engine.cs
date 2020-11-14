@@ -12,28 +12,32 @@ namespace _03.Raiding.Core
 
         public Engine()
         {
-            heroes =new List<BaseHero>();
+            heroes = new List<BaseHero>();
         }
 
         public void Run()
         {
-            int n = int.Parse(Console.ReadLine());
+            int lines = int.Parse(Console.ReadLine());
+            int counter = 0;
 
-            try
+            while (lines != counter)
             {
-                for (int i = 0; i < n; i++)
+                string name = Console.ReadLine();
+                string type = Console.ReadLine();
+
+                try
                 {
-                    string name = Console.ReadLine();
-                    string type = Console.ReadLine();
 
                     BaseHero baseHero = FactoryHeros.CreateHero(type, name);
                     heroes.Add(baseHero);
+                    counter++;
 
                 }
-            }
-            catch (InvalidOperationException ioe)
-            {
-                Console.WriteLine(ioe.Message);
+                catch (InvalidOperationException ioe)
+                {
+                    Console.WriteLine(ioe.Message);
+                }
+
             }
 
             double bossPower = double.Parse(Console.ReadLine());

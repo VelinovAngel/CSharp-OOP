@@ -19,7 +19,7 @@ namespace _03.Raiding.Models
 
         public virtual string CastAbility()
         {
-            return $"{GetType().Name} – {this.Name} healed for {this.Power}";
+            return $"{GetType().Name} - {this.Name} healed for {this.Power}";
         }
     }
 }

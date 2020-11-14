@@ -10,7 +10,7 @@ namespace _03.Raiding.Models
 
         public override string CastAbility()
         {
-            return $"{GetType().Name} – {this.Name} hit for {this.Power} demage";
+            return $"{GetType().Name} - {this.Name} hit for {this.Power} damage";
         }
     }
 }
