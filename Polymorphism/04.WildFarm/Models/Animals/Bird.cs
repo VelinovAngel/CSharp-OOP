@@ -1,10 +1,19 @@
 ﻿using System;
 namespace _04.WildFarm.Models.Animals
 {
-    public class Bird
+    public abstract class Bird : Animal
     {
-        public Bird()
+        protected Bird(string name, double weight , double wingSize)
+            : base(name, weight)
         {
+            this.WingSize = wingSize;
+        }
+
+        public double WingSize { get;}
+
+        public override string ToString()
+        {
+            return base.ToString() + $"{this.WingSize}, {this.Weight}, {this.FoodEaten}]"; 
         }
     }
 }

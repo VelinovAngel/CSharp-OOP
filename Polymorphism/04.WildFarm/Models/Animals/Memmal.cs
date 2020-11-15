@@ -9,5 +9,10 @@
         }
 
         public string LivingRegion { get;}
+
+        public override string ToString()
+        {
+            return base.ToString() + $"{this.Weight}, {this.LivingRegion}, {this.FoodEaten}]";
+        }
     }
 }

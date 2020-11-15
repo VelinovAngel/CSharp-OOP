@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using _04.WildFarm.Models.Foods;
 
 namespace _04.WildFarm.Models.Animals
 {
-    public class Owl : Bird
+    public class Tiger : Feline
     {
-        public Owl(string name, double weight, double wingSize)
-            : base(name, weight, wingSize)
+        public Tiger(string name, double weight, string livingRegion, string breed) : base(name, weight, livingRegion, breed)
         {
         }
 
-        public override double WeightMultiplier => 0.25;
+        public override double WeightMultiplier => 1.0;
 
         public override ICollection<Type> PreferredFoods =>
             new List<Type>() { typeof(Meat) };
 
         public override string ProduceSound()
         {
-            return "Hoot Hoot";
+            return "ROAR!!!";
         }
     }
 }

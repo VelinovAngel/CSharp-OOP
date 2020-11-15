@@ -12,5 +12,9 @@
     <Folder Include="Models\Animals\" />
     <Folder Include="Models\Foods\Interfaces\" />
     <Folder Include="Models\Animals\Interfaces\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Interface\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

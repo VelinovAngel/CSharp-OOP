@@ -1,12 +1,14 @@
-﻿using System;
+﻿using _04.WildFarm.Core;
+using _04.WildFarm.Core.Interface;
 
 namespace _04.WildFarm
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IEngine engine = new Engine();
+            engine.Run();
         }
     }
 }
