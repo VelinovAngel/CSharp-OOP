@@ -19,7 +19,7 @@ namespace _07.MilitaryElite.Models
 
         public void AddPrivate(IPrivate @private)
         {
-            throw new NotImplementedException();
+            this.privates.Add(@private);
         }
     }
 }
