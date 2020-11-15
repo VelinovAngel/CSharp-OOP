@@ -1,7 +1,10 @@
-﻿using System;
+﻿using System.Collections.Generic;
+
 namespace _07.MilitaryElite.Contracts
 {
-    public interface IEngineer
+    public interface IEngineer : ISpecialisedSoldier
     {
+        IReadOnlyCollection<IRepair> Repairs { get; }
+
     }
 }

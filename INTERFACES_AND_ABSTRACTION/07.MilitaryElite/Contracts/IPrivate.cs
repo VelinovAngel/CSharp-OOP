@@ -1,7 +1,7 @@
-﻿using System;
-namespace _07.MilitaryElite.Contracts
+﻿namespace _07.MilitaryElite.Contracts
 {
-    public enum IPrivate : ISoldier
+    public interface IPrivate : ISoldier
     {
+        decimal Salary { get; }
     }
 }
