@@ -12,5 +12,9 @@
     <Folder Include="Models\" />
     <Folder Include="Enumerations\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Core\Contracts\" />
+    <Folder Include="IO\" />
+    <Folder Include="IO\Contracts\" />
+    <Folder Include="Factory\" />
   </ItemGroup>
 </Project>

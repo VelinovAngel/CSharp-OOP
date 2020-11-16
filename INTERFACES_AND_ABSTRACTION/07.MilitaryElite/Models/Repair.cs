@@ -1,10 +1,18 @@
-﻿using System;
+﻿
+using _07.MilitaryElite.Contracts;
+
 namespace _07.MilitaryElite.Models
 {
-    public class Repair
+    public class Repair : IRepair
     {
-        public Repair()
+        public Repair(string partName , int hoursWorked)
         {
+            this.PartName = partName;
+            this.HoursWorked = hoursWorked;
+
         }
+        public string PartName { get; private set; }
+
+        public int HoursWorked { get; private set; }
     }
 }

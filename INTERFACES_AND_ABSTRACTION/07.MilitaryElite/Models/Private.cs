@@ -1,10 +1,15 @@
-﻿using System;
+﻿using _07.MilitaryElite.Contracts;
+
 namespace _07.MilitaryElite.Models
 {
-    public class Private
+    public class Private : Soldier, IPrivate
     {
-        public Private()
+        public Private(int id, string firstName, string lastName, decimal salary)
+            : base(id, firstName, lastName)
         {
+            this.Salary = salary;
         }
+
+        public decimal Salary { get; private set; }
     }
 }

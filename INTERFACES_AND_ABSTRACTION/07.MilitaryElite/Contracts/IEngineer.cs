@@ -6,5 +6,7 @@ namespace _07.MilitaryElite.Contracts
     {
         IReadOnlyCollection<IRepair> Repairs { get; }
 
+        void AddRepair(IRepair repair);
+
     }
 }
