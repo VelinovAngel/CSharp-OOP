@@ -12,5 +12,11 @@ namespace _07.MilitaryElite.Models
         }
 
         public int CodeNumber { get; private set; }
+
+        public override string ToString()
+        {
+            return base.ToString() + Environment.NewLine +
+                $"Code Number: {CodeNumber}";
+        }
     }
 }

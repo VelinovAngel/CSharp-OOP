@@ -11,5 +11,10 @@ namespace _07.MilitaryElite.Models
         }
 
         public decimal Salary { get; private set; }
+
+        public override string ToString()
+        {
+            return base.ToString() + $" Salary: {this.Salary:f2}";
+        }
     }
 }

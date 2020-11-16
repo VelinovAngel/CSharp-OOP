@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Text;
 using System.Collections.Generic;
 using _07.MilitaryElite.Contracts;
 
@@ -20,6 +20,21 @@ namespace _07.MilitaryElite.Models
         public void AddRepair(IRepair repair)
         {
             repairs.Add(repair);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(base.ToString())
+                .AppendLine("Repairs: ");
+
+            foreach (var repair in repairs)
+            {
+                sb.AppendLine(repair.ToString());
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

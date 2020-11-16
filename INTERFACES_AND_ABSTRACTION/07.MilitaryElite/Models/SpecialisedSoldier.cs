@@ -29,5 +29,11 @@ namespace _07.MilitaryElite.Models
                 return corps;
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + Environment.NewLine
+                + $"Corps: {Corps.ToString()}";
+        }
     }
 }

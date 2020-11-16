@@ -3,8 +3,8 @@ namespace _07.MilitaryElite.IO.Contracts
 {
     public interface IWriter
     {
-        string Write(string text);
+        void Write(string text);
 
-        string WriteLine(string text);
+        void WriteLine(string text);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using _07.MilitaryElite.Contracts;
 
 namespace _07.MilitaryElite.Models
@@ -18,6 +19,21 @@ namespace _07.MilitaryElite.Models
         public void AddMisions(IMission mission)
         {
             this.missions.Add(mission);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(base.ToString())
+                .AppendLine("Missions: ");
+
+            foreach (var mission in missions)
+            {
+                sb.AppendLine(mission.ToString());
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

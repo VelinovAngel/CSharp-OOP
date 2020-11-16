@@ -1,12 +1,20 @@
-﻿using System;
+﻿using _07.MilitaryElite.IO;
+using _07.MilitaryElite.Core;
+using _07.MilitaryElite.Core.Contracts;
+using _07.MilitaryElite.IO.Contracts;
 
 namespace _07.MilitaryElite
 {
-    class StartUp
+    public class StartUp
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            
+            IReader reader = new Reader();
+            IWriter writer = new Writer();
+
+            IEngine engine = new Engine(reader,writer);
+            engine.Run();
+
         }
     }
 }
