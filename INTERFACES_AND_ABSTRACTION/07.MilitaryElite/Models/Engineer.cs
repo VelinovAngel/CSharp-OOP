@@ -27,7 +27,7 @@ namespace _07.MilitaryElite.Models
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine(base.ToString())
-                .AppendLine("Repairs: ");
+                .AppendLine("Repairs:");
 
             foreach (var repair in repairs)
             {

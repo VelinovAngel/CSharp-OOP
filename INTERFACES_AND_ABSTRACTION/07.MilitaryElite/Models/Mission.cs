@@ -10,6 +10,7 @@ namespace _07.MilitaryElite.Models
     {
         public Mission(string codeName , string state)
         {
+            this.CodeName = codeName;
             this.State = this.TryParseState(state);
         }
 
@@ -45,7 +46,7 @@ namespace _07.MilitaryElite.Models
 
         public override string ToString()
         {
-            return $"Code Name: {CodeName} State: {State.ToString()}";
+            return $"  Code Name: {CodeName} State: {State.ToString()}";
         }
     }
 }
