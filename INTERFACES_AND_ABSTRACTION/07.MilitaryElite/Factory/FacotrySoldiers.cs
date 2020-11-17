@@ -104,6 +104,5 @@ namespace _07.MilitaryElite.Factory
             }
             return (Soldier)soldier;
         }
-
     }
 }
