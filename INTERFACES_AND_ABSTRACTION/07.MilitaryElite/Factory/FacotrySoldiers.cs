@@ -63,7 +63,6 @@ namespace _07.MilitaryElite.Factory
                 }
 
                 soldier = engineer;
-
             }
             else if (soldierType == "Commando")
             {
