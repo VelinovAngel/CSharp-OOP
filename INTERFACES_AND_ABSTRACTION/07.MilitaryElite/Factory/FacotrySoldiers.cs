@@ -16,7 +16,6 @@ namespace _07.MilitaryElite.Factory
             soldiers = new List<ISoldier>();
         }
 
-
         public Soldier CreateSoldier(string soldierType, int id, string firstName, string lastName, string[] arg)
         {
             ISoldier soldier = null;
