@@ -14,7 +14,6 @@ namespace _07.MilitaryElite
 
             IEngine engine = new Engine(reader,writer);
             engine.Run();
-
         }
     }
 }
