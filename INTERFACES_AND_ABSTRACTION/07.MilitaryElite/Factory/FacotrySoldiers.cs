@@ -42,7 +42,6 @@ namespace _07.MilitaryElite.Factory
                 }
 
                 soldier = general;
-
             }
             else if (soldierType == "Engineer")
             {
