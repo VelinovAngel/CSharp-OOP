@@ -17,7 +17,6 @@ namespace _07.MilitaryElite.Models
 
         public string LastName { get; private set; }
 
-
         public override string ToString()
         {
             return $"Name: {this.FirstName} {this.LastName} Id: {this.Id}";
