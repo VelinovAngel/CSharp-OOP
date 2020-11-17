@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
+using System.Collections.Generic;
 using _07.MilitaryElite.Contracts;
 
 namespace _07.MilitaryElite.Models
