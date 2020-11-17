@@ -33,7 +33,7 @@ namespace _07.MilitaryElite.Models
         public override string ToString()
         {
             return base.ToString() + Environment.NewLine
-                + $"Corps: {Corps.ToString()}";
+                + $"Corps: {Corps}";
         }
     }
 }
