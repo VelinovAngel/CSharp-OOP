@@ -1,5 +1,4 @@
-﻿
-using _07.MilitaryElite.Contracts;
+﻿using _07.MilitaryElite.Contracts;
 
 namespace _07.MilitaryElite.Models
 {
