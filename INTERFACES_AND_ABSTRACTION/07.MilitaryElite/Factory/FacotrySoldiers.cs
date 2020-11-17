@@ -89,7 +89,6 @@ namespace _07.MilitaryElite.Factory
                     }
                 }
                 soldier = commando;
-
             }
             else if (soldierType == "Spy")
             {
