@@ -42,7 +42,6 @@ namespace _05.BirthdayCelebrations
             .Select(c => c.Birthdate)
             .ToList()
             .ForEach(dt => Console.WriteLine($"{dt:dd/mm/yyyy}"));
-
         }
     }
 }
