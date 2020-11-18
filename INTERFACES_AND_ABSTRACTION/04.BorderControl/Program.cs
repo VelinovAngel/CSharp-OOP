@@ -43,7 +43,6 @@ namespace _04.BorderControl
             .Select(c => c.Id)
             .ToList()
             .ForEach(Console.WriteLine);
-
         }
     }
 }
