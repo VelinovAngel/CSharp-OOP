@@ -37,7 +37,6 @@ namespace _06.FoodShortage
                     string group = input[2];
 
                     buyers.Add(new Rebel(name, age, group));
-                   
                 }
             }
 
@@ -52,7 +51,6 @@ namespace _06.FoodShortage
                     buyer.BuyFood();
                 }
             }
-
             Console.WriteLine(buyers.Sum(x=>x.Food));
         }
     }
