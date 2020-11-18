@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
 
 using _07.MilitaryElite.Factory;
 using _07.MilitaryElite.Contracts;
 using _07.MilitaryElite.IO.Contracts;
 using _07.MilitaryElite.Core.Contracts;
-using _07.MilitaryElite.Exceptions;
 
 namespace _07.MilitaryElite.Core
 {
@@ -55,12 +53,10 @@ namespace _07.MilitaryElite.Core
                 {
                     soldier = facotry.CreateSoldier(soldierType, id, firstName, lastName, remainingAgm);
                 }
-                catch (InvalidCorpException ice)
+                catch (Exception exp)
                 {
                     continue;
                 }
-
-
             }
 
             foreach (var soldier in facotry.soldiers)

@@ -26,7 +26,6 @@ namespace _05.BirthdayCelebrations
                     string id = tokens[3];
                     string birthdata = tokens[4];
 
-
                     all.Add(new Citizen(name, age, id , birthdata)); 
                 }
                 else if (tokens[0] == "Pet")
