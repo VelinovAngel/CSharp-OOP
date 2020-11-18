@@ -34,8 +34,7 @@ namespace _04.BorderControl
                     string id = tokens[1];
 
                     all.Add(new Robot(name, id));
-                }
-                
+                }       
             }
 
             string fakeId = Console.ReadLine();
