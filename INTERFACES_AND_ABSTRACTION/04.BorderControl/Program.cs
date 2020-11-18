@@ -25,7 +25,6 @@ namespace _04.BorderControl
                     int age = int.Parse(tokens[1]);
                     string id = tokens[2];
 
-
                     all.Add(new Citizen(name, age, id)); 
                 }
 
