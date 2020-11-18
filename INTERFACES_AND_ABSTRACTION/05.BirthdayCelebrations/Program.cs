@@ -34,8 +34,7 @@ namespace _05.BirthdayCelebrations
                     string birthdate = tokens[2];
 
                     all.Add(new Pet(name, birthdate));
-                }
-                
+                }   
             }
 
             int fakeId = int.Parse(Console.ReadLine());
