@@ -11,7 +11,6 @@ namespace Cars
 
             Console.WriteLine(seat.ToString());
             Console.WriteLine(tesla.ToString());
-
         }
     }
 }
