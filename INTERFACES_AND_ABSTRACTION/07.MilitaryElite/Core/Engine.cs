@@ -5,6 +5,7 @@ using _07.MilitaryElite.Factory;
 using _07.MilitaryElite.Contracts;
 using _07.MilitaryElite.IO.Contracts;
 using _07.MilitaryElite.Core.Contracts;
+using _07.MilitaryElite.Exceptions;
 
 namespace _07.MilitaryElite.Core
 {
