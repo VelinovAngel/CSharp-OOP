@@ -61,7 +61,7 @@ namespace _07.MilitaryElite.Core
 
             foreach (var soldier in facotry.soldiers)
             {
-                Console.WriteLine(soldier);
+                writer.WriteLine(soldier);
             }
 
         }
