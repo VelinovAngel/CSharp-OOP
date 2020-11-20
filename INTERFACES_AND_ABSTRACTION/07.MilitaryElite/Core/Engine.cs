@@ -62,7 +62,6 @@ namespace _07.MilitaryElite.Core
             {
                 writer.WriteLine(soldier);
             }
-
         }
     }
 }
