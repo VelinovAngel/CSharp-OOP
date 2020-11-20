@@ -39,7 +39,6 @@ namespace Telephony
                 {
                     Console.WriteLine(ae.Message);
                 }
-
             }
 
             for (int i = 0; i < urls.Length; i++)
