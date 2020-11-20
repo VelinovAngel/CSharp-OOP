@@ -27,7 +27,6 @@ namespace Shapes
                 }
                 Console.WriteLine();
             }
-
         }
     }
 }
