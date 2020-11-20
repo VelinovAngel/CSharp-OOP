@@ -22,7 +22,6 @@ namespace Telephony
             else
             {
                 return $"Browsing: {url}!";
-
             }
         }
 
