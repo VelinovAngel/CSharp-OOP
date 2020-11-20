@@ -24,7 +24,6 @@ namespace Telephony
                 return $"Browsing: {url}!";
 
             }
-
         }
 
         public string Call(string number)
