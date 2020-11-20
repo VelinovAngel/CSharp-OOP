@@ -29,7 +29,6 @@ namespace Telephony
                     else if (numbers[i].Length == 10)
                     {
                         Console.WriteLine(smartphone.Call(numbers[i]));
-
                     }
                     else
                     {
