@@ -34,7 +34,6 @@ namespace _07.MilitaryElite.Core
             string command = string.Empty;
             while ((command = this.reader.ReadLine()) != "End")
             {
-
                 string[] cmdArg = command
                     .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                     .ToArray();
