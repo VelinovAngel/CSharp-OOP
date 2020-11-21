@@ -28,7 +28,7 @@ namespace _01.Logger.Factories
 
             object[] ctorArg = new object[] { };
 
-            ILayout layout = (ILayout)Activator.CreateInstance(layoutType, BindingFlags.Public | BindingFlags.Instance , ctorArg);
+            ILayout layout = (ILayout)Activator.CreateInstance(layoutType , ctorArg);
 
             return layout; 
         }
