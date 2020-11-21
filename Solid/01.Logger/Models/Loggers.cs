@@ -18,7 +18,7 @@ namespace _01.Logger.Models
         }
 
         public IReadOnlyCollection<IAppender> Appenders
-            => (IReadOnlyCollection<IAppender>)this.appenders; 
+            => (IReadOnlyCollection<IAppender>)this.appenders;
 
         public void Log(IError error)
         {
@@ -31,4 +31,5 @@ namespace _01.Logger.Models
             }
         }
     }
+
 }

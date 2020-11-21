@@ -3,6 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 
 using _01.Logger.Common;
+using _01.Logger.Models
+using _01.Logger.Factories;
 using _01.Logger.IOManegment;
 using _01.Logger.Models.Contracts;
 using _01.Logger.Models.Enumerations;
@@ -12,6 +14,11 @@ namespace _01.Logger
 {
     public class StartUp
     {
+        private readonly LayoutFactory layoutFactory;
+        private readonly AppenderFactory appenderFactory;
+        private readonly IPathManager pathManager;
+
+
         static void Main(string[] args)
         {
             IReader reader = new ConsoleReader();
@@ -20,7 +27,7 @@ namespace _01.Logger
 
         }
 
-        private ILogger SetUpLogger(int appenderCount, IWriter writer, IReader reader)
+        private ILogger SetUpLogger(int appenderCount, IWriter writer, IReader reader , IFile file)
         {
             ICollection<IAppender> appenders = new HashSet<IAppender>();
 
@@ -41,9 +48,23 @@ namespace _01.Logger
                 {
                     continue;
                 }
+                try
+                {
+                    ILayout layout = this.layoutFactory.CreateLayout(layoutType);
+                    IAppender appender = this.appenderFactory.CreateAppender(appenderType, layout, level , file);
+
+                    appenders.Add(appender);
+                }
+                catch (InvalidOperationException ioe)
+                {
+                    writer.WriteLine(ioe.Message);
+                    continue;
+                }
             }
 
-            return ;
+            ILogger logger = new Loggers(appenders);
+
+            return logger;
         }
 
         private Level ParseLevel(string[] levelStr, IWriter writer, ref bool hasError)
