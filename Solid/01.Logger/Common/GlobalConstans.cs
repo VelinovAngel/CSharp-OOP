@@ -9,5 +9,7 @@
         public const string InvalidLayoutType = "Invalid layout type!";
 
         public const string InvalidAppenderType = "Invalid appender type!";
+
+        public const string InvalidDateTimeFormat = "Invalid DateTime Format!";
     }
 }
