@@ -14,5 +14,7 @@
     <Folder Include="Models\Errors\" />
     <Folder Include="Models\Files\" />
     <Folder Include="Models\PathManagment\" />
+    <Folder Include="Models\Appenders\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>
