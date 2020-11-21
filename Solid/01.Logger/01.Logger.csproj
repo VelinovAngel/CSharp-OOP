@@ -16,5 +16,7 @@
     <Folder Include="Models\PathManagment\" />
     <Folder Include="Models\Appenders\" />
     <Folder Include="Common\" />
+    <Folder Include="IOManegment\" />
+    <Folder Include="IOManegment\Contracts\" />
   </ItemGroup>
 </Project>
