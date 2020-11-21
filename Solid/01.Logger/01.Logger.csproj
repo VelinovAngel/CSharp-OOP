@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_01.Logger</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Contracts\" />
+    <Folder Include="Models\Layouts\" />
+    <Folder Include="Models\Enumerations\" />
+  </ItemGroup>
+</Project>
