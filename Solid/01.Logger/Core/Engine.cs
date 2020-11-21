@@ -59,6 +59,8 @@ namespace _01.Logger.Core
 
                 this.logger.Log(error);
             }
+
+            writer.WriteLine(this.logger.ToString());
         }
     }
 }

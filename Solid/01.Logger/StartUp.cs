@@ -2,11 +2,13 @@
 using System.Linq;
 using System.Collections.Generic;
 
+using _01.Logger.Core;
 using _01.Logger.Common;
 using _01.Logger.Models;
 using _01.Logger.Factories;
 using _01.Logger.IOManegment;
 using _01.Logger.Models.Files;
+using _01.Logger.Core.Contracts;
 using _01.Logger.Models.Contracts;
 using _01.Logger.Models.Enumerations;
 using _01.Logger.Models.PathManagment;
@@ -16,26 +18,25 @@ namespace _01.Logger
 {
     public class StartUp
     {
-        private readonly LayoutFactory layoutFactory =  new LayoutFactory();
-        private readonly AppenderFactory appenderFactory = new AppenderFactory();
-
-
-
         static void Main(string[] args)
         {
+            LayoutFactory layoutFactory = new LayoutFactory();
+            AppenderFactory appenderFactory = new AppenderFactory();
             IReader reader = new ConsoleReader();
             IWriter writer = new ConsoleWriter();
+
+            int n = int.Parse(reader.ReadLine());
 
             IPathManager pathManager = new PathManager("logs", "logs.txt");
             IFile file = new LogFile(pathManager);
 
-            int n = int.Parse(reader.ReadLine());
+            ILogger logger = SetUpLogger(n, writer, reader, file,layoutFactory,appenderFactory);
 
-            ILogger logger = new Loggers(appenders);
-
+            IEngine engine = new Engine(logger, reader, writer);
+            engine.Run();
         }
 
-        private ILogger SetUpLogger(int appenderCount, IWriter writer, IReader reader , IFile file)
+        private static ILogger SetUpLogger(int appenderCount, IWriter writer, IReader reader, IFile file, LayoutFactory layoutFactory, AppenderFactory appenderFactory)
         {
             ICollection<IAppender> appenders = new HashSet<IAppender>();
 
@@ -50,7 +51,7 @@ namespace _01.Logger
 
                 bool hasError = false;
 
-                Level level = this.ParseLevel(appernderArg, writer, ref hasError);
+                Level level = ParseLevel(appernderArg, writer, ref hasError);
 
                 if (hasError)
                 {
@@ -58,8 +59,8 @@ namespace _01.Logger
                 }
                 try
                 {
-                    ILayout layout = this.layoutFactory.CreateLayout(layoutType);
-                    IAppender appender = this.appenderFactory.CreateAppender(appenderType, layout, level , file);
+                    ILayout layout = layoutFactory.CreateLayout(layoutType);
+                    IAppender appender = appenderFactory.CreateAppender(appenderType, layout, level, file);
 
                     appenders.Add(appender);
                 }
@@ -75,7 +76,7 @@ namespace _01.Logger
             return logger;
         }
 
-        private Level ParseLevel(string[] levelStr, IWriter writer, ref bool hasError)
+        private static Level ParseLevel(string[] levelStr, IWriter writer, ref bool hasError)
         {
             Level appenderLevel = Level.INFO;
 
@@ -91,7 +92,6 @@ namespace _01.Logger
 
                 appenderLevel = (Level)enumParsed;
             }
-
             return appenderLevel;
         }
     }

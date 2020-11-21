@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using _01.Logger.Models.Contracts;
 
 namespace _01.Logger.Models
@@ -29,6 +30,20 @@ namespace _01.Logger.Models
                     appender.Append(error);
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Logger info");
+
+            foreach (IAppender appender in appenders)
+            {
+                sb.AppendLine(appender.ToString());
+            }
+
+            return sb.ToString().TrimEnd();
         }
     }
 
