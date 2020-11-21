@@ -8,27 +8,17 @@ using _01.Logger.IOManegment.Contracts;
 
 namespace _01.Logger.Models.Appenders
 {
-    public class ConsoleAppender : IAppender
+    public class ConsoleAppender : Appender
     {
-        private int messegesAppend;
         private readonly IWriter writer;
 
-        private ConsoleAppender()
+        public ConsoleAppender(ILayout layout , Level level)
+            :base(layout , level)
         {
             this.writer = new ConsoleWriter();
         }
 
-        public ConsoleAppender(ILayout layout , Level level)
-        {
-            this.Layout = layout;
-            this.Level = Level;
-        }
-
-        public ILayout Layout { get; }
-
-        public Level Level { get; }
-
-        public void Append(IError error)
+        public override void Append(IError error)
         {
             string format = this. Layout.Format;
 
@@ -45,11 +35,6 @@ namespace _01.Logger.Models.Appenders
 
             this.writer.WriteLine(formattedString);
             this.messegesAppend++;
-        }
-
-        public override string ToString()
-        {
-            return $"Appender type: {this.GetType().Name}, Layout type: {this.Layout.GetType().Name}, Report level: {this.Level.ToString()}, Messages appended: {this.messegesAppend}";
         }
     }
 }
