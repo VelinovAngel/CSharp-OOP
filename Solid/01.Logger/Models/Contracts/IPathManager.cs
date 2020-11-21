@@ -1,7 +1,13 @@
-﻿using System;
-namespace _01.Logger.Models.Contracts
+﻿ namespace _01.Logger.Models.Contracts
 {
-    public interface IPathMenager
+    public interface IPathManager
     {
+        string CurrentDirectoryPath { get; }
+
+        string CurrentFilePath { get; }
+
+        string GetCurrentPath();
+
+        void EnsureDirectoryAndFileExists();
     }
 }

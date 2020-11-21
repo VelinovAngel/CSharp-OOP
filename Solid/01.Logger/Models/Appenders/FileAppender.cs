@@ -1,27 +1,38 @@
 ﻿using System;
+
+using _01.Logger.IOManegment;
 using _01.Logger.Models.Contracts;
 using _01.Logger.Models.Enumerations;
+using _01.Logger.IOManegment.Contracts;
 
 namespace _01.Logger.Models.Appenders
 {
-    public class FileAppender : IAppender
+    public class FileAppender : Appender
     {
-        public FileAppender(ILayout layout , Level level, IFile file)
+        private readonly IWriter writer;
+
+        public FileAppender(ILayout layout, Level level, IFile file)
+            : base(layout, level)
         {
-            this.Layout = layout;
-            this.Level = level;
             this.File = file;
+
+            this.writer = new FileWriter(this.File.Path);
         }
 
-        public ILayout Layout { get; }
+        public IFile File { get; }
 
-        public Level Level { get; }
-
-        public IFile File { get;}
-
-        public void Append(IError error)
+        public override void Append(IError error)
         {
-            throw new NotImplementedException();
+            string formattedMessage = this.File.Write(this.Layout, error);
+
+            this.writer.WriteLine(formattedMessage);
+            this.messegesAppend++; 
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $", File size {this.File.Size}";
+        }
+
     }
 }

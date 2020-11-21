@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 
+using _01.Logger.Common;
 using _01.Logger.Models.Contracts;
 using _01.Logger.Models.Enumerations;
 
@@ -34,7 +35,7 @@ namespace _01.Logger.Models.Files
             Level level = error.Level;
 
             string formattedMessage = string.Format(format
-                , dateTime.ToString("G"),
+                , dateTime.ToString(GlobalConstans.DateTimeFormat),
                 level.ToString(),
                 message.ToString());
 
@@ -47,6 +48,7 @@ namespace _01.Logger.Models.Files
 
             return fileText
                 .ToCharArray()
+                .Where(c => char.IsLetter(c))
                 .Sum(c => c);
         }
     }

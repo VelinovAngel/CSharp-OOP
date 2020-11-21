@@ -1,4 +1,12 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+using _01.Logger.Common;
+using _01.Logger.IOManegment;
+using _01.Logger.Models.Contracts;
+using _01.Logger.Models.Enumerations;
+using _01.Logger.IOManegment.Contracts;
 
 namespace _01.Logger
 {
@@ -6,7 +14,56 @@ namespace _01.Logger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IReader reader = new ConsoleReader();
+
+            int n = int.Parse(reader.ReadLine());
+
+        }
+
+        private ILogger SetUpLogger(int appenderCount, IWriter writer, IReader reader)
+        {
+            ICollection<IAppender> appenders = new HashSet<IAppender>();
+
+            for (int i = 0; i < appenderCount; i++)
+            {
+                string[] appernderArg = reader.ReadLine()
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
+
+                string appenderType = appernderArg[0];
+                string layoutType = appernderArg[1];
+
+                bool hasError = false;
+
+                Level level = this.ParseLevel(appernderArg, writer, ref hasError);
+
+                if (hasError)
+                {
+                    continue;
+                }
+            }
+
+            return ;
+        }
+
+        private Level ParseLevel(string[] levelStr, IWriter writer, ref bool hasError)
+        {
+            Level appenderLevel = Level.INFO;
+
+            if (levelStr.Length == 3)
+            {
+                bool isEnumValid = Enum.TryParse(typeof(Level), levelStr[2], true, out object enumParsed);
+
+                if (!isEnumValid)
+                {
+                    writer.WriteLine(GlobalConstans.InvalidLevelType);
+                    hasError = true;
+                }
+
+                appenderLevel = (Level)enumParsed;
+            }
+
+            return appenderLevel;
         }
     }
 }

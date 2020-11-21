@@ -1,10 +1,9 @@
-﻿using System;
-namespace _01.Logger.Common
+﻿namespace _01.Logger.Common
 {
-    public class GlobalConstans
+    public static class GlobalConstans
     {
-        public GlobalConstans()
-        {
-        }
+        public const string DateTimeFormat = "G";
+
+        public const string InvalidLevelType = "Invalid level type!";
     }
 }

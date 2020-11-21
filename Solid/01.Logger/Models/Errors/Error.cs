@@ -1,10 +1,22 @@
 ﻿using System;
+using _01.Logger.Models.Contracts;
+using _01.Logger.Models.Enumerations;
+
 namespace _01.Logger.Models.Errors
 {
-    public class Error
+    public class Error : IError
     {
-        public Error()
+        public Error(DateTime dateTime , string message , Level level)
         {
+            this.DateTime = dateTime;
+            this.Message = message;
+            this.Level = level;
         }
+
+        public DateTime DateTime { get; }
+
+        public string Message { get; }
+
+        public Level Level { get; }
     }
 }
