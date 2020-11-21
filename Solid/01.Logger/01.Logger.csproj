@@ -11,5 +11,8 @@
     <Folder Include="Models\Contracts\" />
     <Folder Include="Models\Layouts\" />
     <Folder Include="Models\Enumerations\" />
+    <Folder Include="Models\Errors\" />
+    <Folder Include="Models\Files\" />
+    <Folder Include="Models\PathManagment\" />
   </ItemGroup>
 </Project>
