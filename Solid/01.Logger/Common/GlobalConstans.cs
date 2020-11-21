@@ -2,7 +2,7 @@
 {
     public static class GlobalConstans
     {
-        public const string DateTimeFormat = "G";
+        public const string DateTimeFormat = "M/dd/yyyy h:mm:ss tt";
 
         public const string InvalidLevelType = "Invalid level type!";
 

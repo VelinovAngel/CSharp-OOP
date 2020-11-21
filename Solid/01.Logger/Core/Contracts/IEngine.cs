@@ -1,7 +1,7 @@
-﻿using System;
-namespace _01.Logger.Core.Contracts
+﻿namespace _01.Logger.Core.Contracts
 {
     public interface IEngine
     {
+        void Run();
     }
 }

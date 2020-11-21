@@ -16,9 +16,9 @@ namespace _01.Logger.IOManegment
         public string FilePath { get;}
 
         public void Write(string text)
-            => File.WriteAllText(this.FilePath,text);
+            => File.AppendAllText(this.FilePath,text);
 
         public void WriteLine(string text)
-        => File.WriteAllText(this.FilePath, text + Environment.NewLine);
+        => File.AppendAllText(this.FilePath, text + Environment.NewLine);
     }
 }

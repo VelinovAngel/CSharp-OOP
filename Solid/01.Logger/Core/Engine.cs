@@ -30,7 +30,7 @@ namespace _01.Logger.Core
             while ((command = this.reader.ReadLine()) != "END")
             {
                 string[] errors = command
-                    .Split(' ')
+                    .Split('|')
                     .ToArray();
 
                 string levelSrt = errors[0];
