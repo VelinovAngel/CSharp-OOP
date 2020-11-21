@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Globalization;
 
-using _01.Logger.Core.Contracts;
-using _01.Logger.Models.Contracts;
-using _01.Logger.IOManegment.Contracts;
-using _01.Logger.Models.Enumerations;
 using _01.Logger.Common;
 using _01.Logger.Models.Errors;
+using _01.Logger.Core.Contracts;
+using _01.Logger.Models.Contracts;
+using _01.Logger.Models.Enumerations;
+using _01.Logger.IOManegment.Contracts;
 
 namespace _01.Logger.Core
 {
@@ -44,7 +44,6 @@ namespace _01.Logger.Core
                     writer.WriteLine(GlobalConstans.InvalidLevelType);
                     continue;
                 }
-
 
                 Level level = (Level)levelObj;
 
