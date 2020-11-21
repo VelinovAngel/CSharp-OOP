@@ -19,5 +19,7 @@
     <Folder Include="IOManegment\" />
     <Folder Include="IOManegment\Contracts\" />
     <Folder Include="Factories\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Contracts\" />
   </ItemGroup>
 </Project>

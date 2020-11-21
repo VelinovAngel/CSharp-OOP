@@ -3,16 +3,16 @@ using _01.Logger.Models.Contracts;
 
 namespace _01.Logger.Models
 {
-    public class Logger : ILogger
+    public class Loggers : ILogger
     {
         private readonly ICollection<IAppender> appenders;
 
-        public Logger(ICollection<IAppender> appenders)
+        public Loggers(ICollection<IAppender> appenders)
         {
             this.appenders = appenders;
         }
 
-        public Logger(params IAppender[] appenders)
+        public Loggers(params IAppender[] appenders)
         {
             this.appenders = appenders;
         }

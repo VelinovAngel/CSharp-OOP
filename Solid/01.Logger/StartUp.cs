@@ -3,27 +3,35 @@ using System.Linq;
 using System.Collections.Generic;
 
 using _01.Logger.Common;
-using _01.Logger.Models
+using _01.Logger.Models;
 using _01.Logger.Factories;
 using _01.Logger.IOManegment;
+using _01.Logger.Models.Files;
 using _01.Logger.Models.Contracts;
 using _01.Logger.Models.Enumerations;
+using _01.Logger.Models.PathManagment;
 using _01.Logger.IOManegment.Contracts;
 
 namespace _01.Logger
 {
     public class StartUp
     {
-        private readonly LayoutFactory layoutFactory;
-        private readonly AppenderFactory appenderFactory;
-        private readonly IPathManager pathManager;
+        private readonly LayoutFactory layoutFactory =  new LayoutFactory();
+        private readonly AppenderFactory appenderFactory = new AppenderFactory();
+
 
 
         static void Main(string[] args)
         {
             IReader reader = new ConsoleReader();
+            IWriter writer = new ConsoleWriter();
+
+            IPathManager pathManager = new PathManager("logs", "logs.txt");
+            IFile file = new LogFile(pathManager);
 
             int n = int.Parse(reader.ReadLine());
+
+            ILogger logger = new Loggers(appenders);
 
         }
 
