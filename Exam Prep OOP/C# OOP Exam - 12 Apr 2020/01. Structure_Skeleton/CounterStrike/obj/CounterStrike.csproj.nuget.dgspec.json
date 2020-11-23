@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj": {}
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj": {}
   },
   "projects": {
-    "/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj": {
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj",
+        "projectUniqueName": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj",
         "projectName": "CounterStrike",
-        "projectPath": "/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj",
+        "projectPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/CounterStrike.csproj",
         "packagesPath": "/Users/pLazZma/.nuget/packages/",
-        "outputPath": "/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/",
+        "outputPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pLazZma/.config/NuGet/NuGet.Config"
