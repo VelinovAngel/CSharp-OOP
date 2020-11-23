@@ -1,0 +1,12 @@
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/bin/Debug/netcoreapp3.0/CounterStrike.deps.json
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/bin/Debug/netcoreapp3.0/CounterStrike.runtimeconfig.json
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/bin/Debug/netcoreapp3.0/CounterStrike.runtimeconfig.dev.json
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/bin/Debug/netcoreapp3.0/CounterStrike.dll
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/bin/Debug/netcoreapp3.0/CounterStrike.pdb
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.csprojAssemblyReference.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.AssemblyInfoInputs.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.AssemblyInfo.cs
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.csproj.CoreCompileInputs.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.dll
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.pdb
+/Users/pLazZma/Desktop/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/obj/Debug/netcoreapp3.0/CounterStrike.genruntimeconfig.cache

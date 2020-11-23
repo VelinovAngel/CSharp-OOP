@@ -1,0 +1,12 @@
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.csprojAssemblyReference.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.AssemblyInfoInputs.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.AssemblyInfo.cs
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.csproj.CoreCompileInputs.cache
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/bin/Debug/netcoreapp3.0/SantaWorkshop.deps.json
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/bin/Debug/netcoreapp3.0/SantaWorkshop.runtimeconfig.json
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/bin/Debug/netcoreapp3.0/SantaWorkshop.runtimeconfig.dev.json
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/bin/Debug/netcoreapp3.0/SantaWorkshop.dll
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/bin/Debug/netcoreapp3.0/SantaWorkshop.pdb
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.dll
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.pdb
+/Users/pLazZma/Desktop/Exam Prep OOP/01 - CSharp OOP Retake Exam - 19 Dec 2019/01. Structure_Skeleton/SantaWorkshop/obj/Debug/netcoreapp3.0/SantaWorkshop.genruntimeconfig.cache
