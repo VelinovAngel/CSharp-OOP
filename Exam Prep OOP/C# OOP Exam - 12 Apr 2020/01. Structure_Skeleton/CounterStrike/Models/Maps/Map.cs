@@ -37,6 +37,7 @@ namespace CounterStrike.Models.Maps
                     }
                 }
             }
+            ;
 
             if (counterTerrorists.Any(x=>x.IsAlive))
             {

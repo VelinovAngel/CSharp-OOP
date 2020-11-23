@@ -47,7 +47,7 @@ namespace CounterStrike.Models.Players
             }
             private set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     throw new ArgumentException(ExceptionMessages.InvalidPlayerHealth);
                 }
@@ -94,8 +94,8 @@ namespace CounterStrike.Models.Players
         {
             if (this.Armor > 0)
             {
-                int armor = this.Armor - points;
-                if (armor > 0)
+                //int armor = this.Armor - points;
+                if (this.Armor - points >= 0)
                 {
                     this.Armor -= points;
                 }

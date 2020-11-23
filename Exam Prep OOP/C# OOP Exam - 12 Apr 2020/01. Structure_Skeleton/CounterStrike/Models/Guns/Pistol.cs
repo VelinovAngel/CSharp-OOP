@@ -3,7 +3,8 @@ namespace CounterStrike.Models.Guns
 {
     public class Pistol : Gun
     {
-        private const int BulletsFiredPistol = 1;
+        private const int BulletsFiredPistola = 1;
+        private const string NameGun = "Pistol";
 
         public Pistol(string name, int bulletsCount)
             : base(name, bulletsCount)
@@ -12,10 +13,13 @@ namespace CounterStrike.Models.Guns
 
         public override int Fire()
         {
-            if (this.BulletsCount > 0)
+            if (this.BulletsCount >= BulletsFiredPistola)
             {
-                this.BulletsCount -= BulletsFiredPistol;
-                return BulletsFiredPistol;
+                if (this.GetType().Name == NameGun)
+                {
+                    BulletsCount -= BulletsFiredPistola;
+                    return BulletsFiredPistola;
+                }
             }
             return 0;
         }

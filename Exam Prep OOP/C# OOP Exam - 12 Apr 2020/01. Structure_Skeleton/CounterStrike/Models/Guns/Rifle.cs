@@ -14,7 +14,7 @@
         {
             if (this.BulletsCount >= BulletsFiredRifle)
             {
-                if (this.Name == NameGun)
+                if (this.GetType().Name == NameGun)
                 {
                     BulletsCount -= BulletsFiredRifle;
                     return BulletsFiredRifle;
