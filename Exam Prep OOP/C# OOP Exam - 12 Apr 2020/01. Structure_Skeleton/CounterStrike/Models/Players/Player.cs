@@ -94,22 +94,20 @@ namespace CounterStrike.Models.Players
         {
             int currentpoints = points;
 
-            if (this.armor - currentpoints >= 0)
+            if (this.Armor - currentpoints >= 0)
             {
-                this.armor -= currentpoints;
+                this.Armor -= currentpoints;
             }
-            else if (this.armor - currentpoints < 0)
+            else if (this.Armor - currentpoints < 0)
             {
-                currentpoints = currentpoints - this.armor;
-                this.armor = 0;
-                this.health -= currentpoints;
+                currentpoints -= this.Armor;
+                this.Armor = 0;
+                this.Health -= currentpoints;
             }
 
-            if (this.health <= 0)
+            if (this.Health <= 0)
             {
-
-                this.health = 0;
-
+                this.Health = 0;
             }
         }
 
