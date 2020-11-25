@@ -79,11 +79,7 @@ namespace CounterStrike.Models.Players
             }
             private set
             {
-                if (value == null)
-                {
-                    throw new ArgumentException(ExceptionMessages.InvalidGun);
-                }
-                this.gun = value;
+                this.gun = value ?? throw new ArgumentException(ExceptionMessages.InvalidGun);
             }
         }
 
