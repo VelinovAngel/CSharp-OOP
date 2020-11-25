@@ -47,7 +47,6 @@ namespace CounterStrike.Models.Guns
                 this.bulletsCount = value;
             }
         }
-
         public abstract int Fire();
     }
 }

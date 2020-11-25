@@ -2,29 +2,31 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="CounterStrike/Models/Maps/Map.cs">
     <Files>
       <File FileName="CounterStrike/Models/Guns/Rifle.cs" Line="5" Column="9" />
-      <File FileName="CounterStrike/Models/Guns/Gun.cs" Line="30" Column="35" />
-      <File FileName="CounterStrike/Models/Players/Player.cs" Line="61" Column="1" />
+      <File FileName="CounterStrike/Models/Guns/Gun.cs" />
+      <File FileName="CounterStrike/Models/Players/Player.cs" />
       <File FileName="CounterStrike/Repositories/GunRepository.cs" />
       <File FileName="CounterStrike/Repositories/PlayerRepository.cs" />
-      <File FileName="CounterStrike/Core/Controller.cs" Line="112" Column="1" />
-      <File FileName="CounterStrike/Utilities/Messages/OutputMessages.cs" Line="8" Column="49" />
-      <File FileName="CounterStrike/Utilities/Messages/ExceptionMessages.cs" Line="21" Column="46" />
-      <File FileName="CounterStrike/Models/Guns/Pistol.cs" Line="7" Column="47" />
-      <File FileName="CounterStrike/Core/Engine.cs" Line="25" Column="1" />
-      <File FileName="CounterStrike/Models/Maps/Map.cs" Line="42" Column="1" />
-      <File FileName="CounterStrike/Models/Players/Contracts/IPlayer.cs" Line="17" Column="14" />
-      <File FileName="CounterStrike/IO/Writer.cs" Line="16" Column="1" />
+      <File FileName="CounterStrike/Core/Controller.cs" />
+      <File FileName="CounterStrike/Utilities/Messages/OutputMessages.cs" />
+      <File FileName="CounterStrike/Utilities/Messages/ExceptionMessages.cs" />
+      <File FileName="CounterStrike/Models/Guns/Pistol.cs" />
+      <File FileName="CounterStrike/Core/Engine.cs" />
+      <File FileName="CounterStrike/Models/Maps/Map.cs" Line="39" Column="14" />
+      <File FileName="CounterStrike/Models/Players/Contracts/IPlayer.cs" />
+      <File FileName="CounterStrike/IO/Writer.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CounterStriker" expanded="True">
-            <Node name="CounterStrike" expanded="True" selected="True">
+            <Node name="CounterStrike" expanded="True">
               <Node name="Core" expanded="True" />
               <Node name="IO" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Guns" expanded="True" />
-                <Node name="Maps" expanded="True" />
+                <Node name="Maps" expanded="True">
+                  <Node name="Map.cs" selected="True" />
+                </Node>
                 <Node name="Players" expanded="True">
                   <Node name="Contracts" expanded="True" />
                 </Node>
@@ -43,9 +45,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.CounterStrike PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Apr 2020/01. Structure_Skeleton/CounterStrike/Models/Maps/Map.cs" relfile="CounterStrike/Models/Maps/Map.cs" line="42" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
