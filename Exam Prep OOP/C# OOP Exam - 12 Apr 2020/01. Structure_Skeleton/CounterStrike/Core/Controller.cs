@@ -79,7 +79,6 @@ namespace CounterStrike.Core
 
             players.Add(player);
             return string.Format(OutputMessages.SuccessfullyAddedPlayer, username);
-
         }
 
         public string Report()
