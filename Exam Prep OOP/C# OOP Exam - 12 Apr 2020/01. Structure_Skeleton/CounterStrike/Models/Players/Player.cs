@@ -92,29 +92,25 @@ namespace CounterStrike.Models.Players
 
         public void TakeDamage(int points)
         {
-            if (this.Armor > 0)
+            int currentpoints = points;
+
+            if (this.armor - currentpoints >= 0)
             {
-                //int armor = this.Armor - points;
-                if (this.Armor - points >= 0)
-                {
-                    this.Armor -= points;
-                }
-                else
-                {
-                    int dmgWithoutArmor = Math.Abs(this.Armor - points);
-                    this.Armor = 0;
-                    this.Health -= dmgWithoutArmor;
-                }
+                this.armor -= currentpoints;
             }
-            else
+            else if (this.armor - currentpoints < 0)
             {
-                if (this.Health - points < 0)
-                {
-                    this.Health = 0;
-                }
-                this.Health -= points;
+                currentpoints = currentpoints - this.armor;
+                this.armor = 0;
+                this.health -= currentpoints;
             }
 
+            if (this.health <= 0)
+            {
+
+                this.health = 0;
+
+            }
         }
 
         public override string ToString()
