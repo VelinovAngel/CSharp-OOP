@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{0ED77E2F-8F32-4BD5-AD14-DD76D14AB3EB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterStrike/IO/Reader.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterStrike/Repositories/GunRepository.cs">
     <Files>
       <File FileName="CounterStrike/Models/Guns/Rifle.cs" Line="5" Column="9" />
       <File FileName="CounterStrike/Models/Guns/Gun.cs" Line="49" Column="10" />
-      <File FileName="CounterStrike/Models/Players/Player.cs" />
-      <File FileName="CounterStrike/Repositories/GunRepository.cs" />
+      <File FileName="CounterStrike/Models/Players/Player.cs" Line="105" Column="14" />
+      <File FileName="CounterStrike/Repositories/GunRepository.cs" Line="1" Column="1" />
       <File FileName="CounterStrike/Repositories/PlayerRepository.cs" />
-      <File FileName="CounterStrike/Core/Controller.cs" />
+      <File FileName="CounterStrike/Core/Controller.cs" Line="81" Column="84" />
       <File FileName="CounterStrike/Utilities/Messages/OutputMessages.cs" />
       <File FileName="CounterStrike/Utilities/Messages/ExceptionMessages.cs" />
       <File FileName="CounterStrike/Models/Guns/Pistol.cs" Line="7" Column="47" />
@@ -15,6 +15,8 @@
       <File FileName="CounterStrike/Models/Players/Contracts/IPlayer.cs" />
       <File FileName="CounterStrike/IO/Writer.cs" />
       <File FileName="CounterStrike/IO/Reader.cs" Line="1" Column="1" />
+      <File FileName="CounterStrike/Models/Players/Terrorist.cs" Line="1" Column="1" />
+      <File FileName="CounterStrike/Models/Players/CounterTerrorist.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +24,7 @@
           <Node name="CounterStriker" expanded="True">
             <Node name="CounterStrike" expanded="True">
               <Node name="Core" expanded="True" />
-              <Node name="IO" expanded="True">
-                <Node name="Reader.cs" selected="True" />
-              </Node>
+              <Node name="IO" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Guns" expanded="True" />
                 <Node name="Maps" expanded="True" />
@@ -32,7 +32,9 @@
                   <Node name="Contracts" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Repositories" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="GunRepository.cs" selected="True" />
+              </Node>
               <Node name="Utilities" expanded="True">
                 <Node name="Messages" expanded="True" />
               </Node>
