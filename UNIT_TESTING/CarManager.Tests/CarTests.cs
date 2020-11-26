@@ -17,14 +17,7 @@ namespace Tests
         [Test]
         public void ConstructorShouldReturnCorrectlyValue()
         {
-            string expMake = "make";
-            string expModel = "golf";
-            double expFuel = 10;
-            double expCapacity = 100;
-            Assert.AreEqual(expMake, car.Make);
-            Assert.AreEqual(expModel, car.Model);
-            Assert.AreEqual(expFuel, car.FuelConsumption);
-            Assert.AreEqual(expCapacity, car.FuelCapacity);
+            Assert.IsNotNull(this.car);
         }
 
         [Test]
