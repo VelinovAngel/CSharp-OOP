@@ -35,7 +35,7 @@ namespace Tests
         [Test]
         public void TestIfFuelConsumptionIsNegativOrZero()
         {
-            Assert.Throws<ArgumentException>(() => new Car("make", "golf", 0, 100));
+            Assert.Throws<ArgumentException>(() => new Car("make", "golf", -3, 100));
         }
 
         [Test]
