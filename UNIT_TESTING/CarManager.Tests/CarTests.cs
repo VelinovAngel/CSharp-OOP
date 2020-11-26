@@ -23,7 +23,7 @@ namespace Tests
         [Test]
         public void MakeShouldThrowExcpWhenIsInvalid()
         {
-            Assert.Throws<ArgumentException>(() => new Car("", "golf", 10, 100));
+            Assert.Throws<ArgumentException>(() => new Car(null, "golf", 10, 100));
         }
 
         [Test]
