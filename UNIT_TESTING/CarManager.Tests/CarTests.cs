@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using CarManager;
 using System;
 
 namespace Tests
@@ -78,20 +79,22 @@ namespace Tests
         }
 
         [Test]
+        public void TestRefuelBelowZero()
+        {
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                this.car.Refuel(-3);
+            });
+        }
+
+        [Test]
         public void TestIfRefuelMoreThanCapacity()
         {
             this.car.Refuel(350);
             int expectedFuel = 100;
 
             Assert.AreEqual(expectedFuel, this.car.FuelAmount);
-        }
-
-
-        [Test]
-        public void CheckIfFuelAmountIsEqualToFuelReful()
-        {
-            this.car.Refuel(1);
-            Assert.AreEqual(1, this.car.FuelAmount);
         }
 
         [Test]
