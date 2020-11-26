@@ -45,11 +45,12 @@ namespace Tests
             Assert.Throws<ArgumentException>(() => new Car("make", "golf", 0, 100));
         }
 
-        //[Test]
-        //public void TestIfFuelAmountIsNegativOrZero()
-        //{
-        //    Assert.Throws<ArgumentException>(() => new Car("make", "golf", 10, 0));
-        //}
+        [Test]
+        public void TestIfFuelAmountIsNegativOrZero()
+        {
+            double exp = 0;
+            Assert.AreEqual(exp, this.car.FuelAmount);
+        }
 
         [Test]
         public void TestIfFuelCapacityIsNegativOrZero()
