@@ -29,7 +29,7 @@ namespace Tests
         [Test]
         public void ModelShouldThrowExcpWhenIsInvalid()
         {
-            Assert.Throws<ArgumentException>(() => new Car("make", "", 10, 100));
+            Assert.Throws<ArgumentException>(() => new Car("make", null, 10, 100));
         }
 
         [Test]
