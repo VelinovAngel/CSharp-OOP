@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using CarManager;
 using System;
 
 namespace Tests
