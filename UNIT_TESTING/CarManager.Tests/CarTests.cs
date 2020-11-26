@@ -65,7 +65,7 @@ namespace Tests
             this.car.Refuel(15);
             int expFuel = 15;
 
-            Assert.AreEqual(expectedFuel, this.car.FuelAmount);
+            Assert.AreEqual(expFuel, this.car.FuelAmount);
         }
 
         [Test]
