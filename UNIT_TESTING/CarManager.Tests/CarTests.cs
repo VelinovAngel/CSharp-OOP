@@ -69,6 +69,16 @@ namespace Tests
         }
 
         [Test]
+        public void TestIfRefuelMoreThanCapacity()
+        {
+            this.car.Refuel(350);
+            int expectedFuel = 300;
+
+            Assert.AreEqual(expectedFuel, this.car.FuelAmount);
+        }
+
+
+        [Test]
         public void CheckIfFuelAmountIsEqualToFuelReful()
         {
             this.car.Refuel(1);
