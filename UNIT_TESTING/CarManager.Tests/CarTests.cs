@@ -69,6 +69,16 @@ namespace Tests
         }
 
         [Test]
+        public void TestRefuelWithZero()
+        {
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                this.car.Refuel(0);
+            });
+        }
+
+        [Test]
         public void TestIfRefuelMoreThanCapacity()
         {
             this.car.Refuel(350);
