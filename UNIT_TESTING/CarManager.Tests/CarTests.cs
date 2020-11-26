@@ -22,13 +22,13 @@ namespace Tests
         [Test]
         public void MakeShouldThrowExcpWhenIsInvalid()
         {
-            Assert.Throws<ArgumentException>(() => new Car(null, "golf", 10, 100));
+            Assert.Throws<ArgumentException>(() => new Car("", "golf", 10, 100));
         }
 
         [Test]
         public void ModelShouldThrowExcpWhenIsInvalid()
         {
-            Assert.Throws<ArgumentException>(() => new Car("make", null, 10, 100));
+            Assert.Throws<ArgumentException>(() => new Car("make", "", 10, 100));
         }
 
         [Test]
@@ -81,7 +81,7 @@ namespace Tests
         public void TestIfRefuelMoreThanCapacity()
         {
             this.car.Refuel(350);
-            int expectedFuel = 300;
+            int expectedFuel = 100;
 
             Assert.AreEqual(expectedFuel, this.car.FuelAmount);
         }
@@ -92,14 +92,6 @@ namespace Tests
         {
             this.car.Refuel(1);
             Assert.AreEqual(1, this.car.FuelAmount);
-        }
-
-        [Test]
-        public void CheckIfFuelCapcityIsEqualToFuelAmount()
-        {
-            var currCar = new Car("make", "golf", 10, 1);
-            currCar.Refuel(1);
-            Assert.AreEqual(currCar.FuelAmount, currCar.FuelCapacity);
         }
 
         [Test]
