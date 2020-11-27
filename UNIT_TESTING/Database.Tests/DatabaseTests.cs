@@ -11,8 +11,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            this.database = new Database
-                .Database(Enumerable.Range(1, 16).ToArray());
+            this.database = new Database.Database(Enumerable.Range(1, 16).ToArray());
         }
 
         [Test]
@@ -27,5 +26,13 @@ namespace Tests
         {
             Assert.Throws<InvalidOperationException>(() => new Database.Database(Enumerable.Range(1, 17).ToArray()));
         }
+
+        [Test]
+        public void CheckIfWhenCountIsZeroShouldThrowException()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.database.Remove());
+        }
+
+
     }
 }
