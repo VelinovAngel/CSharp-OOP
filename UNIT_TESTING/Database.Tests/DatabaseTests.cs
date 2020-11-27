@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using NUnit.Framework;
 
@@ -19,6 +20,12 @@ namespace Tests
         {
             Assert.IsNotNull(this.database);
             Assert.AreEqual(16, database.Count);
+        }
+
+        [Test]
+        public void CheckIfCountIsCorretly16Elements()
+        {
+            Assert.Throws<InvalidOperationException>(() => new Database.Database(Enumerable.Range(1, 17).ToArray()));
         }
     }
 }
