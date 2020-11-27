@@ -6,12 +6,12 @@ namespace Tests
 {
     public class DatabaseTests
     {
-        private Database.Database database;
+        private Database database;
 
         [SetUp]
         public void Setup()
         {
-            this.database = new Database.Database(Enumerable.Range(1, 16).ToArray());
+            this.database = new Database(Enumerable.Range(1, 16).ToArray());
         }
 
         [Test]
@@ -24,7 +24,7 @@ namespace Tests
         [Test]
         public void CheckIfCountIsCorretly16Elements()
         {
-            Assert.Throws<InvalidOperationException>(() => new Database.Database(Enumerable.Range(1, 17).ToArray()));
+            Assert.Throws<InvalidOperationException>(() => new Database(Enumerable.Range(1, 17).ToArray()));
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace Tests
         [Test]
         public void CheckIfWhenCountIsZeroShouldThrowException()
         {
-            Database.Database databaseExp = new Database.Database();
+            Database databaseExp = new Database();
             Assert.Throws<InvalidOperationException>(() => databaseExp.Remove());
         }
 

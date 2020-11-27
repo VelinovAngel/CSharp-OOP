@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/Users/pLazZma/.dotnet/store/|arch|/|tfm|",
-      "/Users/pLazZma/.nuget/packages"
-    ]
-  }
-}
