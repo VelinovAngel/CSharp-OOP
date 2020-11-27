@@ -28,9 +28,18 @@ namespace Tests
         }
 
         [Test]
+        public void CheckIfRemoveLastElement()
+        {
+            this.database.Remove();
+            int expectedValue = 15;
+            Assert.AreEqual(expectedValue, this.database.Count);
+        }
+
+        [Test]
         public void CheckIfWhenCountIsZeroShouldThrowException()
         {
-            Assert.Throws<InvalidOperationException>(() => this.database.Remove());
+            Database.Database databaseExp = new Database.Database();
+            Assert.Throws<InvalidOperationException>(() => databaseExp.Remove());
         }
 
 
