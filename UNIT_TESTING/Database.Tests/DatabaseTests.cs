@@ -4,13 +4,13 @@ namespace Tests
 {
     public class DatabaseTests
     {
-        private Database.Database database;
+        private Database database;
 
 
         [SetUp]
         public void Setup()
         {
-            this.database = new Database.Database(new int[16]);
+            this.database = new Database(new int[16]);
         }
 
         [Test]
