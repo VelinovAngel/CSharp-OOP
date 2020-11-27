@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using CarManager;
 using System;
 
 namespace Tests
@@ -11,7 +10,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            this.car = new Car("make", "golf", 10, 100);
+            this.car = new Car("VW", "golf", 10, 100);
         }
 
         [Test]
@@ -29,13 +28,13 @@ namespace Tests
         [Test]
         public void ModelShouldThrowExcpWhenIsInvalid()
         {
-            Assert.Throws<ArgumentException>(() => new Car("make", "", 10, 100));
+            Assert.Throws<ArgumentException>(() => new Car("VW", "", 10, 100));
         }
 
         [Test]
         public void TestIfFuelConsumptionIsNegativOrZero()
         {
-            Assert.Throws<ArgumentException>(() => new Car("make", "golf", -3, 100));
+            Assert.Throws<ArgumentException>(() => new Car("VW", "golf", -3, 100));
         }
 
         [Test]
@@ -49,7 +48,7 @@ namespace Tests
         public void TestIfFuelCapacityIsNegativOrZero()
         {
             
-            Assert.Throws<ArgumentException>(() => new Car("make", "golf", 10, 0));
+            Assert.Throws<ArgumentException>(() => new Car("VW", "golf", 10, 0));
         }
 
         [Test]
