@@ -42,6 +42,16 @@ namespace Tests
             Assert.Throws<InvalidOperationException>(() => databaseExp.Remove());
         }
 
+        [Test]
+        public void CheckIfFatchReturnCurrectlyResult()
+        {
+            int[] expArray = Enumerable.Range(1, 16).ToArray();
+
+            int[] returnArray = this.database.Fetch();
+
+            Assert.AreEqual(expArray, returnArray);
+        }
+
 
     }
 }
