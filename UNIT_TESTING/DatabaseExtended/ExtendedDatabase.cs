@@ -9,17 +9,20 @@ namespace ExtendedDatabase
 
         private int count;
 
+        /*OK*/
         public ExtendedDatabase(params Person[] persons)
         {
             this.persons = new Person[16];
             AddRange(persons);
         }
 
+        /*OK*/
         public int Count
         {
             get { return count; }
         }
 
+        /*OK*/
         private void AddRange(Person[] data)
         {
             if (data.Length > 16)
@@ -37,11 +40,13 @@ namespace ExtendedDatabase
 
         public void Add(Person person)
         {
+            /*OK*/
             if (this.count == 16)
             {
                 throw new InvalidOperationException("Array's capacity must be exactly 16 integers!");
             }
 
+            /*OK*/
             if (persons.Any(p => p?.UserName == person.UserName))
             {
                 throw new InvalidOperationException("There is already user with this username!");

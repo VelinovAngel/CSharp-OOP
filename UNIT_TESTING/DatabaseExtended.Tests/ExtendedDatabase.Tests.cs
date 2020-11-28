@@ -41,7 +41,8 @@ namespace Tests
         public void ConstructorShouldReturnCorrectlyValue()
         {
             Assert.IsNotNull(this.extendedDatabase);
-            Assert.AreEqual(16, this.extendedDatabase.Count);
+            int expRange = 16;
+            Assert.AreEqual(expRange, this.extendedDatabase.Count);
 
             Assert.IsNotNull(this.people);
         }
@@ -49,14 +50,47 @@ namespace Tests
         [Test]
         public void CheckIfAddRangeShouldThrowInvalidOperationExp()
         {
-            this.people = new ExtendedDatabase.Person(){ 15,"Pesho"};
-           Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
         }
         [Test]
         public void CheckIfAddRangeShouldThrowArgumentExp()
         {
-            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
+            people = new ExtendedDatabase.Person[]
+         { new Person(0,"0"),
+              new Person (1,"1"),
+              new Person (2,"2"),
+              new Person (3,"3"),
+              new Person (4,"4"),
+              new Person(5,"5"),
+              new Person (6,"6"),
+              new Person (7,"7"),
+              new Person (8,"8"),
+              new Person (9, "9"),
+              new Person(10,"10"),
+              new Person (11,"11"),
+              new Person (12,"12"),
+              new Person (13,"13"),
+              new Person (14, "14"),
+              new Person (15, "15"),
+              new Person (16, "16"),
+         };
+
+            Assert.Throws<ArgumentException>(() => new ExtendedDatabase.ExtendedDatabase(people));
         }
+
+        [Test]
+        public void CheckIfAlreadyUserExist()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(new Person(0, "15")));
+        }
+
+        [Test]
+        public void CheckIfAlreadyUserWithSomeIDExist()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(new Person(15, null)));
+        }
+
+
 
         //[Test]
         //public void CheckIfRemoveLastElement()
