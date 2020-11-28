@@ -18,7 +18,7 @@ namespace Tests
         public void ConstructorShouldReturnCorrectlyValue()
         {
             Assert.IsNotNull(this.database);
-            Assert.AreEqual(16, database.Count);
+            Assert.AreEqual(16, this.database.Count);
         }
 
         [Test]
