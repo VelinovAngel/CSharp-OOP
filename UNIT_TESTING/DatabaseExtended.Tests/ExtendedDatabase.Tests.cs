@@ -9,13 +9,32 @@ namespace Tests
     {
         private ExtendedDatabase.ExtendedDatabase extendedDatabase;
         private ExtendedDatabase.Person person;
+        private ExtendedDatabase.Person[] people;
 
         [SetUp]
         public void Setup()
         {
-            this.extendedDatabase = new ExtendedDatabase.ExtendedDatabase(new ExtendedDatabase.Person[16]);
+            people = new ExtendedDatabase.Person[]
+           { new Person(0,"0"),
+              new Person (1,"1"),
+              new Person (2,"2"),
+              new Person (3,"3"),
+              new Person (4,"4"),
+              new Person(5,"5"),
+              new Person (6,"6"),
+              new Person (7,"7"),
+              new Person (8,"8"),
+              new Person (9, "9"),
+              new Person(10,"10"),
+              new Person (11,"11"),
+              new Person (12,"12"),
+              new Person (13,"13"),
+              new Person (14, "14"),
+              new Person (15, "15"),
+           };
 
-            this.person = new ExtendedDatabase.Person(10, "Pesho");
+            this.extendedDatabase = new ExtendedDatabase.ExtendedDatabase(people);
+            this.person = new ExtendedDatabase.Person(100, "Tosho");
         }
 
         [Test]
@@ -24,13 +43,13 @@ namespace Tests
             Assert.IsNotNull(this.extendedDatabase);
             Assert.AreEqual(16, this.extendedDatabase.Count);
 
-            Assert.IsNotNull(this.person);
+            Assert.IsNotNull(this.people);
         }
 
         [Test]
         public void CheckIfAddRangeShouldThrowExp()
         {
-           Assert.Throws<ArgumentException>(() => this.extendedDatabase.Add(this.person));
+           Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
         }
 
         //[Test]
