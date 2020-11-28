@@ -51,7 +51,7 @@ namespace ExtendedDatabase
             {
                 throw new InvalidOperationException("There is already user with this username!");
             }
-
+            /*OK*/
             if (persons.Any(p => p?.Id == person.Id))
             {
                 throw new InvalidOperationException("There is already user with this Id!");

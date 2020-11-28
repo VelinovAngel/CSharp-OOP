@@ -15,7 +15,8 @@ namespace Tests
         public void Setup()
         {
             people = new ExtendedDatabase.Person[]
-           { new Person(0,"0"),
+            {
+              new Person(0,"0"),
               new Person (1,"1"),
               new Person (2,"2"),
               new Person (3,"3"),
@@ -31,7 +32,7 @@ namespace Tests
               new Person (13,"13"),
               new Person (14, "14"),
               new Person (15, "15"),
-           };
+            };
 
             this.extendedDatabase = new ExtendedDatabase.ExtendedDatabase(people);
             this.person = new ExtendedDatabase.Person(100, "Tosho");
@@ -56,7 +57,8 @@ namespace Tests
         public void CheckIfAddRangeShouldThrowArgumentExp()
         {
             people = new ExtendedDatabase.Person[]
-         { new Person(0,"0"),
+            {
+              new Person(0,"0"),
               new Person (1,"1"),
               new Person (2,"2"),
               new Person (3,"3"),
@@ -73,7 +75,7 @@ namespace Tests
               new Person (14, "14"),
               new Person (15, "15"),
               new Person (16, "16"),
-         };
+            };
 
             Assert.Throws<ArgumentException>(() => new ExtendedDatabase.ExtendedDatabase(people));
         }
@@ -88,6 +90,40 @@ namespace Tests
         public void CheckIfAlreadyUserWithSomeIDExist()
         {
             Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(new Person(15, null)));
+        }
+
+        [Test]
+        public void CheckIfRemoveReturnExaclyValue()
+        {
+            ExtendedDatabase.Person[] person = new ExtendedDatabase.Person[0];
+
+            extendedDatabase = new ExtendedDatabase.ExtendedDatabase(person);
+
+
+            Assert.Throws<InvalidOperationException>(() => extendedDatabase.Remove());
+        }
+
+        [Test]
+        public void CheckIfRemoveReturnExaclyCountValueAfterRemove()
+        {
+            people = new ExtendedDatabase.Person[]
+            {
+              new Person(0,"0"),
+              new Person (1,"1"),
+            };
+
+            extendedDatabase = new ExtendedDatabase.ExtendedDatabase(people);
+            extendedDatabase.Remove();
+            int expCount = 1;
+
+            Assert.AreEqual(expCount, extendedDatabase
+                .Count);
+        }
+
+        [Test]
+        public void IfUserIsPresentUsername()
+        {
+            Assert.Throws<ArgumentNullException>(() => this.extendedDatabase.FindByUsername(null));
         }
 
 
