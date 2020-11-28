@@ -47,9 +47,15 @@ namespace Tests
         }
 
         [Test]
-        public void CheckIfAddRangeShouldThrowExp()
+        public void CheckIfAddRangeShouldThrowInvalidOperationExp()
         {
+            this.people = new ExtendedDatabase.Person(){ 15,"Pesho"};
            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
+        }
+        [Test]
+        public void CheckIfAddRangeShouldThrowArgumentExp()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.Add(this.person));
         }
 
         //[Test]
