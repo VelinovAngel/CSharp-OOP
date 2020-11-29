@@ -1,4 +1,4 @@
-//using ExtendedDatabase;
+using ExtendedDatabase;
 using NUnit.Framework;
 
 namespace Tests
@@ -6,7 +6,7 @@ namespace Tests
     public class ExtendedDatabaseTests
     {
         private Person[] people;
-        private ExtendedDatabase database;
+        private ExtendedDatabase.ExtendedDatabase database;
 
         [SetUp]
         public void Setup()
@@ -30,7 +30,7 @@ namespace Tests
               new Person (15, "Nikolina"),
             };
 
-            database = new ExtendedDatabase(people);
+            database = new ExtendedDatabase.ExtendedDatabase(people);
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Tests
               new Person (432516, "Maxi")
             };
 
-            Assert.That(() => new ExtendedDatabase(people), Throws.ArgumentException);
+            Assert.That(() => new ExtendedDatabase.ExtendedDatabase(people), Throws.ArgumentException);
         }
 
         [Test]
@@ -103,24 +103,33 @@ namespace Tests
         [Test]
         public void RemovingElementFromEmptyDatabaseThrowsExeption()
         {
-            Assert.That(() => new ExtendedDatabase().Remove(), Throws.InvalidOperationException);
+            Assert.That(() => new ExtendedDatabase.ExtendedDatabase().Remove(), Throws.InvalidOperationException);
         }
 
         [Test]
         [TestCase(null)]
         [TestCase("")]
-        public void FindPersonByNameThrowsExeptionWhenNameIsNull(string personName)
+        public void FindPersonByNameThrowsExeptionWhenNameIsNull(string expectedValue)
         {
-            Assert.That(() => database.FindByUsername(personName), Throws.ArgumentNullException);
+            Assert.That(() => database.FindByUsername(expectedValue), Throws.ArgumentNullException);
         }
 
         [Test]
         public void FindPersonByNameThrowsExeptionWhenThereIsNoSuchPersonInDatabase()
         {
-            string personName = "Magda";
+            string expName = "Magda";
 
-            Assert.That(() => database.FindByUsername(personName), Throws.InvalidOperationException);
+            Assert.That(() => database.FindByUsername(expName), Throws.InvalidOperationException);
         }
+
+        [Test]
+        public void FindPersonByNameInDatabase()
+        {
+            string expPersonName = "Pesho";
+
+            Assert.AreEqual(expPersonName, database.FindByUsername("Pesho"));
+        }
+
 
         [Test]
         public void ArgumentsAreCaseSensitiveInFindPersonByName()
