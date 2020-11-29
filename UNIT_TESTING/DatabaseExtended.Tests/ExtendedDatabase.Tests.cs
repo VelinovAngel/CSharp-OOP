@@ -121,38 +121,66 @@ namespace Tests
         }
 
         [Test]
-        public void IfUserIsPresentUsername()
+        public void IfUserIsPresentUsernameIsNull()
         {
             Assert.Throws<ArgumentNullException>(() => this.extendedDatabase.FindByUsername(null));
         }
 
+        [Test]
+        public void IfUserIsNotPresentUsername()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.FindByUsername("Pesho"));
+        }
+
+        [Test]
+        public void IfUserIsPresentUsername()
+        {
+            people = new ExtendedDatabase.Person[]
+           {
+              new Person(123120,"Tosho"),
+              new Person (112321,"Gosho"),
+           };
+
+            extendedDatabase = new ExtendedDatabase.ExtendedDatabase(people);
 
 
-        //[Test]
-        //public void CheckIfRemoveLastElement()
-        //{
-        //    this.Remove();
-        //    int expectedValue = 15;
-        //    Assert.AreEqual(expectedValue, this.Count);
-        //}
+            //Person ExpPerson = new Person(123120, "Pesho");
 
-        //[Test]
-        //public void CheckIfWhenCountIsZeroShouldThrowException()
-        //{
-        //    ExtendedDatabaseExp = new ExtendedDatabase.ExtendedDatabase();
-        //    Assert.Throws<InvalidOperationException>(() => ExtendedDatabaseExp.Remove());
-        //}
+            Person currPerson = extendedDatabase
+                .FindByUsername("Pesho");
 
-        //[Test]
-        //public void CheckIfFatchReturnCurrectlyResult()
-        //{
-        //    int[] expArray = Enumerable.Range(1, 16).ToArray();
+            Assert.AreEqual(this.person, currPerson);
+        }
 
-        //    int[] returnArray = this.Fetch();
+        [Test]
+        public void IfUserIsPresenIDIsNull()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => this.extendedDatabase.FindById(-1));
+        }
 
-        //    Assert.AreEqual(expArray, returnArray);
-        //}
+        [Test]
+        public void IfUserIsNotPresenID()
+        {
+            Assert.Throws<InvalidOperationException>(() => this.extendedDatabase.FindById(123123));
+        }
+
+        public void IfUserIsPresentUsernameID()
+        {
+            people = new ExtendedDatabase.Person[]
+           {
+              new Person(123120,"Pesho"),
+              new Person (112321,"Gosho"),
+           };
+
+            extendedDatabase = new ExtendedDatabase.ExtendedDatabase(people);
 
 
+            Person ExpPerson = new Person(123120, "Pesho");
+
+            Person currPerson = extendedDatabase
+                .FindById(123120);
+
+            Assert.Equals(ExpPerson, currPerson);
+        }
     }
 }
