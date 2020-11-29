@@ -77,5 +77,7 @@ namespace Tests
             Assert.AreEqual(expFighterHp, fighter.HP);
             Assert.AreEqual(expDefHp, defender.HP);
         }
+
+
     }
 }
