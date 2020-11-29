@@ -87,6 +87,19 @@ namespace Tests
             Assert.That(() => database.Add(newPerson), Throws.InvalidOperationException);
         }
 
+        public void AddOperationIncreaseCount()
+        {
+            database.Remove();
+            Person newPerson = new Person(15, "Nikolina");
+
+            int expCount = 16;
+
+            int actualCount = database.Count;
+
+            Assert.AreEqual(expCount, actualCount);
+        }
+
+
         [Test]
         public void RemoveOperationSouldRemoveTheLastElementFromTheCollection()
         {
@@ -95,14 +108,15 @@ namespace Tests
             int expectedCount = 15;
             int actualCount = database.Count;
 
-            Assert.That(() => database.FindById(15), Throws.InvalidOperationException);
-            Assert.That(actualCount, Is.EqualTo(expectedCount));
+            Assert.AreEqual(expectedCount, actualCount);
         }
 
         [Test]
         public void RemovingElementFromEmptyDatabaseThrowsExeption()
         {
-            Assert.That(() => new ExtendedDatabase.ExtendedDatabase().Remove(), Throws.InvalidOperationException);
+            ExtendedDatabase.ExtendedDatabase extendedDatabase = new ExtendedDatabase.ExtendedDatabase();
+
+            Assert.That(() => extendedDatabase.Remove(), Throws.InvalidOperationException);
         }
 
         [Test]
@@ -125,21 +139,22 @@ namespace Tests
         public void FindPersonByNameInDatabase()
         {
             string expectedName = "Pesho";
-            Person currentPerson = database.FindByUsername("Pesho");
 
+            Person currentPerson = database.FindByUsername("Pesho");
             string actualName = currentPerson.UserName;
+
             Assert.AreEqual(expectedName, actualName);
         }
 
 
-        //[Test]
-        //public void ArgumentsAreCaseSensitiveInFindPersonByName()
-        //{
-        //    Person findPerson = database.FindById(10);
-        //    string name = findPerson.UserName.ToLower();
+        [Test]
+        public void ArgumentsAreCaseSensitiveInFindPersonByName()
+        {
+            Person findPerson = database.FindById(10);
+            string name = findPerson.UserName.ToLower();
 
-        //    Assert.That(() => database.FindByUsername(name), Throws.InvalidOperationException);
-        //}
+            Assert.That(() => database.FindByUsername(name), Throws.InvalidOperationException);
+        }
 
         [Test]
         public void FindPersonByIdThrowsExeptionWhenThereIsNoPersonWithThatId()
