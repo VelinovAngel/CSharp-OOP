@@ -170,9 +170,21 @@ namespace Tests
         }
 
         [Test]
-        public void FindIdMethodShouldThrowExpIfIdBelowZero()
+        [TestCase(-100L)]
+        public void FindIdMethodShouldThrowExpIfIdBelowZero(long id)
         {
+            this.database.Add(this.expectedPerson);
 
+            Assert.Throws<ArgumentOutOfRangeException>(() => this.database.FindById(id));
+        }
+
+        [Test]
+        public void FindMethodPersonById()
+        {
+            this.database.Add(this.expectedPerson);
+
+            Person actualPerson = database.FindById(100L);
+            Assert.AreEqual(this.expectedPerson, actualPerson);
         }
 
     }
