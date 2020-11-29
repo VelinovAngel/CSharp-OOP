@@ -1,4 +1,4 @@
-using ExtendedDatabase;
+//using ExtendedDatabase;
 using NUnit.Framework;
 
 namespace Tests
@@ -6,7 +6,8 @@ namespace Tests
     public class ExtendedDatabaseTests
     {
         private Person[] people;
-        private ExtendedDatabase.ExtendedDatabase database;
+        private ExtendedDatabase database;
+        //private Person expectedPerson;
 
         [SetUp]
         public void Setup()
@@ -30,7 +31,7 @@ namespace Tests
               new Person (15, "Nikolina"),
             };
 
-            database = new ExtendedDatabase.ExtendedDatabase(people);
+            database = new ExtendedDatabase(people);
         }
 
         [Test]
@@ -57,7 +58,7 @@ namespace Tests
               new Person (432516, "Maxi")
             };
 
-            Assert.That(() => new ExtendedDatabase.ExtendedDatabase(people), Throws.ArgumentException);
+            Assert.That(() => new ExtendedDatabase(people), Throws.ArgumentException);
         }
 
         [Test]
@@ -103,7 +104,7 @@ namespace Tests
         [Test]
         public void RemovingElementFromEmptyDatabaseThrowsExeption()
         {
-            Assert.That(() => new ExtendedDatabase.ExtendedDatabase().Remove(), Throws.InvalidOperationException);
+            Assert.That(() => new ExtendedDatabase().Remove(), Throws.InvalidOperationException);
         }
 
         [Test]
@@ -125,9 +126,11 @@ namespace Tests
         [Test]
         public void FindPersonByNameInDatabase()
         {
-            string expPersonName = "Pesho";
+            string expectedName = "Pesho";
+            Person currentPerson = database.FindByUsername("Pesho");
 
-            Assert.AreEqual(expPersonName, database.FindByUsername("Pesho"));
+            string actualName = currentPerson.UserName;
+            Assert.AreEqual(expectedName, actualName);
         }
 
 
@@ -148,6 +151,19 @@ namespace Tests
             Assert.That(() => database.FindById(id), Throws.InvalidOperationException);
         }
 
+
+
+        [Test]
+        public void FindPersonById()
+        {
+            long expectedId = 0;
+            Person actualPerson = database.FindById(0);
+
+            long actualId = actualPerson.Id;
+
+            Assert.AreEqual(expectedId, actualId);
+        }
+
         [Test]
         public void FindPersonByIdThrowsExeptionWhenIsNegativeId()
         {
@@ -157,4 +173,4 @@ namespace Tests
         }
     }
 }
-    
+
