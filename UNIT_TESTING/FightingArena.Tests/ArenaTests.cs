@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using FightingArena;
+//using FightingArena;
 using System;
 using System.Linq;
 
@@ -38,15 +38,20 @@ namespace Tests
             Arena arena = new Arena();
 
             Warrior warrior = new Warrior("Pesho", 10, 10);
+            Warrior fighter = new Warrior("Tosho", 10, 10);
 
             arena.Enroll(warrior);
+            arena.Enroll(fighter);
 
-            int expCount = 1;
-            bool isAny = arena.Warriors
+            int expCount = 2;
+            bool isWarrior = arena.Warriors
                 .Any(x => x.Name == "Pesho");
+            bool isAnyFighter = arena.Warriors
+                .Any(x => x.Name == "Tosho");
 
             Assert.AreEqual(expCount, arena.Count);
-            Assert.IsTrue(isAny);
+            Assert.IsTrue(isWarrior);
+            Assert.IsTrue(isAnyFighter);
         }
 
 

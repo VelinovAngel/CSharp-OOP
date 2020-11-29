@@ -1,7 +1,7 @@
 using System;
 
 using NUnit.Framework;
-using FightingArena;
+//using FightingArena;
 
 namespace Tests
 {
@@ -64,6 +64,7 @@ namespace Tests
         [Test]
         [TestCase("Pesho", 10, 50, 40, "Gosho", 10, 50, 40)]
         [TestCase("Pesho", 20, 100, 90, "Gosho", 10, 70, 50)]
+        [TestCase("Pesho", 50, 100, 90, "Gosho", 10, 40, 0)]
         public void WarriorAttackWhenDecreaseHP(string fighterName, int fighterDmg, int fighterHp, int fighterHpLeft, string defenderName, int defenderDmg, int defenderHp, int defHpLeft)
         {
             Warrior fighter = new Warrior(fighterName, fighterDmg, fighterHp);
