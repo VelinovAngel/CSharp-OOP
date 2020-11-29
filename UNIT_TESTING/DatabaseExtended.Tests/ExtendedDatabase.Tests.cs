@@ -1,4 +1,4 @@
-//using ExtendedDatabase;
+using ExtendedDatabase;
 using NUnit.Framework;
 
 namespace Tests
@@ -6,7 +6,7 @@ namespace Tests
     public class ExtendedDatabaseTests
     {
         private Person[] people;
-        private ExtendedDatabase database;
+        private ExtendedDatabase.ExtendedDatabase database;
         //private Person expectedPerson;
 
         [SetUp]
@@ -31,7 +31,7 @@ namespace Tests
               new Person (15, "Nikolina"),
             };
 
-            database = new ExtendedDatabase(people);
+            database = new ExtendedDatabase.ExtendedDatabase(people);
         }
 
         [Test]
@@ -58,7 +58,7 @@ namespace Tests
               new Person (432516, "Maxi")
             };
 
-            Assert.That(() => new ExtendedDatabase(people), Throws.ArgumentException);
+            Assert.That(() => new ExtendedDatabase.ExtendedDatabase(people), Throws.ArgumentException);
         }
 
         [Test]
@@ -95,8 +95,6 @@ namespace Tests
             int expectedCount = 15;
             int actualCount = database.Count;
 
-            //The last person's ID is 15, if the program can not find it 
-            //that means the last one is removed
             Assert.That(() => database.FindById(15), Throws.InvalidOperationException);
             Assert.That(actualCount, Is.EqualTo(expectedCount));
         }
@@ -104,7 +102,7 @@ namespace Tests
         [Test]
         public void RemovingElementFromEmptyDatabaseThrowsExeption()
         {
-            Assert.That(() => new ExtendedDatabase().Remove(), Throws.InvalidOperationException);
+            Assert.That(() => new ExtendedDatabase.ExtendedDatabase().Remove(), Throws.InvalidOperationException);
         }
 
         [Test]
@@ -134,14 +132,14 @@ namespace Tests
         }
 
 
-        [Test]
-        public void ArgumentsAreCaseSensitiveInFindPersonByName()
-        {
-            Person findPerson = database.FindById(10);
-            string name = findPerson.UserName.ToLower();
+        //[Test]
+        //public void ArgumentsAreCaseSensitiveInFindPersonByName()
+        //{
+        //    Person findPerson = database.FindById(10);
+        //    string name = findPerson.UserName.ToLower();
 
-            Assert.That(() => database.FindByUsername(name), Throws.InvalidOperationException);
-        }
+        //    Assert.That(() => database.FindByUsername(name), Throws.InvalidOperationException);
+        //}
 
         [Test]
         public void FindPersonByIdThrowsExeptionWhenThereIsNoPersonWithThatId()
@@ -151,6 +149,14 @@ namespace Tests
             Assert.That(() => database.FindById(id), Throws.InvalidOperationException);
         }
 
+
+        [Test]
+        public void FindPersonByIdThrowsExeptionWhenIsNegativeId()
+        {
+            long id = -1;
+
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => database.FindById(id));
+        }
 
 
         [Test]
@@ -162,14 +168,6 @@ namespace Tests
             long actualId = actualPerson.Id;
 
             Assert.AreEqual(expectedId, actualId);
-        }
-
-        [Test]
-        public void FindPersonByIdThrowsExeptionWhenIsNegativeId()
-        {
-            long id = -1;
-
-            Assert.Throws<System.ArgumentOutOfRangeException>(() => database.FindById(id));
         }
     }
 }
