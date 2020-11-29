@@ -132,6 +132,49 @@ namespace Tests
 
             Assert.AreEqual(expCount, actualCount);
         }
+
+        [Test]
+        [TestCase(null)]
+        [TestCase("")]
+        public void CheckShouldThrowsArgumentExpWhenNameIsNullOrEmpty(string username)
+        {
+            this.database.Add(this.expectedPerson);
+            Assert.Throws<ArgumentNullException>(() => database.FindByUsername(username));
+        }
+
+        [Test]
+        [TestCase(1999L, "Gosho")]
+        public void FindMethodShouldThrowExpPersonByNameNotExist(long Id, string name)
+        {
+            this.database.Add(this.expectedPerson);
+
+            Assert.Throws<InvalidOperationException>(() => database.FindByUsername(name));
+        }
+
+        [Test]
+        public void FindMethodPersonByName()
+        {
+            this.database.Add(this.expectedPerson);
+
+            Person actualPerson = database.FindByUsername("Pesho");
+            Assert.AreEqual(this.expectedPerson, actualPerson);
+        }
+
+        [Test]
+        [TestCase(1999L, "Gosho")]
+        public void FindIdMethodShouldThrowExpPersonByIDNotExist(long id, string name)
+        {
+            this.database.Add(this.expectedPerson);
+
+            Assert.Throws<InvalidOperationException>(() => database.FindById(id));
+        }
+
+        [Test]
+        public void FindIdMethodShouldThrowExpIfIdBelowZero()
+        {
+
+        }
+
     }
 }
 
