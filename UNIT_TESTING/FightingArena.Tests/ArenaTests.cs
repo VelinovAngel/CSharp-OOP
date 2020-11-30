@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-//using FightingArena;
+using FightingArena;
 using System;
 using System.Linq;
 
@@ -66,6 +66,8 @@ namespace Tests
             Warrior warrior = new Warrior(fighter, 10, 10);
 
             arena.Enroll(warrior);
+
+            Assert.Throws<InvalidOperationException>(() => arena.Enroll(warrior));
 
             Assert.Throws<InvalidOperationException>(() => arena.Fight(fighter, defender));
         }
