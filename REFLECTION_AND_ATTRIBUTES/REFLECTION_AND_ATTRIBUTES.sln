@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Command_Pattern", "01.Command_Pattern\01.Command_Pattern.csproj", "{3521D29C-E561-40A9-88C2-42685EA855B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Validation_Attributes", "02.Validation_Attributes\02.Validation_Attributes.csproj", "{1CFF16EA-298A-4233-B96C-04DABF1271AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{3521D29C-E561-40A9-88C2-42685EA855B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3521D29C-E561-40A9-88C2-42685EA855B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3521D29C-E561-40A9-88C2-42685EA855B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFF16EA-298A-4233-B96C-04DABF1271AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFF16EA-298A-4233-B96C-04DABF1271AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFF16EA-298A-4233-B96C-04DABF1271AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFF16EA-298A-4233-B96C-04DABF1271AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
