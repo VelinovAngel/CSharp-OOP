@@ -1,100 +1,95 @@
-﻿using NUnit.Framework;
-using FightingArena;
+﻿//using FightingArena;
+using NUnit.Framework;
 using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace Tests
 {
+
     public class ArenaTests
     {
+        private Warrior gosho;
+        private Warrior pesho;
+
         [SetUp]
         public void Setup()
         {
+            gosho = new Warrior("Gosho", 25, 35);
+            pesho = new Warrior("Pesho", 20, 60);
         }
 
         [Test]
-        public void ConstructorValue()
+        public void Arena_Constr()
         {
             Arena arena = new Arena();
-
-            Assert.IsNotNull(arena.Warriors);
+            var list = new List<Warrior>();
+            CollectionAssert.AreEqual(list, arena.Warriors);
         }
 
         [Test]
-        public void EnrollExpIfWarriorExist()
+        public void Arena_Enroll_InvalidOperationException_WarriorAlreadyEnrolled()
         {
             Arena arena = new Arena();
-
-            Warrior warrior = new Warrior("Pesho", 10, 10);
-
-            arena.Enroll(warrior);
-
-            Assert.Throws<InvalidOperationException>(() => arena.Enroll(warrior));
+            arena.Enroll(gosho);
+            Assert.Throws<InvalidOperationException>
+                (() => arena.Enroll(gosho));
         }
 
         [Test]
-        public void EnrollAddWarrier()
+        public void Arena_Enroll_CorrectList()
         {
             Arena arena = new Arena();
+            arena.Enroll(gosho);
+            arena.Enroll(pesho);
 
-            Warrior warrior = new Warrior("Pesho", 10, 10);
-            Warrior fighter = new Warrior("Tosho", 10, 10);
+            var expected = new List<Warrior> { gosho, pesho };
 
-            arena.Enroll(warrior);
-            arena.Enroll(fighter);
-
-            int expCount = 2;
-            bool isWarrior = arena.Warriors
-                .Any(x => x.Name == "Pesho");
-            bool isAnyFighter = arena.Warriors
-                .Any(x => x.Name == "Tosho");
-
-            Assert.AreEqual(expCount, arena.Count);
-            Assert.IsTrue(isWarrior);
-            Assert.IsTrue(isAnyFighter);
+            CollectionAssert.AreEqual(expected, arena.Warriors);
         }
-
 
         [Test]
-        [TestCase("Pesho", "Tosho")]
-        public void FightShouldThrowExpIfWarriorNotExist(string fighter, string defender)
+        public void Arena_Enroll_CorrectList_Count()
         {
             Arena arena = new Arena();
+            arena.Enroll(gosho);
+            arena.Enroll(pesho);
 
-            Assert.Throws<InvalidOperationException>(() => arena.Fight(fighter, defender));
-
-            Warrior warrior = new Warrior(fighter, 10, 10);
-
-            arena.Enroll(warrior);
-
-            Assert.Throws<InvalidOperationException>(() => arena.Enroll(warrior));
-
-            Assert.Throws<InvalidOperationException>(() => arena.Fight(fighter, defender));
+            var expected = new List<Warrior> { gosho, pesho }.Count;
+            var actual = arena.Count;
+            Assert.AreEqual(expected, actual);
         }
-
 
         [Test]
-        [TestCase("Pesho", 10, 50, 40, "Gosho", 10, 50, 40)]
-        public void FightShouldWork(string fighterName, int fighterDmg, int fighterHp, int leftFighterHp, string defenderName, int defenderDmg, int defenderHp, int leftDefenderHp)
+        public void Arena_Fight_InvalidOperationException_DefenderNotEnrolled()
         {
             Arena arena = new Arena();
-
-            Warrior fighter = new Warrior(fighterName, fighterDmg, fighterHp);
-            Warrior defender = new Warrior(defenderName, defenderDmg, defenderHp);
-
-            arena.Enroll(fighter);
-            arena.Enroll(defender);
-
-
-            arena.Fight(fighter.Name, defender.Name);
-
-            int defHp = arena.Warriors.FirstOrDefault(x => x.Name == defender.Name).HP;
-            int fightHp = arena.Warriors.FirstOrDefault(x => x.Name == fighter.Name).HP;
-
-            Assert.AreEqual(defHp, leftDefenderHp);
-            Assert.AreEqual(fightHp, leftFighterHp);
+            arena.Enroll(gosho);
+            Assert.Throws<InvalidOperationException>
+                (() => arena.Fight("Gosho", "Pesho"));
         }
 
+        [Test]
+        public void Arena_Fight_InvalidOperationException_AttackerNotEnrolled()
+        {
+            Arena arena = new Arena();
+            arena.Enroll(pesho);
+            Assert.Throws<InvalidOperationException>
+                (() => arena.Fight("Gosho", "Pesho"));
+        }
 
+        [Test]
+        public void Fight_Correctly()
+        {
+            Arena arena = new Arena();
+            arena.Enroll(gosho);
+            arena.Enroll(pesho);
+
+            arena.Fight("Gosho", "Pesho");
+
+            var expectedPeshoHp = 35;
+            var actual = pesho.HP;
+            Assert.AreEqual(expectedPeshoHp, actual);
+        }
     }
 }
+
