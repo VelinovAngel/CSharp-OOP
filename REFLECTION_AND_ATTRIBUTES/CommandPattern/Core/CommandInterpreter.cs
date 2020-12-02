@@ -35,7 +35,12 @@ namespace CommandPattern.Core
                 throw new ArgumentException("Invalid command type!");
             }
 
+            ICommand commandInstance = (ICommand)Activator
+                .CreateInstance(commandType);
 
+            string result = commandInstance.Execute(commandArgs);
+
+            return result;
         }
     }
 }
