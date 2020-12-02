@@ -6,10 +6,6 @@ namespace CommandPattern.Models.Commands
 {
     public class ExitCommand : ICommand
     {
-        public ExitCommand()
-        {
-        }
-
         public string Execute(string[] args)
         {
             Environment.Exit(0);
