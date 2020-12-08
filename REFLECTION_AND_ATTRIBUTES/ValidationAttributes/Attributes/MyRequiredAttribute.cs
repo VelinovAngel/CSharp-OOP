@@ -1,5 +1,4 @@
-﻿using System;
-namespace ValidationAttributes.Attributes
+﻿namespace ValidationAttributes.Attributes
 {
     public class MyRequiredAttribute : MyValidationAttribute
     {

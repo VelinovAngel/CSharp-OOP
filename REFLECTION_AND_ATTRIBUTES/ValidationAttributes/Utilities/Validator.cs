@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using ValidationAttributes.Attributes;
 
+
 namespace ValidationAttributes.Utilities
 {
     public class Validator
@@ -11,7 +12,7 @@ namespace ValidationAttributes.Utilities
         public static bool IsValid(object obj)
         {
             if (obj == null)
-            {
+            { 
                 return false;
             }
 
@@ -21,20 +22,22 @@ namespace ValidationAttributes.Utilities
 
             foreach (PropertyInfo property in properties)
             {
-                MyValidationAttribute[] attributes = property.GetCustomAttribute().
+                MyValidationAttribute[] attributes = property.GetCustomAttributes()
                                                              .Where(ca => ca is MyValidationAttribute)
                                                              .Cast<MyValidationAttribute>()
                                                              .ToArray();
 
                 foreach (MyValidationAttribute attribute in attributes)
                 {
-                    if (attribute.IsValid())
+                    if (!attribute.IsValid(property.GetValue(obj)))
                     {
-
+                        return false;
                     }
                 }
+
             }
 
+            return true;
 
         }
     }

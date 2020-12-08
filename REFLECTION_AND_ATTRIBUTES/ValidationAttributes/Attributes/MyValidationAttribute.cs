@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace ValidationAttributes.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
