@@ -1,9 +1,9 @@
 ﻿using System;
 namespace RobotService.Models.Robots
 {
-    public class HouseholdRobot : Robots
+    public class PetRobot : Robots
     {
-        public HouseholdRobot(string name, int energy, int happiness, int procedureTime)
+        public PetRobot(string name, int energy, int happiness, int procedureTime)
             : base(name, energy, happiness, procedureTime)
         {
         }

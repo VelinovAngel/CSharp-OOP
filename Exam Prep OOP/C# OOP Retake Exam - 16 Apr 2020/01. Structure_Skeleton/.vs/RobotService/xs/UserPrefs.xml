@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{4CAC8DD8-5C11-49AC-BBB2-E231A214AB58}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Models/Robots/WalkerRobot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Models/Robots/PetRobot.cs">
     <Files>
       <File FileName="RobotService/Models/Robots/Robots.cs" Line="16" Column="1" />
       <File FileName="RobotService/Utilities/Messages/ExceptionMessages.cs" Line="5" Column="45" />
       <File FileName="RobotService/Models/Robots/Contracts/IRobot.cs" Line="1" Column="1" />
-      <File FileName="RobotService/Models/Robots/HouseholdRobot.cs" Line="7" Column="13" />
-      <File FileName="RobotService/Models/Robots/WalkerRobot.cs" Line="4" Column="24" />
+      <File FileName="RobotService/Models/Robots/PetRobot.cs" Line="4" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +13,7 @@
             <Node name="RobotService" expanded="True">
               <Node name="Models" expanded="True">
                 <Node name="Robots" expanded="True">
-                  <Node name="Contracts" expanded="True" />
-                  <Node name="WalkerRobot.cs" selected="True" />
+                  <Node name="PetRobot.cs" selected="True" />
                 </Node>
               </Node>
               <Node name="Utilities" expanded="True">
