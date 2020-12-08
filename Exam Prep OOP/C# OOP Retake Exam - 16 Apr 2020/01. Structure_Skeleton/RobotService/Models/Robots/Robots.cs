@@ -88,7 +88,7 @@ namespace RobotService.Models.Robots
 
         public override string ToString()
         {
-            return $" Robot type: {this.GetType().Name} - {this.name} - Happiness: {this.happiness} - Energy: {this.energy}";
+            return $" Robot type: {this.GetType().Name} - {this.Name} - Happiness: {this.Happiness} - Energy: {this.Energy}";
         }
     }
 }
