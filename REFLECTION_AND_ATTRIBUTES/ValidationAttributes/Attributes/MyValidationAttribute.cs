@@ -1,10 +1,10 @@
 ﻿using System;
 namespace ValidationAttributes.Attributes
 {
-    public class MyValidationAttribute
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
+
+    public abstract class MyValidationAttribute : Attribute
     {
-        public MyValidationAttribute()
-        {
-        }
+        public abstract bool IsValid(object obj);
     }
 }
