@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{0ED77E2F-8F32-4BD5-AD14-DD76D14AB3EB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CounterStrike/Core/Engine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CounterStrike/Repositories/PlayerRepository.cs">
     <Files>
       <File FileName="CounterStrike/Models/Guns/Rifle.cs" Line="5" Column="9" />
       <File FileName="CounterStrike/Models/Guns/Gun.cs" />
       <File FileName="CounterStrike/Models/Players/Player.cs" />
       <File FileName="CounterStrike/Repositories/GunRepository.cs" />
-      <File FileName="CounterStrike/Repositories/PlayerRepository.cs" />
+      <File FileName="CounterStrike/Repositories/PlayerRepository.cs" Line="21" Column="36" />
       <File FileName="CounterStrike/Core/Controller.cs" />
       <File FileName="CounterStrike/Utilities/Messages/OutputMessages.cs" />
       <File FileName="CounterStrike/Utilities/Messages/ExceptionMessages.cs" />
       <File FileName="CounterStrike/Models/Guns/Pistol.cs" />
-      <File FileName="CounterStrike/Core/Engine.cs" Line="25" Column="1" />
+      <File FileName="CounterStrike/Core/Engine.cs" />
       <File FileName="CounterStrike/Models/Maps/Map.cs" />
       <File FileName="CounterStrike/Models/Players/Contracts/IPlayer.cs" />
       <File FileName="CounterStrike/IO/Writer.cs" />
@@ -21,7 +21,13 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node />
+          <Node name="CounterStriker" expanded="True">
+            <Node name="CounterStrike" expanded="True">
+              <Node name="Repositories" expanded="True">
+                <Node name="PlayerRepository.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

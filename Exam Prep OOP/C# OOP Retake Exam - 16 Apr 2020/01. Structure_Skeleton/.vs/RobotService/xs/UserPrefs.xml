@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{4CAC8DD8-5C11-49AC-BBB2-E231A214AB58}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Models/Robots/PetRobot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Models/Procedures/Charge.cs">
     <Files>
-      <File FileName="RobotService/Models/Robots/Robots.cs" Line="16" Column="1" />
-      <File FileName="RobotService/Utilities/Messages/ExceptionMessages.cs" Line="5" Column="45" />
-      <File FileName="RobotService/Models/Robots/Contracts/IRobot.cs" Line="1" Column="1" />
-      <File FileName="RobotService/Models/Robots/PetRobot.cs" Line="4" Column="35" />
+      <File FileName="RobotService/Utilities/Messages/ExceptionMessages.cs" Line="9" Column="35" />
+      <File FileName="RobotService/Models/Procedures/Chip.cs" Line="20" Column="105" />
+      <File FileName="RobotService/Models/Procedures/Charge.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RobotService" expanded="True">
             <Node name="RobotService" expanded="True">
+              <Node name="Core" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Robots" expanded="True">
-                  <Node name="PetRobot.cs" selected="True" />
+                <Node name="Procedures" expanded="True">
+                  <Node name="Charge.cs" selected="True" />
                 </Node>
               </Node>
               <Node name="Utilities" expanded="True">

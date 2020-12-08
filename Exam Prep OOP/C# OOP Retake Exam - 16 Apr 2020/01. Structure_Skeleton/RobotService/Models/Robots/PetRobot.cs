@@ -1,5 +1,4 @@
-﻿using System;
-namespace RobotService.Models.Robots
+﻿namespace RobotService.Models.Robots
 {
     public class PetRobot : Robots
     {
