@@ -8,13 +8,30 @@ namespace RobotService.Models.Robots
     {
         private int happiness;
         private int energy;
+        private string name;
         private string owner = "Service";
         private bool isBought = false;
         private bool isChipped = false;
         private bool isChecked = false;
 
+        protected Robots(string name, int energy, int happiness,  int procedureTime)
+        {
+            Name = name;
+            Happiness = happiness;
+            Energy = energy;
+            ProcedureTime = procedureTime;
+        }
 
-        public string Name { get; }
+        public string Name {
+            get
+            {
+                return this.name;
+            }
+            private set
+            {
+                this.name = value ;
+            }
+        }
 
         public int Happiness
         {
@@ -68,5 +85,10 @@ namespace RobotService.Models.Robots
         public bool IsChipped { get => this.isChipped; set => value = this.isChipped; }
 
         public bool IsChecked { get => this.isChecked; set => value = this.isChecked; }
+
+        public override string ToString()
+        {
+            return $" Robot type: {this.GetType().Name} - {this.name} - Happiness: {this.happiness} - Energy: {this.energy}";
+        }
     }
 }
