@@ -10,8 +10,8 @@ namespace ValidationAttributes
         {
             var person = new Person
              (
-                 "Ivan Ivanov",
-                 30
+                 null,
+                 -1
              );
 
             bool isValidEntity = Validator.IsValid(person);
