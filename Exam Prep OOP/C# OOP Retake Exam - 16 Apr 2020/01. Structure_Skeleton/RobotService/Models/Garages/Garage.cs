@@ -9,10 +9,10 @@ namespace RobotService.Models.Garages
 {
     public abstract class Garage : IGarage
     {
-        private readonly IDictionary<string, IRobot> robots;
         private const int CAPACITY_VALUE = 10;
 
         private int capacity;
+        private readonly IDictionary<string, IRobot> robots;
 
         public Garage()
         {

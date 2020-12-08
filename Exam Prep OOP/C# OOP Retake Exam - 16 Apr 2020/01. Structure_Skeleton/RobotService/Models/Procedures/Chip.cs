@@ -4,7 +4,7 @@ using RobotService.Utilities.Messages;
 
 namespace RobotService.Models.Procedures
 {
-    public class Chip : Procedures
+    public class Chip : Procedure
     {
         private const int HAPPINESS_VALUE = 5;
         private const bool CHIPPED_VALUE = true;

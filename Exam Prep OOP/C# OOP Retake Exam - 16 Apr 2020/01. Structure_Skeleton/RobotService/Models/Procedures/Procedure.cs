@@ -8,24 +8,16 @@ using RobotService.Utilities.Messages;
 
 namespace RobotService.Models.Procedures
 {
-    public abstract class Procedures : IProcedure
+    public abstract class Procedure : IProcedure
     {
-        protected Procedures()
-        {
+        private ICollection<IRobot> robots;
 
+        protected Procedure()
+        {
+            this.robots = new List<IRobot>();
         }
 
-        protected List<IRobot> Robots { get; } = new List<IRobot>(); 
-
-        public virtual void DoService(IRobot robot, int procedureTime)
-        {
-            if (robot.ProcedureTime < procedureTime)
-            {
-                throw new ArgumentException(ExceptionMessages.InsufficientProcedureTime);
-            }
-
-            robot.ProcedureTime -= procedureTime;
-        }
+        protected List<IRobot> Robots { get; }
 
         public string History()
         {
@@ -39,5 +31,16 @@ namespace RobotService.Models.Procedures
 
             return sb.ToString().TrimEnd();
         }
+
+        public virtual void DoService(IRobot robot, int procedureTime)
+        {
+            if (robot.ProcedureTime < procedureTime)
+            {
+                throw new ArgumentException(ExceptionMessages.InsufficientProcedureTime);
+            }
+
+            robot.ProcedureTime -= procedureTime;
+        }
+
     }
 }

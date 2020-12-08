@@ -4,32 +4,39 @@ using RobotService.Utilities.Messages;
 
 namespace RobotService.Models.Robots
 {
-    public abstract class Robots : IRobot
+    public abstract class Robot : IRobot
     {
+        private string name;
         private int happiness;
         private int energy;
-        private string name;
-        private string owner = "Service";
-        private bool isBought = false;
-        private bool isChipped = false;
-        private bool isChecked = false;
 
-        protected Robots(string name, int energy, int happiness,  int procedureTime)
+        private Robot()
+        {
+            Owner = "Service";
+            IsBought = false;
+            IsChipped = false;
+            IsChecked = false;
+
+        }
+
+        protected Robot(string name, int energy, int happiness, int procedureTime)
+            :this()
         {
             Name = name;
-            Happiness = happiness;
             Energy = energy;
+            Happiness = happiness;
             ProcedureTime = procedureTime;
         }
 
-        public string Name {
+        public string Name
+        {
             get
             {
                 return this.name;
             }
             private set
             {
-                this.name = value ;
+                this.name = value;
             }
         }
 
@@ -68,23 +75,13 @@ namespace RobotService.Models.Robots
 
         public int ProcedureTime { get; set; }
 
-        public string Owner
-        {
-            get
-            {
-                return this.owner;
-            }
-            set
-            {
-                this.owner = value;
-            }
-        }
+        public string Owner { get; set; }
 
-        public bool IsBought { get => this.isBought; set => value = this.isBought; }
+        public bool IsBought { get; set; }
 
-        public bool IsChipped { get => this.isChipped; set => value = this.isChipped; }
+        public bool IsChipped { get; set; }
 
-        public bool IsChecked { get => this.isChecked; set => value = this.isChecked; }
+        public bool IsChecked { get; set; }
 
         public override string ToString()
         {

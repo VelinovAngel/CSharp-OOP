@@ -1,9 +1,8 @@
-﻿using System;
-using RobotService.Models.Robots.Contracts;
+﻿using RobotService.Models.Robots.Contracts;
 
 namespace RobotService.Models.Procedures
 {
-    public class Charge : Procedures
+    public class Charge : Procedure
     {
         private const int HAPPINESS_VALUE = 12;
         private const int ENERGY_VALUE = 10;
