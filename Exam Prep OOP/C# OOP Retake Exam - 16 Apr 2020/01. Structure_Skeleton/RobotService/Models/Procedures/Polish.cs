@@ -6,10 +6,6 @@ namespace RobotService.Models.Procedures
     {
         private const int HAPPINESS_VALUE = 7;
 
-        public Polish()
-        {
-        }
-
         public override void DoService(IRobot robot, int procedureTime)
         {
             base.DoService(robot, procedureTime);

@@ -7,10 +7,6 @@ namespace RobotService.Models.Procedures
         private const int HAPPINESS_VALUE = 3;
         private const int ENERGY_VALUE = 10;
 
-        public Rest()
-        {
-        }
-
         public override void DoService(IRobot robot, int procedureTime)
         {
             base.DoService(robot, procedureTime);

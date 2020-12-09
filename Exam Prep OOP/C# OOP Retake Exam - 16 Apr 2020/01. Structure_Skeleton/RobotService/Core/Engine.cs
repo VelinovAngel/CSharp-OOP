@@ -1,10 +1,11 @@
-﻿namespace RobotService.Core
-{
-    using System;
+﻿using System;
 
-    using RobotService.IO;
-    using RobotService.IO.Contracts;
-    using RobotService.Core.Contracts;
+using RobotService.IO;
+using RobotService.IO.Contracts;
+using RobotService.Core.Contracts;
+
+namespace RobotService.Core
+{
 
     public class Engine : IEngine
     {
@@ -16,7 +17,7 @@
         {
             this.writer = new Writer();
             this.reader = new Reader();
-            //this.controller = new Controller();
+            this.controller = new Controller();
         }
 
         public void Run()

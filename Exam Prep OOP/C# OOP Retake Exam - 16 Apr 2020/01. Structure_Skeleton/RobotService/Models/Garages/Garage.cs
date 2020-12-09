@@ -7,17 +7,14 @@ using RobotService.Models.Garages.Contracts;
 
 namespace RobotService.Models.Garages
 {
-    public abstract class Garage : IGarage
+    public class Garage : IGarage
     {
         private const int CAPACITY_VALUE = 10;
-
-        private int capacity;
         private readonly IDictionary<string, IRobot> robots;
 
         public Garage()
         {
             this.robots = new Dictionary<string, IRobot>();
-            this.capacity = CAPACITY_VALUE;
         }
 
         public IReadOnlyDictionary<string, IRobot> Robots
@@ -27,7 +24,7 @@ namespace RobotService.Models.Garages
 
         public void Manufacture(IRobot robot)
         {
-            if (robots.Count == capacity)
+            if (robots.Count == CAPACITY_VALUE)
             {
                 throw new InvalidOperationException(ExceptionMessages.NotEnoughCapacity);
             }
@@ -50,7 +47,6 @@ namespace RobotService.Models.Garages
             robots[robotName].Owner = ownerName;
             robots[robotName].IsBought = true;
             robots.Remove(robotName);
-
         }
     }
 }

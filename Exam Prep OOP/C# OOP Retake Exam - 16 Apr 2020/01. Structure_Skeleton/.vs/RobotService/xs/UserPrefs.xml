@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{4CAC8DD8-5C11-49AC-BBB2-E231A214AB58}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Models/Procedures/Procedure.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RobotService/Utilities/Enums/RobotType.cs">
     <Files>
-      <File FileName="RobotService/Core/Contracts/Controller.cs" Line="6" Column="42" />
-      <File FileName="RobotService/Models/Procedures/Procedure.cs" Line="1" Column="1" />
+      <File FileName="RobotService/Core/Controller.cs" Line="1" Column="1" />
+      <File FileName="RobotService/Utilities/Enums/RobotType.cs" Line="7" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RobotService" expanded="True">
             <Node name="RobotService" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="Contracts" expanded="True" />
-              </Node>
+              <Node name="Core" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Procedures" expanded="True">
-                  <Node name="Procedure.cs" selected="True" />
+                <Node name="Garages" expanded="True" />
+                <Node name="Robots" expanded="True" />
+              </Node>
+              <Node name="Utilities" expanded="True">
+                <Node name="Enums" expanded="True">
+                  <Node name="RobotType.cs" selected="True" />
                 </Node>
               </Node>
-              <Node name="Utilities" expanded="True" />
             </Node>
           </Node>
         </State>

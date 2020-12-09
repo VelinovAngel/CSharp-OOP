@@ -9,11 +9,6 @@ namespace RobotService.Models.Procedures
         private const int HAPPINESS_VALUE = 5;
         private const bool CHIPPED_VALUE = true;
 
-        public Chip()
-        {
-
-        }
-
         public override void DoService(IRobot robot, int procedureTime)
         {
             base.DoService(robot, procedureTime);

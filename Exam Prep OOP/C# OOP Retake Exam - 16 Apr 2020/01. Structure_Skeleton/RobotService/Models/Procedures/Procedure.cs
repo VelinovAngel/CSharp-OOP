@@ -10,14 +10,14 @@ namespace RobotService.Models.Procedures
 {
     public abstract class Procedure : IProcedure
     {
-        private ICollection<IRobot> robots;
 
         protected Procedure()
         {
-            this.robots = new List<IRobot>();
+            this.Robots = new List<IRobot>();
+            //HistoryPrivate();
         }
 
-        protected List<IRobot> Robots { get; }
+        protected ICollection<IRobot> Robots { get; }
 
         public string History()
         {
@@ -30,17 +30,30 @@ namespace RobotService.Models.Procedures
             }
 
             return sb.ToString().TrimEnd();
+            //return HistoryPrivate();
         }
+
+        //private string HistoryPrivate()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine($"{this.GetType().Name}");
+
+        //    foreach (IRobot robot in robots)
+        //    {
+        //        sb.AppendLine(robot.ToString());
+        //    }
+
+        //    return sb.ToString().TrimEnd();
+        //}
 
         public virtual void DoService(IRobot robot, int procedureTime)
         {
+            robot.ProcedureTime -= procedureTime;
+
             if (robot.ProcedureTime < procedureTime)
             {
                 throw new ArgumentException(ExceptionMessages.InsufficientProcedureTime);
             }
-
-            robot.ProcedureTime -= procedureTime;
         }
-
     }
 }

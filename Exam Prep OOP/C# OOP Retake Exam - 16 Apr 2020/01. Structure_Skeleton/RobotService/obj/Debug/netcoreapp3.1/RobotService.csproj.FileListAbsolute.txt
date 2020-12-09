@@ -1,0 +1,12 @@
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/bin/Debug/netcoreapp3.1/RobotService.deps.json
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/bin/Debug/netcoreapp3.1/RobotService.runtimeconfig.json
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/bin/Debug/netcoreapp3.1/RobotService.runtimeconfig.dev.json
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/bin/Debug/netcoreapp3.1/RobotService.dll
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/bin/Debug/netcoreapp3.1/RobotService.pdb
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.csprojAssemblyReference.cache
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.AssemblyInfoInputs.cache
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.AssemblyInfo.cs
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.csproj.CoreCompileInputs.cache
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.dll
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.pdb
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Retake Exam - 16 Apr 2020/01. Structure_Skeleton/RobotService/obj/Debug/netcoreapp3.1/RobotService.genruntimeconfig.cache

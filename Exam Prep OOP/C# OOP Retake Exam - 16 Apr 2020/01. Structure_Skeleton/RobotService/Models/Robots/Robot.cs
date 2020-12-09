@@ -1,44 +1,27 @@
 ﻿using System;
-using RobotService.Models.Robots.Contracts;
+
 using RobotService.Utilities.Messages;
+using RobotService.Models.Robots.Contracts;
 
 namespace RobotService.Models.Robots
 {
     public abstract class Robot : IRobot
     {
-        private string name;
+        private const string DEFAULT_OWNER = "Service";
+
         private int happiness;
         private int energy;
 
-        private Robot()
-        {
-            Owner = "Service";
-            IsBought = false;
-            IsChipped = false;
-            IsChecked = false;
-
-        }
-
         protected Robot(string name, int energy, int happiness, int procedureTime)
-            :this()
         {
-            Name = name;
-            Energy = energy;
-            Happiness = happiness;
-            ProcedureTime = procedureTime;
+            this.Name = name;
+            this.Energy = energy;
+            this.Happiness = happiness;
+            this.ProcedureTime = procedureTime;
+            Owner = DEFAULT_OWNER;
         }
 
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-            private set
-            {
-                this.name = value;
-            }
-        }
+        public string Name { get; }
 
         public int Happiness
         {
