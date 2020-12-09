@@ -18,6 +18,7 @@ namespace RobotService.Models.Procedures
                 throw new ArgumentException(string.Format(ExceptionMessages.AlreadyChipped, robot.Name));
             }
 
+            robot.ProcedureTime -= procedureTime;
             robot.Happiness -= HAPPINESS_VALUE;
             robot.IsChipped = CHIPPED_VALUE;
 

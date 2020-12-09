@@ -11,6 +11,7 @@ namespace RobotService.Models.Procedures
         {
             base.DoService(robot, procedureTime);
 
+            robot.ProcedureTime -= procedureTime;
             robot.Energy -= ENERGY_VALUE;
             robot.Happiness += HAPPINESS_VALUE;
 
