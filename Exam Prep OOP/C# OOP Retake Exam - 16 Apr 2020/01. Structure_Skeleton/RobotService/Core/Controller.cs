@@ -16,25 +16,16 @@ namespace RobotService.Core
 {
     public class Controller : IController
     {
-        private IDictionary<string, IProcedure> procedures;
-
-        private IProcedure procedure;
+        private readonly Dictionary<ProcedureType, IProcedure> procedures;
 
         private readonly IGarage garage;
 
         public Controller()
         {
             garage = new Garage();
+            this.procedures = new Dictionary<ProcedureType, IProcedure>();
+            this.SeedProcedurs();
 
-            procedures = new Dictionary<string, IProcedure>()
-            {
-                {"Charge", new Charge() },
-                {"Chip", new Chip() },
-                {"Polish", new Polish() },
-                {"Rest", new Rest() },
-                {"Work", new Work() },
-                {"TechCheck", new TechCheck() }
-            };
         }
 
         //NOTE: For each command except for "Manufacture" and "History", you must check if a robot with that name exist in the garage. If it doesn't, throw an ArgumentException with the message "Robot {robot name} does not exist".
@@ -68,17 +59,13 @@ namespace RobotService.Core
 
         public string Chip(string robotName, int procedureTime)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
+            if (!garage.Robots.ContainsKey(robotName))
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
             }
 
             IRobot robot = garage.Robots[robotName];
-
-            //procedure = new Chip();
-            //test.Add(procedure);
-            procedure = procedures["Chip"];
-            procedure.DoService(robot, procedureTime);
+            procedures[ProcedureType.Chip].DoService(robot , procedureTime);
 
             return string.Format(OutputMessages.ChipProcedure, robotName);
         }
@@ -93,7 +80,6 @@ namespace RobotService.Core
             IRobot robot = garage.Robots[robotName];
             //procedure = new Polish();
             //test.Add(procedure);
-            procedure = procedures["Polish"];
             procedure.DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.PolishProcedure, robotName);
@@ -109,7 +95,6 @@ namespace RobotService.Core
             IRobot robot = garage.Robots[robotName];
             //procedure = new Rest();
             //test.Add(procedure);
-            procedure = procedures["Rest"];
             procedure.DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.RestProcedure, robotName);
@@ -125,7 +110,6 @@ namespace RobotService.Core
             IRobot robot = garage.Robots[robotName];
             //procedure = new TechCheck();
             //test.Add(procedure);
-            procedure = procedures["TeckCheck"];
             procedure.DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.TechCheckProcedure, robotName);
@@ -141,7 +125,6 @@ namespace RobotService.Core
             IRobot robot = garage.Robots[robotName];
             //procedure = new Work();
             //test.Add(procedure);
-            procedure = procedures["Work"];
             procedure.DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.WorkProcedure, robotName, procedureTime);
@@ -157,7 +140,6 @@ namespace RobotService.Core
             IRobot robot = garage.Robots[robotName];
             //procedure = new Charge();
             //test.Add(procedure);
-            procedure = procedures["Charge"];
             procedure.DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.ChargeProcedure, robotName);
@@ -182,6 +164,16 @@ namespace RobotService.Core
         public string History(string procedureType)
         {
             return procedures[procedureType].History();
+        }
+
+        private void SeedProcedurs()
+        {
+            this.procedures.Add(ProcedureType.Charge, new Charge());
+            this.procedures.Add(ProcedureType.Chip, new Chip());
+            this.procedures.Add(ProcedureType.Polish, new Polish());
+            this.procedures.Add(ProcedureType.Rest, new Rest());
+            this.procedures.Add(ProcedureType.TechCheck, new TechCheck());
+            this.procedures.Add(ProcedureType.Work, new Work());
         }
     }
 }
