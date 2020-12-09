@@ -59,100 +59,58 @@ namespace RobotService.Core
 
         public string Chip(string robotName, int procedureTime)
         {
-            if (!garage.Robots.ContainsKey(robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
 
-            IRobot robot = garage.Robots[robotName];
-            procedures[ProcedureType.Chip].DoService(robot , procedureTime);
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.Chip].DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.ChipProcedure, robotName);
         }
 
+        public string TechCheck(string robotName, int procedureTime)
+        {
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.TechCheck].DoService(robot, procedureTime);
+
+            return string.Format(OutputMessages.TechCheckProcedure, robotName);
+        }
+
         public string Polish(string robotName, int procedureTime)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
-
-            IRobot robot = garage.Robots[robotName];
-            //procedure = new Polish();
-            //test.Add(procedure);
-            procedure.DoService(robot, procedureTime);
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.Polish].DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.PolishProcedure, robotName);
         }
 
         public string Rest(string robotName, int procedureTime)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
-
-            IRobot robot = garage.Robots[robotName];
-            //procedure = new Rest();
-            //test.Add(procedure);
-            procedure.DoService(robot, procedureTime);
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.Rest].DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.RestProcedure, robotName);
         }
 
-        public string TechCheck(string robotName, int procedureTime)
-        {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
-
-            IRobot robot = garage.Robots[robotName];
-            //procedure = new TechCheck();
-            //test.Add(procedure);
-            procedure.DoService(robot, procedureTime);
-
-            return string.Format(OutputMessages.TechCheckProcedure, robotName);
-        }
 
         public string Work(string robotName, int procedureTime)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
-
-            IRobot robot = garage.Robots[robotName];
-            //procedure = new Work();
-            //test.Add(procedure);
-            procedure.DoService(robot, procedureTime);
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.Work].DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.WorkProcedure, robotName, procedureTime);
         }
 
         public string Charge(string robotName, int procedureTime)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
-
-            IRobot robot = garage.Robots[robotName];
-            //procedure = new Charge();
-            //test.Add(procedure);
-            procedure.DoService(robot, procedureTime);
+            IRobot robot = GetRobot(robotName);
+            procedures[ProcedureType.Charge].DoService(robot, procedureTime);
 
             return string.Format(OutputMessages.ChargeProcedure, robotName);
         }
 
         public string Sell(string robotName, string ownerName)
         {
-            if (!garage.Robots.Any(x => x.Key == robotName))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
-            }
 
-            IRobot robot = garage.Robots[robotName];
+            IRobot robot = GetRobot(robotName);
 
             garage.Sell(robotName, ownerName);
 
@@ -163,7 +121,10 @@ namespace RobotService.Core
 
         public string History(string procedureType)
         {
-            return procedures[procedureType].History();
+            Enum.TryParse(procedureType, out ProcedureType procedureTypeEnum);
+            IProcedure procedure = procedures[procedureTypeEnum];
+
+            return procedure.History().Trim();
         }
 
         private void SeedProcedurs()
@@ -174,6 +135,16 @@ namespace RobotService.Core
             this.procedures.Add(ProcedureType.Rest, new Rest());
             this.procedures.Add(ProcedureType.TechCheck, new TechCheck());
             this.procedures.Add(ProcedureType.Work, new Work());
+        }
+
+        private IRobot GetRobot(string name)
+        {
+            if (!garage.Robots.ContainsKey(name))
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, name));
+            }
+
+            return garage.Robots[name];
         }
     }
 }
