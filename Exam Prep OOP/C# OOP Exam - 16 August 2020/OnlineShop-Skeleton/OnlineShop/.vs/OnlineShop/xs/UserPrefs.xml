@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{6C27F244-5BC0-4DDF-9BAC-90574D2249B1}|Default">
   <MonoDevelop.Ide.ItemProperties.OnlineShop PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Products/ProductModels/PeripheralModels/Mouse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Products/ProductModels/ComputersModels/Computer.cs">
     <Files>
-      <File FileName="Models/Products/ProductModels/PeripheralModels/Mouse.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/PeripheralModels/Mouse.cs" Line="11" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" Line="70" Column="1" />
+      <File FileName="Models/Products/ProductModels/Product.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,9 +14,10 @@
               <Node name="Models" expanded="True">
                 <Node name="Products" expanded="True">
                   <Node name="ProductModels" expanded="True">
-                    <Node name="PeripheralModels" expanded="True">
-                      <Node name="Mouse.cs" selected="True" />
+                    <Node name="ComputersModels" expanded="True">
+                      <Node name="Computer.cs" selected="True" />
                     </Node>
+                    <Node name="PeripheralModels" expanded="True" />
                   </Node>
                 </Node>
               </Node>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text;
 using OnlineShop.Models.Products.Components;
 using OnlineShop.Models.Products.Computers;
 using OnlineShop.Models.Products.Peripherals;
@@ -13,7 +13,8 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
         private readonly ICollection<IComponent> components;
         private readonly ICollection<IPeripheral> peripherals;
 
-        protected Computer(int id, string manufacturer, string model, decimal price, double overallPerformance) : base(id, manufacturer, model, price, overallPerformance)
+        protected Computer(int id, string manufacturer, string model, decimal price, double overallPerformance)
+            : base(id, manufacturer, model, price, overallPerformance)
         {
             components = new List<IComponent>();
             peripherals = new List<IPeripheral>();
@@ -61,5 +62,27 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($" Components ({components.Count}):");
+            foreach (var component in components)
+            {
+                sb.AppendLine($"  {component}");
+            }
+
+            sb.AppendLine($" Peripherals ({peripherals.Count}); Average Overall Performance ({this.OverallPerformance}):");
+
+            foreach (var peripheral in peripherals)
+            {
+                sb.AppendLine($"  {peripheral}");
+            }
+
+            return base.ToString() + sb.ToString().TrimEnd();
+        }
+
+
     }
 }
