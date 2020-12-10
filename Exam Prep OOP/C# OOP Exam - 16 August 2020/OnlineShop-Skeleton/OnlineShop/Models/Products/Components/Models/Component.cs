@@ -1,4 +1,4 @@
-﻿using OnlineShop.Models.Models.Product;
+﻿using OnlineShop.Models.Products.Models;
 
 namespace OnlineShop.Models.Products.Components.Models
 {
@@ -16,7 +16,7 @@ namespace OnlineShop.Models.Products.Components.Models
 
         public override string ToString()
         {
-            return $"Overall Performance: {this.OverallPerformance}. Price: {this.Price} - {GetType().Name}: {this.Manufacturer} {this.Model} (Id: {this.Id}) Generation: {this.Generation}";
+            return base.ToString() + $"Generation: {this.Generation}";
         }
     }
 }

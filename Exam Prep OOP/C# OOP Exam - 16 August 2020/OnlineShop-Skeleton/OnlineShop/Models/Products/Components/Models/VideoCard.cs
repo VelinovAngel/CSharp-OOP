@@ -1,13 +1,13 @@
 ﻿namespace OnlineShop.Models.Products.Components.Models
 {
-    public class PowerSupply : Component
+    public class VideoCard : Component
     {
-        public PowerSupply(int id, string manufacturer, string model, decimal price, double overallPerformance, int generation)
+        public VideoCard(int id, string manufacturer, string model, decimal price, double overallPerformance, int generation)
             : base(id, manufacturer, model, price, overallPerformance, generation)
         {
         }
 
         public override double OverallPerformance
-            => base.OverallPerformance * 1.05;
+            => base.OverallPerformance * 1.15;
     }
 }

@@ -59,7 +59,7 @@ namespace OnlineShop.Models.Products.Models
             }
         }
 
-        public decimal Price
+        public virtual decimal Price
         {
             get => this.price;
             private set
@@ -72,7 +72,7 @@ namespace OnlineShop.Models.Products.Models
             }
         }
 
-        public double OverallPerformance
+        public virtual double OverallPerformance
         {
             get => this.overallPerformance;
             private set
