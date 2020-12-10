@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{32F90C1A-0C31-40DA-ACF2-B18047A5606D}|Default">
   <MonoDevelop.Ide.ItemProperties.OnlineShop PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineShop/Models/Products/Peripherals/Models/Peripheral.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OnlineShop/Models/Products/Components/Models/Component.cs">
     <Files>
       <File FileName="OnlineShop/Common/Constants/ExceptionMessages.cs" Line="7" Column="45" />
       <File FileName="OnlineShop/Models/Products/Peripheral.cs" Line="1" Column="1" />
-      <File FileName="OnlineShop/Models/Products/Components/Models/Component.cs" Line="7" Column="32" />
-      <File FileName="OnlineShop/Models/Products/Models/Product.cs" Line="2" Column="35" />
-      <File FileName="OnlineShop/Models/Products/Computer.cs" Line="3" Column="1" />
+      <File FileName="OnlineShop/Models/Products/Components/Models/Component.cs" Line="23" Column="1" />
+      <File FileName="OnlineShop/Models/Products/Models/Product.cs" Line="75" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +18,12 @@
               </Node>
               <Node name="Models" expanded="True">
                 <Node name="Products" expanded="True">
-                  <Node name="Peripherals" expanded="True">
-                    <Node name="Models" expanded="True" />
+                  <Node name="Components" expanded="True">
+                    <Node name="Models" expanded="True">
+                      <Node name="Component.cs" selected="True" />
+                    </Node>
                   </Node>
+                  <Node name="Models" expanded="True" />
                 </Node>
               </Node>
             </Node>
