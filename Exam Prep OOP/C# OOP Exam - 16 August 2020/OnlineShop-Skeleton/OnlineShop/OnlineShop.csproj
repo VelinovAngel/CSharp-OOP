@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Products\Models\" />
+    <Folder Include="Models\Products\Components\Models\" />
+    <Folder Include="Models\Products\Computers\Models\" />
+    <Folder Include="Models\Products\Peripherals\Models\" />
+  </ItemGroup>
+</Project>

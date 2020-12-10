@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 
 using RobotService.Models.Robots;
@@ -109,7 +108,6 @@ namespace RobotService.Core
 
         public string Sell(string robotName, string ownerName)
         {
-
             IRobot robot = GetRobot(robotName);
 
             garage.Sell(robotName, ownerName);
