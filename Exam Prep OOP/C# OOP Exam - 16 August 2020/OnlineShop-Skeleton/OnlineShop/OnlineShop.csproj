@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Products\Models\" />
-    <Folder Include="Models\Products\Components\Models\" />
-    <Folder Include="Models\Products\Computers\Models\" />
-    <Folder Include="Models\Products\Peripherals\Models\" />
+    <Folder Include="Models\Products\ProductModels\" />
+    <Folder Include="Models\Products\ProductModels\ComponentsModels\" />
+    <Folder Include="Models\Products\ProductModels\ComputersModels\" />
+    <Folder Include="Models\Products\ProductModels\PeripheralModels\" />
   </ItemGroup>
 </Project>

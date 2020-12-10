@@ -3,6 +3,7 @@
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/bin/Debug/netcoreapp3.1/OnlineShop.runtimeconfig.dev.json
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/bin/Debug/netcoreapp3.1/OnlineShop.dll
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/bin/Debug/netcoreapp3.1/OnlineShop.pdb
+/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/obj/Debug/netcoreapp3.1/OnlineShop.csprojAssemblyReference.cache
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/obj/Debug/netcoreapp3.1/OnlineShop.AssemblyInfoInputs.cache
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/obj/Debug/netcoreapp3.1/OnlineShop.AssemblyInfo.cs
 /Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/obj/Debug/netcoreapp3.1/OnlineShop.csproj.CoreCompileInputs.cache

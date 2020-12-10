@@ -1,4 +1,4 @@
-﻿namespace OnlineShop.Models.Products.Peripherals.Models
+﻿namespace OnlineShop.Models.Products.ProductModels.PeripheralModels
 {
     public class Keyboard : Peripheral
     {

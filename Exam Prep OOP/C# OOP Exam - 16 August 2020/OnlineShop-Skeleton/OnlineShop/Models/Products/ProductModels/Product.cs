@@ -1,7 +1,8 @@
 ﻿using System;
+
 using OnlineShop.Common.Constants;
 
-namespace OnlineShop.Models.Products.Models
+namespace OnlineShop.Models.Products.ProductModels
 {
     public abstract class Product : IProduct
     {

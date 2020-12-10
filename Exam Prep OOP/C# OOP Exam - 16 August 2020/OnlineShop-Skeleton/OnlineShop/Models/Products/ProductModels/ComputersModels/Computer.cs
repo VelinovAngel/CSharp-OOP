@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using OnlineShop.Models.Products.Components;
-using OnlineShop.Models.Products.Models;
+using OnlineShop.Models.Products.Computers;
 using OnlineShop.Models.Products.Peripherals;
 
-namespace OnlineShop.Models.Products.Computers.Models
+namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 {
     public abstract class Computer : Product, IComputer
     {
@@ -19,10 +20,10 @@ namespace OnlineShop.Models.Products.Computers.Models
         }
 
         public IReadOnlyCollection<IComponent> Components
-            => (IReadOnlyCollection<IComponent>)this.components;
+           => (IReadOnlyCollection<IComponent>)this.components;
 
         public IReadOnlyCollection<IPeripheral> Peripherals
-               => (IReadOnlyCollection<IPeripheral>)this.peripherals;
+            => (IReadOnlyCollection<IPeripheral>)this.peripherals;
 
         public override double OverallPerformance
         {
@@ -40,7 +41,6 @@ namespace OnlineShop.Models.Products.Computers.Models
             => base.Price +
             this.Peripherals.Sum(x => x.Price) +
             this.Components.Sum(x => x.Price);
-
 
         public void AddComponent(IComponent component)
         {
@@ -62,5 +62,4 @@ namespace OnlineShop.Models.Products.Computers.Models
             throw new NotImplementedException();
         }
     }
-
 }

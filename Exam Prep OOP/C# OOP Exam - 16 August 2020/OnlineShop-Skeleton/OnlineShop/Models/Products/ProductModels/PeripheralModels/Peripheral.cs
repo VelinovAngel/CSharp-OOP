@@ -1,8 +1,8 @@
-﻿using OnlineShop.Models.Products.Models;
+﻿using OnlineShop.Models.Products.Peripherals;
 
-namespace OnlineShop.Models.Products.Peripherals.Models
+namespace OnlineShop.Models.Products.ProductModels.PeripheralModels
 {
-    public class Peripheral : Product, IPeripheral
+    public abstract class Peripheral : Product, IPeripheral
     {
         public Peripheral(int id, string manufacturer, string model, decimal price, double overallPerformance, string connectionType)
             : base(id, manufacturer, model, price, overallPerformance)

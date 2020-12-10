@@ -1,4 +1,4 @@
-﻿namespace OnlineShop.Models.Products.Components.Models
+﻿namespace OnlineShop.Models.Products.ProductModels.ComponentsModels
 {
     public class VideoCard : Component
     {

@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{6C27F244-5BC0-4DDF-9BAC-90574D2249B1}|Default">
+  <MonoDevelop.Ide.ItemProperties.OnlineShop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Products/ProductModels/PeripheralModels/Mouse.cs">
+    <Files>
+      <File FileName="Models/Products/ProductModels/PeripheralModels/Mouse.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OnlineShop" expanded="True">
+            <Node name="OnlineShop" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Products" expanded="True">
+                  <Node name="ProductModels" expanded="True">
+                    <Node name="PeripheralModels" expanded="True">
+                      <Node name="Mouse.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
