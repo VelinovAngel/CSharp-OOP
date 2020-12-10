@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using OnlineShop.Common.Constants;
+using OnlineShop.Common.Enums;
 using OnlineShop.Models.Products.Components;
 using OnlineShop.Models.Products.Computers;
 using OnlineShop.Models.Products.Peripherals;
@@ -45,22 +47,48 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
         public void AddComponent(IComponent component)
         {
-            throw new NotImplementedException();
-        }
+            //TODO
+            if (!Enum.TryParse(component.GetType().Name, out ComponentType componentType))
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.ExistingComponent, component.GetType().Name, this.GetType().Name, this.Id));
+            }
 
-        public void AddPeripheral(IPeripheral peripheral)
-        {
-            throw new NotImplementedException();
+            this.components.Add(component);
         }
 
         public IComponent RemoveComponent(string componentType)
         {
-            throw new NotImplementedException();
+            if (components.Count <= 0 || components.Any(x => x.GetType().Name == componentType))
+            {
+                throw new ArgumentException(string.Join(ExceptionMessages.NotExistingComponent, componentType, this.GetType().Name, this.Id));
+            }
+
+            IComponent component = components.FirstOrDefault(x => x.GetType().Name == componentType);
+            this.components.Remove(component);
+            return component;
+        }
+
+        public void AddPeripheral(IPeripheral peripheral)
+        {
+            //TODO
+            if (!Enum.TryParse(peripheral.GetType().Name, out PeripheralType peripheralType))
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.ExistingPeripheral, peripheral.GetType().Name, this.GetType().Name, this.Id));
+            }
+
+            peripherals.Add(peripheral);
         }
 
         public IPeripheral RemovePeripheral(string peripheralType)
         {
-            throw new NotImplementedException();
+            if (peripherals.Count <= 0 || peripherals.Any(x => x.GetType().Name == peripheralType))
+            {
+                throw new ArgumentException(string.Join(ExceptionMessages.ExistingPeripheral, peripheralType, this.GetType().Name, this.Id));
+            }
+
+            IPeripheral peripheral = peripherals.FirstOrDefault(x => x.GetType().Name == peripheralType);
+            this.peripherals.Remove(peripheral);
+            return peripheral;
         }
 
         public override string ToString()
@@ -80,7 +108,7 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
                 sb.AppendLine($"  {peripheral}");
             }
 
-            return base.ToString() + sb.ToString().TrimEnd();
+            return base.ToString() + Environment.NewLine + sb.ToString().TrimEnd();
         }
 
 
