@@ -14,7 +14,7 @@ namespace OnlineShop.Models.Products.ProductModels.ComponentsModels
 
         public override string ToString()
         {
-            return base.ToString() + $"Generation: {this.Generation}";
+            return base.ToString() + $" Generation: {this.Generation}";
         }
     }
 }

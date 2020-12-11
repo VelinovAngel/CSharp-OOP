@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{6C27F244-5BC0-4DDF-9BAC-90574D2249B1}|Default">
   <MonoDevelop.Ide.ItemProperties.OnlineShop PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StartUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Products/ProductModels/Product.cs">
     <Files>
-      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" Line="51" Column="13" />
-      <File FileName="Core/Engine.cs" Line="1" Column="1" />
-      <File FileName="StartUp.cs" Line="11" Column="15" />
-      <File FileName="Core/CommandInterpreter.cs" Line="132" Column="40" />
-      <File FileName="Common/Enums/CommandType.cs" Line="1" Column="1" />
-      <File FileName="Common/Enums/ComputerType.cs" Line="1" Column="1" />
-      <File FileName="Models/Products/ProductModels/ComputersModels/Laptop.cs" Line="1" Column="1" />
-      <File FileName="Core/IController.cs" Line="19" Column="40" />
+      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" Line="108" Column="35" />
+      <File FileName="Core/Engine.cs" Line="20" Column="1" />
+      <File FileName="Core/CommandInterpreter.cs" Line="125" Column="1" />
+      <File FileName="Core/Controller.cs" Line="22" Column="15" />
+      <File FileName="Core/IController.cs" Line="1" Column="1" />
+      <File FileName="StartUp.cs" Line="26" Column="1" />
+      <File FileName="output.txt" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/Product.cs" Line="91" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,14 +21,16 @@
                 <Node name="Enums" expanded="True" />
               </Node>
               <Node name="Core" expanded="True" />
+              <Node name="IO" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Products" expanded="True">
                   <Node name="ProductModels" expanded="True">
+                    <Node name="ComponentsModels" expanded="True" />
                     <Node name="ComputersModels" expanded="True" />
+                    <Node name="Product.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="StartUp.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -38,9 +40,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 16 August 2020/OnlineShop-Skeleton/OnlineShop/Core/CommandInterpreter.cs" relfile="Core/CommandInterpreter.cs" line="125" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

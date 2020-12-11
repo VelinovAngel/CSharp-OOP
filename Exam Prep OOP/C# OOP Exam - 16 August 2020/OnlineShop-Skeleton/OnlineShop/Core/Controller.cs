@@ -27,8 +27,6 @@ namespace OnlineShop.Core
 
         }
 
-
-
         public string AddComputer(string computerType, int id, string manufacturer, string model, decimal price)
         {
             if (!Enum.TryParse(computerType, out ComputerType pcType))
