@@ -59,9 +59,14 @@ namespace OnlineShop.Core
             {
                 throw new ArgumentException(ExceptionMessages.ExistingPeripheralId);
             }
+            IComputer computer = computers.FirstOrDefault(x => x.Id == computerId);
+
+            NotExistingComputer(computer);
+
             IPeripheral peripheral = CreatePeripherial(id, manufacturer, model, price, overallPerformance, connectionType, peripheralComputerType);
 
             peripherals.Add(peripheral);
+            computer.AddPeripheral(peripheral);
 
             return string.Format(SuccessMessages.AddedPeripheral, peripheralType, id, computerId);
 
@@ -70,13 +75,14 @@ namespace OnlineShop.Core
         public string RemoveComponent(string componentType, int computerId)
         {
             IComputer computer = computers.FirstOrDefault(x => x.Id == computerId);
+
             NotExistingComputer(computer);
 
             IComponent component = computer.RemoveComponent(componentType);
 
             components.Remove(component);
 
-            return string.Join(SuccessMessages.RemovedComponent, componentType, component.Id);
+            return string.Format(SuccessMessages.RemovedComponent, componentType, component.Id);
         }
 
 
@@ -89,7 +95,7 @@ namespace OnlineShop.Core
 
             peripherals.Remove(peripheral);
 
-            return string.Join(SuccessMessages.RemovedPeripheral, peripheralType, peripheral.Id);
+            return string.Format(SuccessMessages.RemovedPeripheral, peripheralType, peripheral.Id);
         }
 
         public string BuyBest(decimal budget)
@@ -100,7 +106,7 @@ namespace OnlineShop.Core
 
             if (computer == null)
             {
-                throw new ArgumentException(string.Join(ExceptionMessages.CanNotBuyComputer, budget));
+                throw new ArgumentException(string.Format(ExceptionMessages.CanNotBuyComputer, budget));
             }
             computers.Remove(computer);
 
@@ -112,10 +118,12 @@ namespace OnlineShop.Core
             IComputer computer = computers
             .FirstOrDefault(x => x.Id == id);
 
+            NotExistingComputer(computer);
             //if (computer == null)
             //{
 
             //}
+            computers.Remove(computer);
 
             return computer.ToString();
         }
@@ -124,6 +132,7 @@ namespace OnlineShop.Core
         {
             IComputer computer = computers
                .FirstOrDefault(x => x.Id == id);
+            NotExistingComputer(computer);
 
             return computer.ToString();
         }

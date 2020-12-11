@@ -58,12 +58,13 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
         public IComponent RemoveComponent(string componentType)
         {
-            if (components.Count <= 0 || components.Any(x => x.GetType().Name == componentType))
+            if (components.Count <= 0 || components.All(x => x.GetType().Name != componentType))
             {
-                throw new ArgumentException(string.Join(ExceptionMessages.NotExistingComponent, componentType, this.GetType().Name, this.Id));
+                throw new ArgumentException(string.Format(ExceptionMessages.NotExistingComponent, componentType, this.GetType().Name, this.Id));
             }
 
             IComponent component = components.FirstOrDefault(x => x.GetType().Name == componentType);
+
             this.components.Remove(component);
             return component;
         }
@@ -73,7 +74,7 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
             //TODO
             if (!Enum.TryParse(peripheral.GetType().Name, out PeripheralType peripheralType))
             {
-                throw new ArgumentException(string.Format(ExceptionMessages.ExistingPeripheral, peripheral.GetType().Name, this.GetType().Name, this.Id));
+                throw new ArgumentException(string.Format(ExceptionMessages.ExistingPeripheral, peripheral, this.GetType().Name, this.Id));
             }
 
             peripherals.Add(peripheral);
@@ -81,9 +82,9 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
         public IPeripheral RemovePeripheral(string peripheralType)
         {
-            if (peripherals.Count <= 0 || peripherals.Any(x => x.GetType().Name == peripheralType))
+            if (peripherals.Count <= 0 || peripherals.Any(x => x.GetType().Name != peripheralType))
             {
-                throw new ArgumentException(string.Join(ExceptionMessages.ExistingPeripheral, peripheralType, this.GetType().Name, this.Id));
+                throw new ArgumentException(string.Format(ExceptionMessages.NotExistingPeripheral, peripheralType, this.GetType().Name, this.Id));
             }
 
             IPeripheral peripheral = peripherals.FirstOrDefault(x => x.GetType().Name == peripheralType);
@@ -101,7 +102,16 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
                 sb.AppendLine($"  {component}");
             }
 
-            sb.AppendLine($" Peripherals ({peripherals.Count}); Average Overall Performance ({this.OverallPerformance}):");
+            double overll = 0;
+
+            if (Peripherals.Count !=  0)
+            {
+
+                overll = this.Peripherals.Average(x => x.OverallPerformance);
+            }
+
+
+            sb.AppendLine($" Peripherals ({peripherals.Count}); Average Overall Performance ({overll:f2}):");
 
             foreach (var peripheral in peripherals)
             {
