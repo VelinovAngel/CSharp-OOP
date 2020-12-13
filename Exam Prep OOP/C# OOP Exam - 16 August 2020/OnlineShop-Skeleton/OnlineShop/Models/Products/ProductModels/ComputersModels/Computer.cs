@@ -58,7 +58,7 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
         public IComponent RemoveComponent(string componentType)
         {
-            if (components.Count <= 0 || components.All(x => x.GetType().Name != componentType))
+            if (!components.Any() || components.All(x => x.GetType().Name != componentType))
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.NotExistingComponent, componentType, this.GetType().Name, this.Id));
             }
@@ -82,13 +82,18 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
         public IPeripheral RemovePeripheral(string peripheralType)
         {
-            if (peripherals.Count <= 0 || peripherals.Any(x => x.GetType().Name != peripheralType))
+            if (!peripherals.Any() || peripherals.Any(x => x.GetType().Name != peripheralType))
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.NotExistingPeripheral, peripheralType, this.GetType().Name, this.Id));
             }
 
             IPeripheral peripheral = peripherals.FirstOrDefault(x => x.GetType().Name == peripheralType);
-            this.peripherals.Remove(peripheral);
+
+            if (peripheral != null)
+            {
+                this.peripherals.Remove(peripheral);
+
+            }
             return peripheral;
         }
 
@@ -104,7 +109,7 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
             double overll = 0;
 
-            if (Peripherals.Count !=  0)
+            if (Peripherals.Count != 0)
             {
 
                 overll = this.Peripherals.Average(x => x.OverallPerformance);

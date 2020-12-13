@@ -46,6 +46,30 @@ namespace OnlineShop.Core
             return string.Format(SuccessMessages.AddedComputer, id);
         }
 
+        public string AddComponent(int computerId, int id, string component, string manufacturer, string model, decimal price, double overallPerformance, int generation)
+        {
+            if (!Enum.TryParse(component, out ComponentType componentType))
+            {
+                throw new ArgumentException(string.Format(ExceptionMessages.InvalidComponentType));
+            }
+
+            if (components.Any(x => x.Id == id))
+            {
+                throw new ArgumentException(ExceptionMessages.ExistingComponentId);
+            }
+
+            IComponent currComponent = CreateComponent(id, manufacturer, model, price, overallPerformance, generation, componentType);
+
+            IComputer computer = this.computers
+              .FirstOrDefault(c => c.Id == computerId);
+
+            computer.AddComponent(currComponent);
+
+            components.Add(currComponent);
+
+            return string.Format(SuccessMessages.AddedComponent, componentType, id, computerId);
+        }
+
 
 
         public string AddPeripheral(int computerId, int id, string peripheralType, string manufacturer, string model, decimal price, double overallPerformance, string connectionType)
@@ -104,6 +128,7 @@ namespace OnlineShop.Core
                 .OrderByDescending(x => x.OverallPerformance)
                 .FirstOrDefault(x => x.Price <= budget);
 
+
             if (computer == null)
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.CanNotBuyComputer, budget));
@@ -119,13 +144,15 @@ namespace OnlineShop.Core
             .FirstOrDefault(x => x.Id == id);
 
             NotExistingComputer(computer);
+
+            string result = computer.ToString();
             //if (computer == null)
             //{
 
             //}
             computers.Remove(computer);
 
-            return computer.ToString();
+            return result;
         }
 
         public string GetComputerData(int id)
@@ -184,32 +211,6 @@ namespace OnlineShop.Core
             };
 
             return peripheral;
-        }
-
-        public string AddComponent(int computerId, int id, string component, string manufacturer, string model, decimal price, double overallPerformance, int generation)
-        {
-            if (!Enum.TryParse(component, out ComponentType componentType))
-            {
-                throw new ArgumentException(string.Format(ExceptionMessages.InvalidComponentType));
-            }
-
-            if (components.Any(x => x.Id == id))
-            {
-                throw new ArgumentException(ExceptionMessages.ExistingComponentId);
-            }
-
-            IComponent currComponent = CreateComponent(id, manufacturer, model, price, overallPerformance, generation, componentType);
-
-            IComputer computer = this.computers
-              .FirstOrDefault(c => c.Id == computerId);
-            NotExistingComputer(computer);
-
-            computer.AddComponent(currComponent);
-
-
-            components.Add(currComponent);
-
-            return string.Format(SuccessMessages.AddedComponent, componentType, id, computerId);
         }
 
     }
