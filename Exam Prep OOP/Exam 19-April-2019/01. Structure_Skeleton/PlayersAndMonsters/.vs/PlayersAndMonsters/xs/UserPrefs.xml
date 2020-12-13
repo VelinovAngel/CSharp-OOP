@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{5AF6ED88-A269-45EF-9765-99563122A1E9}|Default">
+  <MonoDevelop.Ide.ItemProperties.PlayersAndMonsters PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/ManagerController.cs">
+    <Files>
+      <File FileName="Core/ManagerController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PlayersAndMonsters" expanded="True">
+            <Node name="PlayersAndMonsters" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="ManagerController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

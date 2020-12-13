@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{EEB2DD9A-F45F-4113-9B16-319A7CE48183}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Repositories/DwarfRepository.cs">
+    <Files>
+      <File FileName="Repositories/DwarfRepository.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SantaWorkshop" expanded="True">
+            <Node name="SantaWorkshop" expanded="True">
+              <Node name="Repositories" expanded="True">
+                <Node name="DwarfRepository.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.ItemProperties.SantaWorkshop PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
