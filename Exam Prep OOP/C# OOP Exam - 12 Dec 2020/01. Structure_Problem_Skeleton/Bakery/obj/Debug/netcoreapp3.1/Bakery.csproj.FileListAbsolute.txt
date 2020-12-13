@@ -1,0 +1,12 @@
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/bin/Debug/netcoreapp3.1/Bakery.deps.json
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/bin/Debug/netcoreapp3.1/Bakery.runtimeconfig.json
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/bin/Debug/netcoreapp3.1/Bakery.runtimeconfig.dev.json
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/bin/Debug/netcoreapp3.1/Bakery.dll
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/bin/Debug/netcoreapp3.1/Bakery.pdb
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.csprojAssemblyReference.cache
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.AssemblyInfoInputs.cache
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.AssemblyInfo.cs
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.csproj.CoreCompileInputs.cache
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.dll
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.pdb
+/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/Debug/netcoreapp3.1/Bakery.genruntimeconfig.cache

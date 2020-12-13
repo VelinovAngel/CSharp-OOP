@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{3950DB23-6F7B-42D5-9642-7DDB8D70FC1A}|Default">
+  <MonoDevelop.Ide.ItemProperties.BankSafe PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BankSafe.Tests/BankVaultTests.cs">
+    <Files>
+      <File FileName="BankSafe.Tests/BankVaultTests.cs" Line="53" Column="1" />
+      <File FileName="BankSafe/BankVault.cs" Line="52" Column="1" />
+      <File FileName="BankSafe/Item.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BankSafe" expanded="True" selected="True">
+            <Node name="BankSafe" expanded="True" />
+            <Node name="BankSafe.Tests" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="BankSafe" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

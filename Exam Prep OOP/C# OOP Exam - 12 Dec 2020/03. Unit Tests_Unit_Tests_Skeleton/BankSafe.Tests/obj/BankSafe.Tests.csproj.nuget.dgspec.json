@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/pLazZma/Desktop/03. Unit Tests_Unit_Tests_Skeleton/BankSafe.Tests/BankSafe.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/pLazZma/Desktop/03. Unit Tests_Unit_Tests_Skeleton/BankSafe.Tests/BankSafe.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/pLazZma/Desktop/03. Unit Tests_Unit_Tests_Skeleton/BankSafe.Tests/BankSafe.Tests.csproj",
+        "projectName": "BankSafe.Tests",
+        "projectPath": "/Users/pLazZma/Desktop/03. Unit Tests_Unit_Tests_Skeleton/BankSafe.Tests/BankSafe.Tests.csproj",
+        "packagesPath": "/Users/pLazZma/.nuget/packages/",
+        "outputPath": "/Users/pLazZma/Desktop/03. Unit Tests_Unit_Tests_Skeleton/BankSafe.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/pLazZma/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.8.3, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

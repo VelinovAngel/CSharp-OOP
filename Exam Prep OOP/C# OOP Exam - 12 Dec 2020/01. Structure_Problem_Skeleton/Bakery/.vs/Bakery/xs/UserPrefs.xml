@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{5D9C0CD6-486D-4299-A438-CC5F133C7DFD}|Default">
+  <MonoDevelop.Ide.ItemProperties.Bakery PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Tables/Table.cs">
+    <Files>
+      <File FileName="Models/BakedFoods/BakedFood.cs" Line="13" Column="13" />
+      <File FileName="Utilities/Messages/ExceptionMessages.cs" />
+      <File FileName="Models/Drinks/Drink.cs" Line="12" Column="30" />
+      <File FileName="Models/Tables/Table.cs" Line="40" Column="1" />
+      <File FileName="Core/Controller.cs" Line="192" Column="10" />
+      <File FileName="Models/Drinks/Water.cs" />
+      <File FileName="Models/Tables/InsideTable.cs" />
+      <File FileName="Core/Engine.cs" Line="106" Column="1" />
+      <File FileName="IO/Writer.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bakery" expanded="True">
+            <Node name="Bakery" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
