@@ -163,7 +163,6 @@ namespace Bakery.Core
             allSum.Add(bill);
            currTable.Clear();
             
-
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Table: {tableNumber}")
