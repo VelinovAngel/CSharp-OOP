@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{25F905BC-FE73-4C1B-B4C0-33F1C63CAAF9}|Default">
   <MonoDevelop.Ide.ItemProperties.Bakery PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bakery/Models/BakedFoods/BakedFood.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bakery/Models/Tables/Table.cs">
     <Files>
       <File FileName="Bakery/Core/Controller.cs" Line="192" Column="12" />
       <File FileName="Bakery/Core/Engine.cs" Line="1" Column="1" />
       <File FileName="Bakery/Models/BakedFoods/BakedFood.cs" Line="1" Column="1" />
+      <File FileName="Bakery/Models/Drinks/Drink.cs" Line="13" Column="1" />
+      <File FileName="Bakery/Models/Tables/Table.cs" Line="4" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +16,10 @@
               <Node name="Core" expanded="True" />
               <Node name="IO" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="BakedFoods" expanded="True">
-                  <Node name="BakedFood.cs" selected="True" />
+                <Node name="BakedFoods" expanded="True" />
+                <Node name="Drinks" expanded="True" />
+                <Node name="Tables" expanded="True">
+                  <Node name="Table.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
