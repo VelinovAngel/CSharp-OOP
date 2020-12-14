@@ -101,11 +101,9 @@ namespace Bakery.Models.Tables
             decimal foodPrice = bakedFoodsOrderd.Sum(x=>x.Price);
             decimal drinkPrice = drinksOrderd.Sum(x=>x.Price);
 
-
             //bakedFoodsOrderd.Clear();
             //drinksOrderd.Clear();
             return foodPrice + drinkPrice + Price;
-
         }
 
 
