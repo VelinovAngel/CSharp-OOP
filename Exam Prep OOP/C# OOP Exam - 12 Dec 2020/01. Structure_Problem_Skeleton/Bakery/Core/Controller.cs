@@ -189,8 +189,7 @@ namespace Bakery.Core
         public string GetTotalIncome()
         {
             decimal price = allSum.Sum();
-           
-            
+                
             return $"Total income: {price:f2}lv";
         }
 
