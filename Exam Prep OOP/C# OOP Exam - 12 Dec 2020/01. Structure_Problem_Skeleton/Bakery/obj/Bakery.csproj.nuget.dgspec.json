@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj": {}
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Dec 2020/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj": {}
   },
   "projects": {
-    "/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj": {
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Dec 2020/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj",
+        "projectUniqueName": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Dec 2020/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj",
         "projectName": "Bakery",
-        "projectPath": "/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj",
+        "projectPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Dec 2020/01. Structure_Problem_Skeleton/Bakery/Bakery.csproj",
         "packagesPath": "/Users/pLazZma/.nuget/packages/",
-        "outputPath": "/Users/pLazZma/Desktop/01. Structure_Problem_Skeleton/Bakery/obj/",
+        "outputPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/C# OOP Exam - 12 Dec 2020/01. Structure_Problem_Skeleton/Bakery/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pLazZma/.config/NuGet/NuGet.Config"
