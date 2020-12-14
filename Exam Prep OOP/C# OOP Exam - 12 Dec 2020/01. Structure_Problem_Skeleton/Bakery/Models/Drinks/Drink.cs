@@ -11,8 +11,6 @@ namespace Bakery.Models.Drinks
         private decimal price;
         private string brand;
 
-
-
         protected Drink(string name, int portion, decimal price, string brand)
         {
             Name = name;
