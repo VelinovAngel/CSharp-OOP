@@ -70,7 +70,6 @@ namespace Bakery.Core
             }
 
             return $"Added {name} ({type}) to the menu";
-
         }
 
         public string AddTable(string type, int tableNumber, int capacity)
