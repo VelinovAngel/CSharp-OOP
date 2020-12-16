@@ -116,7 +116,6 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
                 overll = this.Peripherals.Average(x => x.OverallPerformance);
             }
 
-
             sb.AppendLine($" Peripherals ({peripherals.Count}); Average Overall Performance ({overll:f2}):");
 
             foreach (var peripheral in peripherals)
