@@ -125,7 +125,6 @@ namespace OnlineShop.Core
                 .OrderByDescending(x => x.OverallPerformance)
                 .FirstOrDefault(x => x.Price <= budget);
 
-
             if (computer == null)
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.CanNotBuyComputer, budget));
