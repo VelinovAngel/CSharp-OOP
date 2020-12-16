@@ -70,8 +70,6 @@ namespace OnlineShop.Core
             return string.Format(SuccessMessages.AddedComponent, componentType, id, computerId);
         }
 
-
-
         public string AddPeripheral(int computerId, int id, string peripheralType, string manufacturer, string model, decimal price, double overallPerformance, string connectionType)
         {
             if (!Enum.TryParse(peripheralType, out PeripheralType peripheralComputerType))

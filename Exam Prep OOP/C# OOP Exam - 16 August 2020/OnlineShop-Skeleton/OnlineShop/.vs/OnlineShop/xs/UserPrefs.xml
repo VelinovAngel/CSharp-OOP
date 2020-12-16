@@ -3,15 +3,15 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Core/IController.cs">
     <Files>
       <File FileName="Core/Controller.cs" Line="90" Column="80" IsPinned="True" />
-      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" Line="99" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" />
       <File FileName="Models/Products/ProductModels/ComputersModels/DesktopComputer.cs" />
-      <File FileName="Models/Products/ProductModels/ComputersModels/Laptop.cs" Line="1" Column="1" />
-      <File FileName="output.txt" Line="26" Column="78" />
+      <File FileName="Models/Products/ProductModels/ComputersModels/Laptop.cs" />
+      <File FileName="output.txt" />
       <File FileName="Models/Products/ProductModels/Product.cs" />
       <File FileName="IO/IReader.cs" />
       <File FileName="StartUp.cs" />
-      <File FileName="Core/Engine.cs" Line="1" Column="1" />
-      <File FileName="Core/ICommandInterpreter.cs" Line="1" Column="1" />
+      <File FileName="Core/Engine.cs" />
+      <File FileName="Core/ICommandInterpreter.cs" />
       <File FileName="Core/IController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
