@@ -1,35 +1,37 @@
 ﻿<Properties StartupConfiguration="{6C27F244-5BC0-4DDF-9BAC-90574D2249B1}|Default">
   <MonoDevelop.Ide.ItemProperties.OnlineShop PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/IController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Products/ProductModels/ComputersModels/Computer.cs">
     <Files>
-      <File FileName="Core/Controller.cs" Line="90" Column="80" IsPinned="True" />
-      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" />
+      <File FileName="Core/Controller.cs" Line="207" Column="10" IsPinned="True" />
+      <File FileName="Models/Products/ProductModels/ComputersModels/Computer.cs" Line="99" Column="1" />
       <File FileName="Models/Products/ProductModels/ComputersModels/DesktopComputer.cs" />
       <File FileName="Models/Products/ProductModels/ComputersModels/Laptop.cs" />
       <File FileName="output.txt" />
       <File FileName="Models/Products/ProductModels/Product.cs" />
       <File FileName="IO/IReader.cs" />
       <File FileName="StartUp.cs" />
-      <File FileName="Core/Engine.cs" />
-      <File FileName="Core/ICommandInterpreter.cs" />
+      <File FileName="Core/Engine.cs" Line="1" Column="1" />
+      <File FileName="Core/ICommandInterpreter.cs" Line="1" Column="1" />
       <File FileName="Core/IController.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/CentralProcessingUnit.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/Component.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/Motherboard.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/PowerSupply.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/RandomAccessMemory.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/SolidStateDrive.cs" Line="1" Column="1" />
+      <File FileName="Models/Products/ProductModels/ComponentsModels/VideoCard.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OnlineShop" expanded="True">
             <Node name="OnlineShop" expanded="True">
-              <Node name="Common" expanded="True">
-                <Node name="Enums" expanded="True" />
-              </Node>
-              <Node name="Core" expanded="True">
-                <Node name="IController.cs" selected="True" />
-              </Node>
               <Node name="Models" expanded="True">
                 <Node name="Products" expanded="True">
-                  <Node name="Computers" expanded="True" />
                   <Node name="ProductModels" expanded="True">
-                    <Node name="ComputersModels" expanded="True" />
+                    <Node name="ComputersModels" expanded="True">
+                      <Node name="Computer.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>
