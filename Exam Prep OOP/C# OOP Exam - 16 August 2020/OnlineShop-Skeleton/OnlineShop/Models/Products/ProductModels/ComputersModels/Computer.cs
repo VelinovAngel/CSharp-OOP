@@ -125,6 +125,5 @@ namespace OnlineShop.Models.Products.ProductModels.ComputersModels
 
             return base.ToString() + Environment.NewLine + sb.ToString().TrimEnd();
         }
-
     }
 }
