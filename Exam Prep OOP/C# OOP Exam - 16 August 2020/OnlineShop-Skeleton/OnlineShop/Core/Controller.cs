@@ -142,10 +142,7 @@ namespace OnlineShop.Core
             NotExistingComputer(computer);
 
             string result = computer.ToString();
-            //if (computer == null)
-            //{
 
-            //}
             computers.Remove(computer);
 
             return result;
