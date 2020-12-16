@@ -91,7 +91,6 @@ namespace OnlineShop.Core
             computer.AddPeripheral(peripheral);
 
             return string.Format(SuccessMessages.AddedPeripheral, peripheralType, id, computerId);
-
         }
 
         public string RemoveComponent(string componentType, int computerId)
