@@ -205,6 +205,5 @@ namespace OnlineShop.Core
 
             return peripheral;
         }
-
     }
 }
