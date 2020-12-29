@@ -192,6 +192,5 @@ namespace Bakery.Core
                 
             return $"Total income: {price:f2}lv";
         }
-
     }
 }
