@@ -136,7 +136,8 @@ namespace Bakery.Core
             var currTableNum = tables
                 .FirstOrDefault(x => x.TableNumber == tableNumber);
             var currDrinkName = drinks
-                .FirstOrDefault(x => x.Name == drinkName && x.Brand == drinkBrand);
+                .FirstOrDefault(x => x.Name == drinkName
+                && x.Brand == drinkBrand);
 
             if (currTableNum == null)
             {

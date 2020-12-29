@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pLazZma/Desktop/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj": {}
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj": {}
   },
   "projects": {
-    "/Users/pLazZma/Desktop/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj": {
+    "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pLazZma/Desktop/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj",
+        "projectUniqueName": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj",
         "projectName": "PlayersAndMonsters",
-        "projectPath": "/Users/pLazZma/Desktop/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj",
+        "projectPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/PlayersAndMonsters.csproj",
         "packagesPath": "/Users/pLazZma/.nuget/packages/",
-        "outputPath": "/Users/pLazZma/Desktop/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/obj/",
+        "outputPath": "/Users/pLazZma/Projects/C-Advanced-Exercises/CSharp-OOP/Exam Prep OOP/Exam 19-April-2019/01. Structure_Skeleton/PlayersAndMonsters/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pLazZma/.config/NuGet/NuGet.Config"
