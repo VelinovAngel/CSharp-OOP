@@ -152,7 +152,6 @@ namespace Bakery.Core
 
             currTableNum.OrderDrink(currDrinkName);
             return $"Table {currTableNum.TableNumber} ordered {currDrinkName.Name} {currDrinkName.Brand}";
-
         }
 
         public string LeaveTable(int tableNumber)
