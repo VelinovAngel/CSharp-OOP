@@ -2,8 +2,8 @@
 {
     using Bakery.Core.Contracts;
     using Bakery.IO;
-    using Bakery.IO.Contracts;
     using System;
+    using Bakery.IO.Contracts;
 
     public class Engine : IEngine
     {
