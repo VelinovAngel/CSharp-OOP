@@ -1,7 +1,7 @@
 ﻿namespace Bakery.Core
 {
-    using Bakery.IO;
     using System;
+    using Bakery.IO;
     using Bakery.IO.Contracts;
     using Bakery.Core.Contracts;
 
