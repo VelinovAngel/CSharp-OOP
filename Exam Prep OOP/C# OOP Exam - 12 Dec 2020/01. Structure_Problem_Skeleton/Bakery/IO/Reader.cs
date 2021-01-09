@@ -1,7 +1,7 @@
 ﻿namespace Bakery.IO
 {
-    using Bakery.IO.Contracts;
     using System;
+    using Bakery.IO.Contracts;
 
     public class Reader : IReader
     {
